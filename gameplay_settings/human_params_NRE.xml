@@ -1,0 +1,47 @@
+<HumanParams
+	surrenderTimeMsec="200"
+
+	crouchDownTimeMsec="250"
+	crouchUpTimeMsec="300"
+	openDoorTimeMsec="600"
+	closeDoorTimeMsec="1200"	
+
+	civilianScareDistanceMeters="3.0"
+	runAwayDistanceMeters="3.0"
+
+	grenadeReactionTime="0.35"
+	grenadeWarningAdvanceMS = "200"
+
+	grenadeThrowSoundRadiusMeters="5.0"
+	enemyGrenadeThrowMinDistMeters="12.0"
+	enemyGrenadeThrowMaxDistMeters="30.0"	
+
+	suppressiveFireRadius="0.42"
+	suppressiveFireSuppressionPerSecond="15.0"
+
+	suppressionNearMiss="10"
+	suppressionHitMe="15"
+	suppressionHitFriend="12"
+	suppressionHitFriendRadiusMeters="4"
+	suppressionMax="90"
+
+	suppressedThresholdStart="18"
+	suppressedThresholdStop="12"
+	pinnedThresholdStart="88"
+	pinnedThresholdStop="85"
+
+	suppressedMovePercent="-25"
+	suppressedTurnPercent="-50"
+	suppressedAimTimePercent="10"
+	suppressedAccuracyPercent="-25"
+
+	coverBlockPercent = "80"
+	fullCoverBlockPercent = "95"
+
+	flinchDamageThreshold	="18.0"
+	flinchChancePerDmgPoint	="1.3"
+	flinchStunDurationMsec	="150"
+
+	hideDelayMsec				= "600"
+
+/>

@@ -1,0 +1,109 @@
+<!--
+	EquipmentModifier can change anything from the weapon's <ModifiableParams>.
+		NOTE1: if the param is NOT defined in the base equipment, we consider the default to be zero, so we add the modifiers on top of zero.
+		NOTE2: these are specific to Optics currently, other equipment types cannot modify values.
+
+	Same for AttackTypeModifier, can modify anything from the current AttackType if it's inside the defined range
+		NOTE: minAimTime2/maxAimTime2 are unique to Scopes. Instead of adding to the attacktype aimTime, we defined a new range of aimtime (for the range defined in the scope), which will be added on top of the aimTime from the attacktype
+ex:
+
+	<EquipmentModifier
+		changeInTime="-50"
+		readyTime="-20"
+		reloadTime="-100"
+	/>
+
+	<AttackTypeModifier minRange="5" maxRange="10"
+		minAimTime2="-50"
+		maxAimTime2="-50"
+		resetTime="-50"
+		accuracyAdd="+30"
+		critChanceAdd="+30"
+	/>
+
+	<AttackTypeModifier minRange="10" maxRange="50"
+		minAimTime2="-50"
+		maxAimTime2="-50"
+		resetTime="-50"
+		accuracyAdd="+30"
+		critChanceAdd="+30"
+	/>
+
+
+-->
+
+
+<Equipment>
+	<Scope name="M150RCO"
+			inventoryBinding="PrimaryWeaponScope"
+			tooltip="@scope_rangersM150acog_name"
+			description="@scope_rangersM150acog_desc"
+			category="magnified"
+			img="data/models/weapons/attachments/acog_4x_ui.dds"
+		>
+		<RenderObject3D model="data/models/weapons/attachments/scope_m150_acog4x.khm" attachSlot="optics_socket" skipGOSSAO="true" diffuseTex="data/models/weapons/attachments/scope_m150_acog4x.dds"/>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="-1"/>
+		<Params>
+			<EquipmentModifier>
+				<AddTo
+					reloadTime="+130"
+					reloadEmptyTime="+130"
+					readyTime="+10"
+					guardTime="+10"
+					changeInTime="+300"
+					changeOutTime="+300"
+				/>
+			</EquipmentModifier>
+
+			<AttackTypeModifier minRange="7" maxRange="15">
+				<AddTo
+					minAimTime2="-40"
+					maxAimTime2="-120"
+					resetTime="-30"
+					accuracyAdd="+20"
+					critChanceAdd="+10"
+					coverReductionMin="50" 
+					coverReductionMax="30"
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="15" maxRange="25">
+				<AddTo
+					minAimTime2="-120"
+					maxAimTime2="-120"
+					resetTime="-50"
+					accuracyAdd="+50"
+					critChanceAdd="+15"
+					coverReductionMin="40" 
+					coverReductionMax="25"					
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="25" maxRange="50">
+				<AddTo
+					minAimTime2="-120"
+					maxAimTime2="-50"
+					resetTime="-50"
+					accuracyAdd="+25"
+					critChanceAdd="+5"
+					coverReductionMin="15" 
+					coverReductionMax="10"					
+				/>
+			</AttackTypeModifier>
+
+			<AttackTypeModifier minRange="50" maxRange="100">
+				<AddTo
+					minAimTime2="-50"
+					maxAimTime2="-30"
+					resetTime="+0"
+					accuracyAdd="+10"
+					critChanceAdd="+0"
+					coverReductionMin="15" 
+					coverReductionMax="10"					
+				/>
+			</AttackTypeModifier>
+
+		</Params>
+	</Scope>
+</Equipment>

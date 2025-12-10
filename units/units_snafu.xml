@@ -1,0 +1,17 @@
+<!--
+Note on adding new Units: you can find a template mod for adding a new Unit in the game's DoorKickers2/mods/ subfolder
+-->
+<Units>
+	<!--
+		'name' uniquely identifies this unit throughout the xml files
+		'nameUI' is the localized version that shows up in the game's UI, therefore needs not be unique and is not referenced anywhere in the xml files
+		'supply' is how much a single trooper from that class will count in total supply allowed for a map. One slot = 100 supply
+		'flagTex' will show up in various places. Needs to have an alpha channel.
+		'flagColor' will color various elements of the deploy panel
+		'movie' is optional, shows up in the new squad creation screen, or when unlocking this unit
+		'rndNameEntry' are the variation of random names that get automatically assigned when creating a new squad of this unit. Will also work with a single name.
+		'incapacitationChance' chance to become incapacitated instead of dying (campaign only)
+		'incapacitationChanceCrit' chance to become incapacitated when receiving a crit instead of dying (campaign only)
+	-->
+
+</Units>

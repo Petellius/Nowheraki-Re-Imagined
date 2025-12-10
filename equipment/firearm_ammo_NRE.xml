@@ -1,0 +1,898 @@
+<Equipment>
+
+<!-- Valid <Params> attributes:
+	roundsPerSecond			- required
+	audibleSoundRadius		- required, in meters
+	physicsImpactForce		- required, only affect hit objects
+	
+	numPellets				- optional, overrides weapon default number of pellets
+	accuracyAdd 			- optional, default 0
+	accuracyMultiplier 		- optional, default 100 - In percents. Multiplies final accuracy amount ( after scopes, attack types and accuracyAdd are applied )
+	silenced				- optional, default 0 - Set to 1 for silent shooting
+	overpenetrates			- optional, default 0 - Set to 1 will make shots pierce first hit human
+	damageType				- optional, default 0 - Can be changed for rare modding reasons to fake more powerful weapons
+ -->
+ 
+<!--
+
+RIFLE/PISTOLS AMMO - ENEMIES
+
+-->
+
+
+
+<!-- -->
+
+	<Ammo name="762x39FMJ_Type 56">
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="22" end="18" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762x39FMJ_Type 56 Noob">
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="22" end="18" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="2" end="2" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJ_Type 56 UltraNoob">
+
+		<Params roundsPerSecond="5"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="18" end="13" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="1" end="1" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="9x18FMJ_PM63"
+			img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+		>
+
+
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="20" end="16" startDist="0" endDist="15"/>
+			<CriticalChancePercent start="4" end="1" startDist="0" endDist="10"/>
+			<ArmorPenetration start="30" end="20" startDist="0" endDist="20"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="9x19FMJ_MiniUzi"
+			img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+		>
+
+		<Params roundsPerSecond="16"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.5"
+				>
+			<Damage start="20" end="18" startDist="0" endDist="20"/>
+			<CriticalChancePercent start="5" end="1" startDist="0" endDist="25"/>
+			<ArmorPenetration start="30" end="20" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="9x19FMJ_MiniUziSup"
+			img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+		>
+
+		<Params roundsPerSecond="17"
+				audibleSoundRadius="10"
+				physicsImpactForce="2.5"
+				silenced="1"
+				>
+			<Damage start="20" end="18" startDist="0" endDist="20"/>
+			<CriticalChancePercent start="5" end="1" startDist="0" endDist="25"/>
+			<ArmorPenetration start="30" end="20" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="9x19FMJ_MP40"
+			img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+		>
+
+		<Params roundsPerSecond="9"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.5"
+				>
+			<Damage start="20" end="18" startDist="0" endDist="20"/>
+			<CriticalChancePercent start="5" end="1" startDist="0" endDist="30"/>
+			<ArmorPenetration start="30" end="30" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="919FMJM882_APC9KSupEnemy"
+			tooltip="@ammo_919FMJM882_name"
+			description="@ammo_919FMJM882Sup2_desc"
+			img="data/models/weapons/attachments/m882_ammo_ui.dds"
+		>
+
+		<Params	roundsPerSecond="19"
+				audibleSoundRadius="9"
+				physicsImpactForce="2.0"
+				silenced="1"
+				>
+			<Damage start="18" end="15" startDist="0" endDist="25"/>
+			<CriticalChancePercent start="5" end="1" startDist="7" endDist="18"/>
+			<ArmorPenetration start="20" end="20" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="545x39FMJ_AKS 74U">
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="20"
+				physicsImpactForce="1.7"
+				>
+			<Damage start="18" end="14" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39FMJ_AKS 74U Sup">
+
+		<Params roundsPerSecond="13"
+				audibleSoundRadius="15"
+				physicsImpactForce="1.7"
+				silenced="1"
+				>
+			<Damage start="18" end="14" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762x51FMJ_FAL Rifle">
+
+		<Params roundsPerSecond="6"
+				audibleSoundRadius="50"
+				physicsImpactForce="5.0"
+				>
+			<Damage start="22" end="18" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="15" end="10" startDist="10" endDist="25"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="303BRITFMJ_SMLE">
+
+		<Params roundsPerSecond="0.6"
+				audibleSoundRadius="50"
+				physicsImpactForce="4.5"
+				>
+			<Damage start="20" end="18" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="5" end="1" startDist="0" endDist="50"/>
+			<ArmorPenetration start="50" end="40" startDist="0" endDist="15"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="545x39FMJ_RPK 74 LMG">
+
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="30"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="12" end="12" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="1" end="1" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39FMJ_7N39_RPK16 LMG">
+
+		<Params roundsPerSecond="12.5"
+				audibleSoundRadius="30"
+				physicsImpactForce="2.5"
+				>
+			<Damage start="10" end="10" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="1" end="0" startDist="0" endDist="50"/>
+			<ArmorPenetration start="60" end="50" startDist="0" endDist="50"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762x39FMJ_RPK LMG">
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="30"
+				physicsImpactForce="3.0"
+				>
+			<Damage start="14" end="14" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="1" end="1" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762x54RFMJ_RP46MG">
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="30"
+				physicsImpactForce="5.0"
+				>
+			<Damage start="25" end="20" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="1" end="1" startDist="0" endDist="100"/>
+			<ArmorPenetration start="60" end="60" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762RAP7N13_SVD">
+
+		<Params roundsPerSecond="3"
+				audibleSoundRadius="30"
+				physicsImpactForce="6.0"
+				>
+			<Damage start="35" end="25" startDist="15" endDist="100"/>
+			<CriticalChancePercent start="20" end="20" startDist="0" endDist="100"/>
+			<ArmorPenetration start="60" end="60" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762R7N1_SVDCIA"
+			tooltip="@ammo_762R7N1_name"
+			description="@ammo_762R7N1_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="3.5"
+				audibleSoundRadius="100"
+				physicsImpactForce="6.0"
+				>
+			<Damage start="50" end="40" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="30" end="20" startDist="15" endDist="40"/>
+			<ArmorPenetration start="50" end="30" startDist="20" endDist="60"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762R203GR_SVDNWS" unlockCost="3" discountedBy="762R203GR_SVUNWS,762R203GR_SVDNWS"
+			tooltip="@ammo_762R203_name"
+			description="@ammo_762R203_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="3.5"
+				audibleSoundRadius="100"
+				physicsImpactForce="7.5"
+				>
+			<Damage start="60" end="45" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="33" end="14" startDist="20" endDist="45"/>
+			<ArmorPenetration start="20" end="20" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762RAP7N13_SVDCIA" unlockCost="3" discountedBy="762RAP7N13_PKPCIA,762RAP7N13_SVDCIA,762RAP7N13_SVDNWS,762RAP7N13_SVUNWS"
+			tooltip="@ammo_762RAP7N13_name"
+			description="@ammo_762RAP7N13_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="3.5"
+				audibleSoundRadius="100"
+				physicsImpactForce="6.0"
+				>
+			<Damage start="40" end="30" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="25" end="20" startDist="15" endDist="40"/>
+			<ArmorPenetration start="60" end="60" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762RAP7N13_SVDNWS" unlockCost="8" discountedBy="762RAP7N13_PKPCIA,762RAP7N13_SVDCIA,762RAP7N13_SVDNWS,762RAP7N13_SVUNWS"
+			tooltip="@ammo_762RAP7N13_name"
+			description="@ammo_762RAP7N13_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="3.5"
+				audibleSoundRadius="100"
+				physicsImpactForce="6.0"
+				>
+			<Damage start="40" end="30" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="25" end="20" startDist="15" endDist="40"/>
+			<ArmorPenetration start="60" end="60" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762R7N14_SVDCIA" unlockCost="8"
+			tooltip="@ammo_762R7N14_name"
+			description="@ammo_762R7N14_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="3.5"
+				audibleSoundRadius="100"
+				physicsImpactForce="6.0"
+				>
+			<Damage start="51" end="45" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="30" end="20" startDist="15" endDist="45"/>
+			<ArmorPenetration start="60" end="50" startDist="30" endDist="40"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="303BRITFMJ_SMLENWS">
+
+		<Params roundsPerSecond="0.6"
+				audibleSoundRadius="60"
+				physicsImpactForce="5"
+				>
+			<Damage start="50" end="40" startDist="0" endDist="50"/>
+			<CriticalChancePercent start="30" end="20" startDist="14" endDist="35"/>
+			<ArmorPenetration start="50" end="40" startDist="0" endDist="15"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762R7N1_SVUNWS"
+			tooltip="@ammo_762R7N1_name"
+			description="@ammo_762R7N1_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="10.8"
+				audibleSoundRadius="100"
+				physicsImpactForce="5.0"
+				>
+			<Damage start="50" end="40" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="30" end="20" startDist="15" endDist="38"/>
+			<ArmorPenetration start="50" end="30" startDist="20" endDist="45"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762R203GR_SVUNWS" unlockCost="3" discountedBy="762R203GR_SVUNWS,762R203GR_SVDNWS"
+			tooltip="@ammo_762R203_name"
+			description="@ammo_762R203_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="9.4"
+				audibleSoundRadius="100"
+				physicsImpactForce="7.0"
+				>
+			<Damage start="60" end="40" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="30" end="14" startDist="20" endDist="40"/>
+			<ArmorPenetration start="20" end="20" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+	<Ammo name="762RAP7N13_SVUNWS" unlockCost="8" discountedBy="762RAP7N13_PKPCIA,762RAP7N13_SVDCIA,762RAP7N13_SVDNWS,762RAP7N13_SVUNWS"
+			tooltip="@ammo_762RAP7N13_name"
+			description="@ammo_762RAP7N13_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+	>
+
+		<Params roundsPerSecond="10.8"
+				audibleSoundRadius="100"
+				physicsImpactForce="5.0"
+				>
+			<Damage start="40" end="30" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="25" end="20" startDist="15" endDist="35"/>
+			<ArmorPenetration start="60" end="60" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+
+<!-- -->
+
+	<Ammo name="300BLK220GRSUBS_AUGSup"
+			tooltip="@ammo_300BLK220GRSUBS_name"
+			description="@ammo_300BLK220GRSUBSsup_desc"
+			img="data/models/weapons/attachments/m80_ammo_ui.dds"
+		>
+
+		<!-- defines base ROF and sound of weapon -->
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="4"
+				physicsImpactForce="3.0"
+				silenced="1"
+				>
+
+			<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+			<Damage start="40" end="30" startDist="0" endDist="30"/>
+
+			<!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+			<CriticalChancePercent start="45" end="20" startDist="0" endDist="50"/>
+
+			<!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+			<ArmorPenetration start="30" end="30" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+
+<!-- -->
+	<Ammo name="9x39APSP6_SR3_M">
+
+		<Params roundsPerSecond="15"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="22" end="18" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="5" startDist="0" endDist="50"/>
+			<ArmorPenetration start="60" end="50" startDist="23" endDist="34"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+	<Ammo name="9x39APSP6_VSS">
+
+		<Params roundsPerSecond="6"
+				audibleSoundRadius="5"
+				physicsImpactForce="2.0"
+				silenced="1"
+				>
+			<Damage start="45" end="21" startDist="15" endDist="30"/>
+			<CriticalChancePercent start="40" end="21" startDist="20" endDist="40"/>
+			<ArmorPenetration start="60" end="50" startDist="20" endDist="30"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+	<Ammo name="9x39SP5_VSSCIA"
+			tooltip="@ammo_939FMJSP5_name"
+			description="@ammo_939FMJSP5_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="15"
+				audibleSoundRadius="3.5"
+				physicsImpactForce="3.0"
+				silenced="1"
+				>
+			<Damage start="50" end="25" startDist="15" endDist="30"/>
+			<CriticalChancePercent start="45" end="21" startDist="20" endDist="40"/>
+			<ArmorPenetration start="40" end="40" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+	<Ammo name="9x39APSP6_VSSCIA" unlockCost="2"
+			tooltip="@ammo_939APSP6_name"
+			description="@ammo_939APSP6_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="15"
+				audibleSoundRadius="5"
+				physicsImpactForce="2.0"
+				silenced="1"
+				>
+			<Damage start="45" end="21" startDist="15" endDist="30"/>
+			<CriticalChancePercent start="40" end="21" startDist="20" endDist="40"/>
+			<ArmorPenetration start="60" end="50" startDist="20" endDist="30"/>
+		</Params>
+	</Ammo>
+
+<!-- -->
+
+
+	<Ammo name="762x39FMJM43_Type56CIA"
+			tooltip="@ammo_762FMJM43_name"
+			description="@ammo_762FMJM43_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="100"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJM43_Type56NWS"
+			tooltip="@ammo_762FMJM43_name"
+			description="@ammo_762FMJM43_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="100"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJ7N23_Type56NWS" unlockCostBH="3" discountedBy="762x39FMJ7N23_RPKNWS,762x39FMJ7N23_VulcanNWS,762x39FMJ7N23_VulcanNWSSup"
+			tooltip="@ammo_762397N23AP_name"
+			description="@ammo_762397N23AP_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.9"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="80"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="60" end="50" startDist="0" endDist="30"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJM43_VulcanNWS"
+			tooltip="@ammo_762FMJM43_name"
+			description="@ammo_762FMJM43_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="100"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+
+	<Ammo name="762x39FMJM43_VulcanNWSSup"
+			tooltip="@ammo_762FMJM43_name"
+			description="@ammo_762FMJM43Sup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="40"
+				physicsImpactForce="2.0"
+				silenced="1"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJ7N23_VulcanNWS" unlockCostBH="3" discountedBy="762x39FMJ7N23_RPKNWS,762x39FMJ7N23_Type56NWS,762x39FMJ7N23_VulcanNWSSup"
+			tooltip="@ammo_762397N23AP_name"
+			description="@ammo_762397N23AP_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="100"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="80"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="60" end="50" startDist="0" endDist="30"/>
+		</Params>
+	</Ammo>
+
+
+	<Ammo name="762x39FMJ7N23_VulcanNWSSup" unlockCostBH="3" discountedBy="762x39FMJ7N23_RPKNWS,762x39FMJ7N23_VulcanNWS,762x39FMJ7N23_Type56NWS"
+			tooltip="@ammo_762397N23AP_name"
+			description="@ammo_762397N23APSup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="11"
+				audibleSoundRadius="40"
+				physicsImpactForce="2.0"
+				silenced="1"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="80"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="40"/>
+			<ArmorPenetration start="60" end="50" startDist="0" endDist="30"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJM43_RPKNWS"
+			tooltip="@ammo_762FMJM43_name"
+			description="@ammo_762FMJM43_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="100"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="55"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="762x39FMJ7N23_RPKNWS" unlockCostBH="3" discountedBy="762x39FMJ7N23_Type56NWS,762x39FMJ7N23_VulcanNWS,762x39FMJ7N23_VulcanNWSSup"
+			tooltip="@ammo_762397N23AP_name"
+			description="@ammo_762397N23AP_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"	
+>
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.9"
+				>
+			<Damage start="24" end="21" startDist="0" endDist="85"/>
+			<CriticalChancePercent start="20" end="17" startDist="0" endDist="45"/>
+			<ArmorPenetration start="60" end="50" startDist="0" endDist="30"/>
+		</Params>
+	</Ammo>
+
+
+
+<!-- 5.45x39  -->
+
+	<Ammo name="545x39FMJ7N10_AKS74UCIA"			
+			tooltip="@ammo_545FMJ7N10_name"
+			description="@ammo_545FMJ7N10_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.7"
+				>
+			<Damage start="27" end="15" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39FMJ7N10_AKS74UCIASup"			
+			tooltip="@ammo_545FMJ7N10_name"
+			description="@ammo_545FMJ7N10Sup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="13"
+				audibleSoundRadius="46"
+				physicsImpactForce="1.7"
+				silenced="1"
+				>
+			<Damage start="27" end="15" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39FMJ7N10_AK105ALPHACIASup"			
+			tooltip="@ammo_545FMJ7N10_name"
+			description="@ammo_545FMJ7N10AlphaSup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="43"
+				physicsImpactForce="1.7"
+				silenced="1"
+				>
+			<Damage start="27" end="15" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="20" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39HP55_AKS74UCIA" unlockCost="3" discountedBy="545x39HP55_AKS74UCIA,545x39HP55_AKS74UCIASup,545x39HP55_AK105ALPHACIA,545x39HP55_AK105ALPHACIASup"
+			tooltip="@ammo_545HP_name"
+			description="@ammo_545HP_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.5"
+				>
+			<Damage start="32" end="17" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="21" end="5" startDist="5" endDist="45"/>
+			<ArmorPenetration start="40" end="40" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39HP55_AKS74UCIASup" unlockCost="3" discountedBy="545x39HP55_AKS74UCIA,545x39HP55_AKS74UCIASup,545x39HP55_AK105ALPHACIA,545x39HP55_AK105ALPHACIASup"			
+			tooltip="@ammo_545HP_name"
+			description="@ammo_545HPSup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="13"
+				audibleSoundRadius="44"
+				physicsImpactForce="1.5"
+				silenced="1"
+				>
+			<Damage start="32" end="17" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="21" end="5" startDist="5" endDist="45"/>
+			<ArmorPenetration start="40" end="40" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39HP55_AK105ALPHACIA" unlockCost="3" discountedBy="545x39HP55_AKS74UCIA,545x39HP55_AKS74UCIASup,545x39HP55_AK105ALPHACIA,545x39HP55_AK105ALPHACIASup"			
+			tooltip="@ammo_545HP_name"
+			description="@ammo_545HP_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.5"
+				>
+			<Damage start="32" end="17" startDist="5" endDist="100"/>
+			<CriticalChancePercent start="21" end="5" startDist="7"  endDist="45"/>
+			<ArmorPenetration start="40" end="40" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+
+	<Ammo name="545x39HP55_AK105ALPHACIASup" unlockCost="3" discountedBy="545x39HP55_AKS74UCIA,545x39HP55_AKS74UCIASup,545x39HP55_AK105ALPHACIA,545x39HP55_AK105ALPHACIASup"			
+			tooltip="@ammo_545HP_name"
+			description="@ammo_545HPAlphaSup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="42"
+				physicsImpactForce="1.7"
+				silenced="1"
+				>
+			<Damage start="32" end="17" startDist="5" endDist="100"/>
+			<CriticalChancePercent start="21" end="5" startDist="7" endDist="45"/>
+			<ArmorPenetration start="40" end="40" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+
+	<Ammo name="545x39FMJ7U1SUBS_AKS74UCIASup" unlockCostBH="2" discountedBy="545x39FMJ7U1SUBS_AKS74UCIASup,545x39FMJ7U1SUBS_AKALPHACIASup"
+			tooltip="@ammo_545FMJ7U1_name"
+			description="@ammo_545FMJ7U1Sup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="6"
+				physicsImpactForce="1.7"
+				silenced="1"
+				>
+			<Damage start="30" end="22" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="25" end="6" startDist="0" endDist="20"/>
+			<ArmorPenetration start="40" end="30" startDist="0" endDist="10"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39FMJ7U1SUBS_AKALPHACIASup" unlockCostBH="2" discountedBy="545x39FMJ7U1SUBS_AKS74UCIASup,545x39FMJ7U1SUBS_AKALPHACIASup"
+			tooltip="@ammo_545FMJ7U1_name"
+			description="@ammo_545FMJ7U1AlphaSup_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="4"
+				physicsImpactForce="1.7"
+				silenced="1"
+				>
+			<Damage start="30" end="22" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="26" end="6" startDist="0" endDist="24"/>
+			<ArmorPenetration start="40" end="30" startDist="0" endDist="15"/>
+		</Params>
+	</Ammo>
+
+
+	<Ammo name="545x39FMJ7N24_AKS74UCIA"			
+			tooltip="@ammo_545FMJ7N24_name"
+			description="@ammo_545FMJ7N24_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.7"
+				>
+			<Damage start="18" end="14" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="545x39FMJ7N39_AKS74UCIA"			
+			tooltip="@ammo_545FMJ7N39_name"
+			description="@ammo_545FMJ7N39_desc"
+			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+>
+
+		<Params roundsPerSecond="12"
+				audibleSoundRadius="100"
+				physicsImpactForce="1.7"
+				>
+			<Damage start="18" end="14" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="5" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+
+<!-- -->
+
+	<Ammo name="762x25FMJ_TT 33 Pistol">
+
+		<Params roundsPerSecond="4.6"
+				audibleSoundRadius="20"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="15" end="10" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="3" end="0" startDist="0" endDist="10"/>
+			<ArmorPenetration start="20" end="20" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+
+<!-- Shotgun enemies  -->
+
+	<Ammo name="12GA00BUCK_CRUISER"
+			tooltip="@ammo_12GA00BUCK_name"
+			description="@ammo_12GA00BUCK_desc"
+			img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+		>
+
+		<!-- defines base ROF and sound of weapon -->
+		<Params roundsPerSecond="1"
+				audibleSoundRadius="30"
+				physicsImpactForce="3.0"
+				>
+
+			<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+			<Damage start="15" end="3" startDist="5" endDist="40"/>
+
+			<CriticalChancePercent start="5" end="0" startDist="0" endDist="15"/>
+			<ArmorPenetration start="40" end="20" startDist="0" endDist="15"/>
+		</Params>
+	</Ammo>
+
+	<Ammo name="12GA1BUCK_HUNTING"
+			tooltip="@ammo_12GA00BUCK_name"
+			description="@ammo_12GA00BUCK_desc"
+			img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+		>
+
+		<!-- defines base ROF and sound of weapon -->
+		<Params roundsPerSecond="0.6"
+				audibleSoundRadius="30"
+				physicsImpactForce="2.5"
+				>
+
+			<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+			<Damage start="12" end="3" startDist="4" endDist="40"/>
+
+			<CriticalChancePercent start="2" end="0" startDist="0" endDist="15"/>
+			<ArmorPenetration start="20" end="20" startDist="0" endDist="15"/>
+		</Params>
+	</Ammo>
+
+
+</Equipment>

@@ -1,0 +1,210 @@
+<Equipment>
+
+	<Firearm name="Type 56" inventoryBinding="PrimaryWeapon" category="rifle"
+			tooltip="@firearm_type56_name"
+			img="data/models/weapons/type56_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/type56.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/type56.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="2500"
+			reloadEmptyTime="3500"
+			changeInTime="700"
+			changeOutTime="700"
+			readyTime="500"
+			guardTime="200"
+
+			accuracyStart="90"
+			accuracyEnd="45"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x39_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="type56_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="25.0"
+			ai_rangeMax="55.0"
+		/>		
+
+		<AttackTypes>
+			<AttackType name="Militia_Rifle_Heavy_1" rangeMeters="5"/>
+			<AttackType name="Militia_Rifle_Heavy_2" rangeMeters="12"/>
+			<AttackType name="Militia_Rifle_Heavy_3" rangeMeters="22"/>
+			<AttackType name="Militia_Rifle_Heavy_4" rangeMeters="50"/>
+			<AttackType name="Militia_Rifle_Heavy_5" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<AttackTypesBlindfire>
+			<AttackType name="AreaSuppression_Militia_Rifle_Auto" rangeMeters="12"/>
+			<AttackType name="AreaSuppression_Militia_Rifle_Long" rangeMeters="9999"/> 
+		</AttackTypesBlindfire>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="type56_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>		
+	</Firearm>
+
+	<Firearm name="Type 56 Noob" inventoryBinding="PrimaryWeapon" category="rifle" 
+			tooltip="@firearm_type56_name"
+			img="data/models/weapons/type56_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/type56_folded.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/type56.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="3500"
+			reloadEmptyTime="4500"
+			changeInTime="700"
+			changeOutTime="700"
+			readyTime="700"
+			guardTime="300"
+
+			accuracyStart="85"
+			accuracyEnd="40"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x39_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="type56_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="25.0"
+			ai_rangeMax="45.0"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Militia_Rifle_Heavy_1" rangeMeters="5"/>
+			<AttackType name="Militia_Rifle_Heavy_2" rangeMeters="12"/>
+			<AttackType name="Militia_Rifle_Heavy_3" rangeMeters="22"/>
+			<AttackType name="Militia_Rifle_Heavy_4" rangeMeters="50"/>
+			<AttackType name="Militia_Rifle_Heavy_5" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<AttackTypesBlindfire>
+			<AttackType name="AreaSuppression_Militia_Rifle_Auto" rangeMeters="12"/>
+			<AttackType name="AreaSuppression_Militia_Rifle_Long" rangeMeters="9999"/> 
+		</AttackTypesBlindfire>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="type56_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="Type 56 UltraNoob">
+		<to name="762x39FMJ_Type 56 UltraNoob"/>
+	</Bind>
+	<Firearm name="Type 56 UltraNoob" inventoryBinding="PrimaryWeapon" category="rifle"
+			tooltip="@firearm_type56_name"
+			img="data/models/weapons/type56_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/type56_folded.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/type56.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="4000"
+			reloadEmptyTime="5200"
+			changeInTime="800"
+			changeOutTime="900"
+			readyTime="750"
+			guardTime="400"
+
+			accuracyStart="80"
+			accuracyEnd="35"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x39_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="type56_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="18.0"
+			ai_rangeMax="40.0"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Militia_Rifle_Heavy_1" rangeMeters="5"/>
+			<AttackType name="Militia_Rifle_Heavy_2" rangeMeters="12"/>
+			<AttackType name="Militia_Rifle_Heavy_3" rangeMeters="22"/>
+			<AttackType name="Militia_Rifle_Heavy_4" rangeMeters="50"/>
+			<AttackType name="Militia_Rifle_Heavy_5" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<AttackTypesBlindfire>
+			<AttackType name="AreaSuppression_Militia_Rifle_Auto" rangeMeters="12"/>
+			<AttackType name="AreaSuppression_Militia_Rifle_Long" rangeMeters="9999"/> 
+		</AttackTypesBlindfire>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="type56_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>		
+	</Firearm>	
+	
+</Equipment>
