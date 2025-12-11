@@ -224,4 +224,59 @@ SUICIDE BOMB
 		</Projectile>
 	</Grenade>
 
+	<Helmet name="Balistic_Helmet_RogueSwat" inventoryBinding="Helmet" unlockCost="0"
+			tooltip=""
+			description=""
+			img="data/models/humans/attachments/balistic_helmet_NGF_ui.dd"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="0" />
+		<RenderObject3D model="data/models/humans/attachments/helmet_pagst_pr.khm" diffuseTex="data/models/humans/attachments/helmet_pagst_blk_pr.dds" attachSlot="Bip001 Head"/>
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="14" piercingProtectionLevel="40"/>
+		</Params>	
+	</Helmet>	
+
+	<Shield name="Shield_RogueSwat" inventoryBinding="SupportGear3"
+			tooltip=""
+			description=""
+			img="data/models/equipment/shield_01_ui.dds"
+			movie=""
+			holdBone="shield"
+			animationSet="shield"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-22" turnSpeedModifierPercent="-60"/>
+		<RenderObject3D model="data/models/equipment/shield_01.khm" diffuseTex="data/models/equipment/shield_01.dds" attachSlot="prop_back_rifle"/>
+
+		<ModifiableParams
+			fovDegrees="75"
+			fovRangeMeters="999999"
+			fovRadiusMeters="0.4"
+			suppressionRecoveryAdd="20"
+		/>
+
+		<Params protectionInfoText="@equipment_protect1">
+			<ProtectionArc degrees="90" coveragePercent="90" piercingProtectionLevel="53"/>
+
+			<FX
+				particles="Hit_Metal_Shield"
+			/>
+
+			<!-- this gets applied to the weapon held in the right hand, when the shield is also equipped. 'AttackTypeModifier' does not work here.  -->
+			<EquipmentModifier>
+				<AddTo
+					reloadTime="+2000"
+					reloadEmptyTime="+2000"
+					readyTime="+100"
+					guardTime="+100"
+					changeInTime="+300"
+					changeOutTime="+300"
+
+					accuracyStart="-40"
+					accuracyEnd="-70"
+				/>
+			</EquipmentModifier>
+		</Params>
+	</Shield>
+
 </Equipment>

@@ -1,0 +1,197 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+	<!-- ROGUE SWAT ENEMIES -->
+	<!-- TIER 1 -->
+
+	<!-- Police Tier - Low calibre weapons, no armour -->
+<Entities>	
+	<Entity name="Generic Tango" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.2" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Generic Tango Shottie" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.2" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Cruiser Shotgun" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Generic Tango 2 M4" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
+			<Id name="@entity_human_tangoelite" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.3" stopsToShoot="false" usesSuppressionFire="true"/>
+
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M4 ACOG Tango" />
+				<Item name="M150RCO" />
+				<Item name="Balistic_Helmet_RogueSwat" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Generic Tango 2 Uzi" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_helmet.khm" diffuseTex="data/models/humans/attachments/swat_sapper_helmet.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
+			<Id name="@entity_human_tangoelite" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.3" stopsToShoot="false" usesSuppressionFire="true"/>
+
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Mini Uzi SUP Tango" />
+				<Item name="Balistic_Helmet_RogueSwat" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Generic Tango 3" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_helmet.khm" diffuseTex="data/models/humans/attachments/swat_sapper_helmet.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Id name="@entity_human_tango" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Alpha AK Spectre Sup Tango" />
+				<Item name="LPVO_6X" />
+				<Item name="Balistic_Helmet_RogueSwat" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Generic Tango Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic,weaponless">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.2" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Generic Tango 2 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic,weaponless">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
+			<Id name="@entity_human_tangoelite" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.3" stopsToShoot="false" usesSuppressionFire="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Balistic_Helmet_RogueSwat" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Generic Tango 3 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_helmet.khm" diffuseTex="data/models/humans/attachments/swat_sapper_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="32" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Id name="@entity_human_tango" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Shield_RogueSwat" />
+				<Item name="TT 33 Pistol" />
+			</Equipment>
+		</Human>
+	</Entity>
+</Entities>
