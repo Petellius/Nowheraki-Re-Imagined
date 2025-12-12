@@ -87,7 +87,7 @@
 			animationSet="rifle_fire_rib_NGF"
 		>
 		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
-		<RenderObject3D model="data/models/weapons/type56.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/type56.dds"/>
+		<RenderObject3D model="data/models/weapons/type56_folded.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/type56.dds"/>
 
 		<ModifiableParams
 			numPellets="1"
