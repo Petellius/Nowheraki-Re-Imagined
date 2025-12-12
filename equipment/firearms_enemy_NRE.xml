@@ -84,7 +84,7 @@
 	<Firearm name="NRE_Ins_Type56_Rabble_Fanatic" inventoryBinding="PrimaryWeapon" category="rifle"
 			tooltip="@firearm_type56_name"
 			img="data/models/weapons/type56_ui.dds"
-			animationSet="rifle"
+			animationSet="rifle_fire_rib_NGF"
 		>
 		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
 		<RenderObject3D model="data/models/weapons/type56.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/type56.dds"/>
