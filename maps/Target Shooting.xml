@@ -1,0 +1,1782 @@
+<Map name="Target Shooting">
+    <Scenario type="None" numDeployableTroops="1" referenceWinTimeSeconds="0" challenges="0" nightMission="false"/>
+    <Graphics fogColor="E8C47C" fogDensity="0.25" windSpeed="0.050000001" windDirection="45" cloudDensity="0" waterClarity="0.94999999" rainAmount="0" terrainNormalsStrength="1" terrainSharpness="0.5" gossaoStrength="3" gossaoStrengthTerrain="5" gossaoDirectionalOcclusion="0" gossaoLevelsMin="0.050000001"/>
+    <Terrain widthMeters="150" heightMeters="150">
+        <Materials num="1" mat0="dirt_to_grass"/>
+    </Terrain>
+    <MusicTracks/>
+    <Entities>
+        <Entity template="Floor" id="1" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="Light Ambiental" id="2" pos="-75 2 -76" rot="1 -0 0 0 1 -0 0 0 1">
+            <Light color0="FFFFFF" color1="818181" colorMultiplier="1" isIndoorLight="true" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Ambiental" id="3" pos="-74 2 -76" rot="1 -0 0 0 1 -0 0 0 1">
+            <Light color0="FFFFFF" color1="818181" colorMultiplier="0.60000002" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Directional" id="4" pos="-73 2 -76" rot="0.982593834 0.0497760624 0.178973943 0.160383835 0.258825719 -0.952515721 -0.0937355384 0.964640617 0.246337265">
+            <Light color="FFFFFF" colorMultiplier="1.2" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Default Effect (Outdoors)" id="8" pos="-72 2 -76" rot="1 -0 0 0 1 -0 0 0 1">
+            <SoundShader effectID="EFX_REVERB_OUTDOOR" defaultIndoors="false" defaultOutdoors="true"/>
+        </Entity>
+        <Entity template="Default Effect (Indoors)" id="9" pos="-71 2 -76" rot="1 -0 0 0 1 -0 0 0 1">
+            <SoundShader effectID="EFX_REVERB_INDOOR" defaultIndoors="true" defaultOutdoors="false"/>
+        </Entity>
+        <Entity template="Wall" id="588" pos="-7.87500048 0 -21.7500019" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="5">
+                <Branch parent="0" p0="0 0" p1="40.75 0.25" p2="40.5 -17.9999981" p3="1.625 -17.9999981" p4="0.125 0.25"/>
+            </Wall>
+        </Entity>
+        <Entity template="Wall" id="589" pos="35 0 -39" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="5">
+                <Branch parent="0" p0="0 0" p1="25.6250038 1.75" p2="24.5000038 26.875" p3="-1.375 26" p4="0 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Wall" id="590" pos="-7.87500048 0 7.00000048" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="5">
+                <Branch parent="0" p0="0 0" p1="26.25 -0.25" p2="26.375 20.1250019" p3="-0.124999523 20.2500019" p4="0 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Wall" id="591" pos="11.625001 0 2.375" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="5">
+                <Branch parent="0" p0="0 0" p1="-19.5 0.375001907" p2="-19.25 -17.125"/>
+                <Branch parent="0" p3="-0.25 -17.25" p4="-19.1250019 -17.125"/>
+            </Wall>
+        </Entity>
+        <Entity template="camera_view_01" id="670" pos="10.75 1.76138401 -23.5000057" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="camera_view_01" id="5" pos="46.3750038 1.76138401 4.50000191" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="searchlight_pole" id="335" pos="21.5000019 0 -10.500001" rot="0 0 -1 0 1 0 1 -0 0" group="45"/>
+        <Entity template="Search Light" id="336" pos="21.5000019 7.41911697 -10.500001" rot="1 0 0 0 1 0 0 0 1" group="45" editorAutoHeight="true">
+            <Targets num="1" id0="337"/>
+            <Light color="FFFFFF" radiusMeters="40" angleDegrees="18.5" limitType="None" colorMultiplier="1.38" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Waypoints" id="337" pos="20.6250019 0.100000001 -10.500001" rot="1 0 0 0 1 0 0 0 1" group="45">
+            <Waypoints relative="true" num="9">
+                <Point p="-25.2500019 -0.100000001 -21.3750019" waitMsec="1500" waitChance="0" radius="0"/>
+                <Point p="-25.2500019 -0.100000001 -18.875"/>
+                <Point p="-23.5000019 -0.100000001 -16.875"/>
+                <Point p="-21.2500019 -0.100000001 -15.125001"/>
+                <Point p="-18 -0.100000001 -15.250001"/>
+                <Point p="-15.750001 -0.100000001 -16"/>
+                <Point p="-14.125001 -0.100000001 -17.375"/>
+                <Point p="-12.750001 -0.100000001 -19.125"/>
+                <Point p="-12.375001 -0.100000001 -21.3750019" waitMsec="1500"/>
+            </Waypoints>
+        </Entity>
+        <Entity template="camera_view_01" id="7" pos="21.5000019 1.76138401 4.00000191" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="Deploy Slot" id="10" pos="-1.50000012 0.100000001 4.5" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="SwatLeader" id="13" pos="-1.50000012 0 4.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Female 01" id="11" pos="-6.50000048 9.31322575e-10 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Female 02" id="14" pos="-5.50000048 9.31322575e-10 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Female 03" id="16" pos="-4.5 9.31322575e-10 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Female 04" id="18" pos="-3.50000024 9.31322575e-10 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Female 04" id="20" pos="-2.5 9.31322575e-10 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Marksman" id="22" pos="-1.50000012 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Assaulter" id="24" pos="-0.5 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Assaulter MK18" id="26" pos="0.5 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Grenadier" id="28" pos="1.50000012 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Breacher" id="30" pos="2.5 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Machinegunner" id="34" pos="3.50000024 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Militia" id="36" pos="4.5 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Lieutenant Tawr Captured" id="38" pos="5.50000048 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Lieutenant Tawr Reborn KOH" id="40" pos="6.50000048 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Lieutenant Tawr" id="42" pos="7.50000048 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 01" id="45" pos="8.5 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 02" id="47" pos="9.5 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 02 Cover Blown" id="49" pos="10.500001 0 -13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 03" id="51" pos="-6.50000048 0 -12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 03 Deep Cover" id="53" pos="-5.50000048 0 -12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 04" id="55" pos="-4.5 9.31322575e-10 -12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Asset Randy 04 Overt" id="57" pos="-3.50000024 9.31322575e-10 -12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="JTAC Dracon" id="59" pos="-2.5 0 -12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Militiaman Pyro" id="61" pos="-6.50000048 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Militiaman Hawkeye" id="63" pos="-5.50000048 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Militia Scenario" id="65" pos="-4.5 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Militia MG" id="67" pos="-3.50000024 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Militia FAL" id="69" pos="-2.5 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Militia RPG" id="71" pos="-1.37500012 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Allied Militia HMG" id="73" pos="-0.5 0 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="SwatSapperBaba" id="75" pos="0.5 9.31322575e-10 -10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Marksman" id="77" pos="-6.50000048 0 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Carbine" id="79" pos="-5.50000048 9.31322575e-10 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_M16A4" id="81" pos="-4.5 0 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Grenadier" id="85" pos="-3.50000024 0 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Breacher" id="87" pos="-2.5 9.31322575e-10 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Automatic_Rifleman" id="89" pos="-1.50000012 0 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Javelin_Gunner" id="91" pos="-0.5 2.80329641e-05 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Javelin_Gunner_VIP" id="93" pos="0.5 2.80329641e-05 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_SMAW_Gunner_Dual_purpose" id="95" pos="1.50000012 2.80329641e-05 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_SMAW_Gunner_Anti_infantry" id="97" pos="2.5 2.80329641e-05 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_SMAW_Gunner_Anti_Tank" id="99" pos="3.50000024 2.80329641e-05 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_USMC_Stinger_Gunner_VIP" id="101" pos="4.5 2.80329641e-05 -8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Hostage" id="103" pos="-6.50000048 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HostageVisible" id="105" pos="-5.50000048 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HostageVisibleExecution" id="107" pos="-4.5 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Hostage CivClothes 1" id="109" pos="-3.50000024 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Hostage CivClothes 3" id="111" pos="-2.5 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HostageFem CivClothes 1" id="113" pos="-1.50000024 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HostageFem CivClothes 2" id="115" pos="-0.5 0 -1.49999988" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 01" id="117" pos="-6.50000048 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 02" id="119" pos="-5.50000048 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 03" id="121" pos="-4.5 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 04" id="123" pos="-3.50000024 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 05" id="125" pos="-2.5 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 06" id="127" pos="-1.50000024 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 07" id="129" pos="-0.5 0 0.500000358" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 08" id="131" pos="-6.50000048 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 09" id="133" pos="-5.50000048 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 10" id="135" pos="-4.5 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 11" id="137" pos="-3.50000024 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Female 01" id="139" pos="-2.5 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Female 02" id="141" pos="-1.50000024 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Female 03" id="143" pos="-0.5 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian VisFemale 01" id="145" pos="0.5 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Civilian Male 02 Scenario" id="147" pos="1.5 0 1.50000012" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tank_m1a1_chassie_NGF" id="31" pos="-3 -0.0570268035 -31.6250019" scale="1.08899999" rot="-1 0 -4.47034836e-08 0 1 0 4.47034836e-08 0 -1" group="48"/>
+        <Entity template="tank_m1a1_turret_heat_NGF" id="32" pos="-3 -0.0570268035 -31.6250019" scale="1.08899999" rot="-1 0 -4.47034836e-08 0 1 0 4.47034836e-08 0 -1" group="48">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="33" pos="-3 0.541923106 -29.9915028" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="48">
+            <Targets num="1" id0="35"/>
+        </Entity>
+        <Entity template="Trigger" id="35" pos="-3 -0.0243569016 -30.6721268" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="48">
+            <Targets num="1" id0="37"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="37" pos="-3.00000191 1.68537319 -31.2365322" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="48">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="tank_m1a1_chassie_NGF" id="48" pos="3.00000024 -0.0570268035 -31.5000019" scale="1.08899999" rot="-1 0 -4.47034836e-08 0 1 0 4.47034836e-08 0 -1" group="51"/>
+        <Entity template="tank_m1a1_turret_canister_NGF" id="50" pos="3.00000024 -0.0570268035 -31.5000019" scale="1.08899999" rot="-1 0 -4.47034836e-08 0 1 0 4.47034836e-08 0 -1" group="51">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="52" pos="3.00000024 0.541923106 -29.8665028" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="51">
+            <Targets num="1" id0="54"/>
+        </Entity>
+        <Entity template="Trigger" id="54" pos="3.00000024 -0.0243569016 -30.5471268" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="51">
+            <Targets num="1" id0="56"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="56" pos="2.99999833 1.68537319 -31.1115322" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="51">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="tank_m1a1_chassie_NGF" id="68" pos="9 -0.0570268035 -31.5000019" scale="1.08899999" rot="-1 0 -4.47034836e-08 0 1 0 4.47034836e-08 0 -1" group="54"/>
+        <Entity template="tank_m1a1_turret_m240_NGF" id="70" pos="9 -0.0570268035 -31.5000019" scale="1.08899999" rot="-1 0 -4.47034836e-08 0 1 0 4.47034836e-08 0 -1" group="54">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="72" pos="9 0.541923106 -29.8665028" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="54">
+            <Targets num="1" id0="74"/>
+        </Entity>
+        <Entity template="Trigger" id="74" pos="9 -0.0243569016 -30.5471268" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="54">
+            <Targets num="1" id0="76"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="76" pos="8.99999809 1.68537319 -31.1115322" scale="1.08899999" rot="1 0 0 0 1 0 0 0 1" group="54">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="icv_stryker_chassie_NGF" id="88" pos="15.000001 -0.809988141 -31.2500019" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="57"/>
+        <Entity template="Trigger" id="90" pos="14.4304066 -0.104537368 -31.8195953" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="57">
+            <Targets num="1" id0="96"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="92" pos="13.7184124 0.487841964 -31.25" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="57">
+            <Targets num="1" id0="90"/>
+        </Entity>
+        <Entity template="icv_stryker_turret_NGF" id="94" pos="15.000001 -0.209999993 -31.2500019" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="57">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="96" pos="14.8576059 1.68399262 -32.5107689" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="57">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="icv_stryker_wheel_NGF" id="98" pos="15.000001 -0.822227597 -31.2500019" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="57"/>
+        <Entity template="aav7a1_chassie_NGF" id="142" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_interior_NGF" id="144" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_accesaries_NGF" id="146" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_door_NGF" id="148" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_extra_armor_NGF" id="149" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_light_NGF" id="150" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_net_NGF" id="151" pos="21.125 0.349999905 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav7a1_tracks_NGF" id="152" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60"/>
+        <Entity template="aav_7a1_turret_NGF" id="153" pos="21.125 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Custom Cover" id="154" pos="20.9999905 0 -27.1249962" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Wall numTrees="1" numNodes="2">
+                <Branch parent="0" p0="0 0" p1="1.74999952 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Movement Blocker" id="155" pos="21.7499981 0 -31.2500019" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Wall numTrees="1" numNodes="6">
+                <Branch parent="0" p0="0 0" p1="0 2.37500024" p2="1 3.62500024" p3="2.24999952 3.62500024" p4="3.24999952 2.37500024" p5="3.24999952 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Invisible Wall" id="156" pos="21.2499866 0 -26.75" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Wall numTrees="1" numNodes="2">
+                <Branch parent="0" p0="0 0" p1="2.24999952 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Invisible Wall" id="157" pos="21.2499924 0 -27" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Wall numTrees="1" numNodes="8">
+                <Branch parent="0" p0="0 0" p1="-0.5 0" p2="-0.5 4" p3="2.74999952 4" p4="2.74999952 0" p5="2.24999952 0" p6="2.25000381 3.74999905"/>
+                <Branch parent="0" p7="0 3.74999905"/>
+            </Wall>
+        </Entity>
+        <Entity template="Trigger" id="158" pos="20.6945953 -0.104537487 -33.1804047" scale="1.13919103" rot="1 0 -1.04308128e-07 0 1 0 1.04308128e-07 -0 1" group="60">
+            <Targets num="5" id0="160" id1="165" id2="164" id3="162" id4="163"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="159" pos="20.1565838 0.487842083 -33" scale="1.13919103" rot="1 0 -1.04308128e-07 0 1 0 1.04308128e-07 -0 1" group="60">
+            <Targets num="1" id0="158"/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="160" pos="20.2673893 1.68399262 -33.8642273" scale="1.13919103" rot="1 0 -1.04308128e-07 0 1 0 1.04308128e-07 -0 1" group="60">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="Custom Cover" id="161" pos="18.4999828 0 -31.2499981" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Wall numTrees="1" numNodes="11">
+                <Branch parent="0" p0="0 0" p1="0 2.37500024" p2="-0.875 3.50000024" p3="-2.37499952 3.50000024" p4="-3.24999952 2.37500024" p5="-3.24999952 0.125" p6="-3.24999952 0"/>
+                <Branch parent="5" p7="-2.12499952 0.125" p8="-2.12499952 1.37500012" p9="-3.12499952 1.37500012" p10="-3.12499952 0.25"/>
+            </Wall>
+        </Entity>
+        <Entity template="DamageArea" id="162" pos="20.1249905 1.5 -29.1249962" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <DamageArea radius="2.2" damage="200" damageType="1" armorPenetration="100" pushForce="10" knockbackDistance="0" suppressionScale="1" stunTimeMs="0" burnTimeMs="0" screenShake="1" triggerAtSpawn="false"/>
+        </Entity>
+        <Entity template="Spawner" id="163" pos="20.1249924 0.0999999046 -28.8749981" scale="2.00000024" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Spawner nameHash="2387244449">
+                <Clone template="PS_Fire_01" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Spawner" id="164" pos="20.1249886 1.5 -29.7499943" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Spawner nameHash="2550095531">
+                <Clone template="PS_RpgExplosion" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Spawner" id="165" pos="20.1249886 0.0399999619 -31.1249981" scale="1.70000017" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="60">
+            <Spawner nameHash="2048234480"/>
+        </Entity>
+        <Entity template="aav7a1_chassie_NGF" id="186" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav7a1_interior_NGF" id="187" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav7a1_accesaries_NGF" id="188" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav7a1_extra_armor_NGF" id="189" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav7a1_light_NGF" id="190" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav7a1_net_NGF" id="191" pos="27.1250019 0.349999905 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav7a1_tracks_NGF" id="192" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63"/>
+        <Entity template="aav_7a1_turret_NGF" id="193" pos="27.1250019 0 -32" rot="-1 0 1.41561031e-07 0 1 0 -1.41561031e-07 0 -1" group="63">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Custom Cover" id="194" pos="26.9999981 0 -27.125" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Wall numTrees="1" numNodes="2">
+                <Branch parent="0" p0="0 0" p1="1.74999952 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="aav7a1_door_NGF" id="195" pos="27.125 5.21999979 -27.9850101" rot="-1 -1.78813934e-07 1.62981451e-09 -1.49103918e-09 0.0174516905 0.99984777 -1.78815142e-07 0.99984777 -0.0174516905" group="63"/>
+        <Entity template="Trigger" id="196" pos="26.6946011 -0.104537487 -33.3054123" scale="1.13919103" rot="1 0 -5.96046448e-08 0 1 0 5.96046448e-08 -0 1" group="63">
+            <Targets num="5" id0="197" id1="202" id2="203" id3="204" id4="205"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="197" pos="26.2674065 1.68399262 -33.9892349" scale="1.13919103" rot="1 0 -5.96046448e-08 0 1 0 5.96046448e-08 -0 1" group="63">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="198" pos="26.1565971 0.487842083 -33.1250076" scale="1.13919103" rot="1 0 -5.96046448e-08 0 1 0 5.96046448e-08 -0 1" group="63">
+            <Targets num="1" id0="196"/>
+        </Entity>
+        <Entity template="Movement Blocker" id="199" pos="27.7500019 0 -31.2500095" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Wall numTrees="1" numNodes="6">
+                <Branch parent="0" p0="0 0" p1="0 2.37500024" p2="1 3.62500024" p3="2.24999952 3.62500024" p4="3.24999952 2.37500024" p5="3.24999952 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Invisible Wall" id="200" pos="27.2500076 0 -27.0000076" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Wall numTrees="1" numNodes="8">
+                <Branch parent="0" p0="0 0" p1="-0.5 0" p2="-0.5 4" p3="2.74999952 4" p4="2.74999952 0" p5="2.24999952 0" p6="2.25 3.74999905"/>
+                <Branch parent="0" p7="0 3.74999905"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="201" pos="24.4999981 0 -31.2500114" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Wall numTrees="1" numNodes="11">
+                <Branch parent="0" p0="0 0" p1="0 2.37500024" p2="-0.875 3.50000024" p3="-2.37499952 3.50000024" p4="-3.24999952 2.37500024" p5="-3.24999952 0.125" p6="-3.24999952 0"/>
+                <Branch parent="5" p7="-2.12499952 0.125" p8="-2.12499952 1.37500012" p9="-3.12499952 1.37500012" p10="-3.12499952 0.25"/>
+            </Wall>
+        </Entity>
+        <Entity template="DamageArea" id="202" pos="26.1250076 1.5 -29.125" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <DamageArea radius="2.2" damage="200" damageType="1" armorPenetration="100" pushForce="10" knockbackDistance="0" suppressionScale="1" stunTimeMs="0" burnTimeMs="0" screenShake="1" triggerAtSpawn="false"/>
+        </Entity>
+        <Entity template="Spawner" id="203" pos="26.1250019 0.0999999046 -28.8750038" scale="2.00000024" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Spawner nameHash="2387244449">
+                <Clone template="PS_Fire_01" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Spawner" id="204" pos="26.1250057 1.5 -29.7499981" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Spawner nameHash="2550095531">
+                <Clone template="PS_RpgExplosion" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Spawner" id="205" pos="26.125 0.0399999619 -31.1249981" scale="1.70000017" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="63">
+            <Spawner nameHash="2048234480"/>
+        </Entity>
+        <Entity template="tank_t72_turret_pkt_heat_NGF" id="215" pos="38 -0.0939855576 -33" scale="1.10000002" rot="-1 0 1.2665987e-07 0 1 0 -1.2665987e-07 0 -1" group="66">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="216" pos="37.9999962 1.66601419 -32.6496048" scale="1.10000002" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="tank_t72_track_NGF" id="217" pos="38 -0.0939855576 -33" scale="1.10000002" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66"/>
+        <Entity template="tank_t72_chassie_NGF" id="218" pos="38 -0.0794639587 -33.0715027" scale="1.10000002" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66"/>
+        <Entity template="sound_remover_trigger_NGF" id="219" pos="38 0.511013985 -33" scale="1.10000002" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66">
+            <Targets num="1" id0="220"/>
+        </Entity>
+        <Entity template="Trigger" id="220" pos="38.4124985 -0.0609855652 -33" scale="1.10000002" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66">
+            <Targets num="1" id0="216"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="Custom Cover" id="221" pos="36.3799973 0 -36.2500076" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66">
+            <Wall numTrees="1" numNodes="9">
+                <Branch parent="0" p0="0 0" p1="0.5 0" p2="0.875 0.375000238" p3="2.37500048 0.375000238" p4="2.75000048 0" p5="3.25000024 0" p6="3.25000024 6.625" p7="0 6.625" p8="0 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Movement Blocker" id="222" pos="36.3850021 0 -36.25" rot="1 0 -1.7136334e-07 0 1 0 1.7136334e-07 -0 1" group="66">
+            <Wall numTrees="1" numNodes="14">
+                <Branch parent="0" p0="0 0" p1="0 6.5" p2="0.75 6.5" p3="0.75 6.875" p4="2.50000048 6.875" p5="2.50000048 6.5" p6="3.25000024 6.5" p7="3.25000024 0" p8="2.75000072 0" p9="2.37500048 0.375000238" p10="0.875 0.375" p11="0.5 0" p12="0.375 0"/>
+                <Branch parent="0" p13="0.375 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="223" pos="37.625 0 -33.375" rot="1 0 -4.54485416e-07 0 1 0 4.54485416e-07 -0 1" group="66">
+            <Wall numTrees="1" numNodes="16">
+                <Branch parent="0" p0="0 0" p1="-0.125000522 0.124999985" p2="-0.250000507 0.5" p3="-0.124999747 0.75" p4="-8.38190246e-08 0.874998093" p5="0.250000298 0.999999046"/>
+                <Branch parent="0" p6="0.125001386 -0.125003859" p7="0.37499997 -0.249999523" p8="0.625001371 -0.125004023" p9="0.75 0" p10="0.87499994 0.12500003" p11="0.999999702 0.5" p12="0.874999702 0.75" p13="0.749999881 0.874997854" p14="0.50000006 0.999998093" p15="0.250001758 0.999996126"/>
+            </Wall>
+        </Entity>
+        <Entity template="tank_t72_turret_heat_NGF" id="233" pos="44.0000038 -0.093985796 -33.125" scale="1.10000002" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="69">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="234" pos="44 1.66601419 -32.7746048" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="69">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="tank_t72_track_NGF" id="235" pos="44.0000038 -0.093985796 -33.125" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="69"/>
+        <Entity template="tank_t72_chassie_NGF" id="236" pos="44.0000038 -0.0794637203 -33.1965027" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="69"/>
+        <Entity template="sound_remover_trigger_NGF" id="237" pos="44.0000038 0.511014104 -33.125" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="69">
+            <Targets num="1" id0="238"/>
+        </Entity>
+        <Entity template="Trigger" id="238" pos="44.4125023 -0.0609858036 -33.125" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="69">
+            <Targets num="1" id0="234"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="Custom Cover" id="239" pos="42.3800049 0 -36.375" rot="1 0 0 0 1 0 0 0 1" group="69">
+            <Wall numTrees="1" numNodes="9">
+                <Branch parent="0" p0="0 0" p1="0.5 0" p2="0.875 0.375000238" p3="2.37500048 0.375000238" p4="2.75000048 0" p5="3.25000024 0" p6="3.25000024 6.625" p7="0 6.625" p8="0 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Movement Blocker" id="240" pos="42.385006 0 -36.375" rot="1 0 0 0 1 0 0 0 1" group="69">
+            <Wall numTrees="1" numNodes="14">
+                <Branch parent="0" p0="0 0" p1="0 6.5" p2="0.75 6.5" p3="0.75 6.875" p4="2.50000048 6.875" p5="2.50000048 6.5" p6="3.25000024 6.5" p7="3.25000024 0" p8="2.75000072 0" p9="2.37500048 0.375000238" p10="0.875 0.375" p11="0.5 0" p12="0.375 0"/>
+                <Branch parent="0" p13="0.375 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="241" pos="43.6251068 0 -33.5030289" rot="1 0 -4.54485416e-07 0 1 0 4.54485416e-07 -0 1" group="69">
+            <Wall numTrees="1" numNodes="16">
+                <Branch parent="0" p0="0 0" p1="-0.125000522 0.124999985" p2="-0.250000507 0.5" p3="-0.124999747 0.75" p4="-8.38190246e-08 0.874998093" p5="0.250000298 0.999999046"/>
+                <Branch parent="0" p6="0.125001386 -0.125003859" p7="0.37499997 -0.249999523" p8="0.625001371 -0.125004023" p9="0.75 0" p10="0.87499994 0.12500003" p11="0.999999702 0.5" p12="0.874999702 0.75" p13="0.749999881 0.874997854" p14="0.50000006 0.999998093" p15="0.250001758 0.999996126"/>
+            </Wall>
+        </Entity>
+        <Entity template="tank_t72_woodland_chassie_NGF" id="251" pos="37.875 -0.0794637203 -22.2500019" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="72"/>
+        <Entity template="Trigger" id="252" pos="38.2874985 -0.0609858036 -22.1785011" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="72">
+            <Targets num="1" id0="258"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="253" pos="37.875 0.511014104 -22.1785011" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="72">
+            <Targets num="1" id0="254"/>
+        </Entity>
+        <Entity template="tank_t72_woodland_turret_pkt_heat_NGF" id="254" pos="37.875 -0.093985796 -22.1785011" scale="1.10000002" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="72">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tank_t72_woodland_track_NGF" id="255" pos="37.875 -0.093985796 -22.1785011" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="72"/>
+        <Entity template="tank_idle_NGF" id="256" pos="37.8749962 1.66601419 -21.8281078" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="72">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="Custom Cover" id="257" pos="36.2550011 0 -25.428503" rot="1 0 0 0 1 0 0 0 1" group="72">
+            <Wall numTrees="1" numNodes="9">
+                <Branch parent="0" p0="0 0" p1="0.5 0" p2="0.875 0.375000238" p3="2.37500048 0.375000238" p4="2.75000048 0" p5="3.25000024 0" p6="3.25000024 6.625" p7="0 6.625" p8="0 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Movement Blocker" id="258" pos="36.2600021 0 -25.428503" rot="1 0 0 0 1 0 0 0 1" group="72">
+            <Wall numTrees="1" numNodes="14">
+                <Branch parent="0" p0="0 0" p1="0 6.5" p2="0.75 6.5" p3="0.75 6.875" p4="2.50000048 6.875" p5="2.50000048 6.5" p6="3.25000024 6.5" p7="3.25000024 0" p8="2.75000072 0" p9="2.37500048 0.375000238" p10="0.875 0.375" p11="0.5 0" p12="0.375 0"/>
+                <Branch parent="0" p13="0.375 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="259" pos="37.500103 0 -22.5565319" rot="1 0 -4.54485416e-07 0 1 0 4.54485416e-07 -0 1" group="72">
+            <Wall numTrees="1" numNodes="16">
+                <Branch parent="0" p0="0 0" p1="-0.125000522 0.124999985" p2="-0.250000507 0.5" p3="-0.124999747 0.75" p4="-8.38190246e-08 0.874998093" p5="0.250000298 0.999999046"/>
+                <Branch parent="0" p6="0.125001386 -0.125003859" p7="0.37499997 -0.249999523" p8="0.625001371 -0.125004023" p9="0.75 0" p10="0.87499994 0.12500003" p11="0.999999702 0.5" p12="0.874999702 0.75" p13="0.749999881 0.874997854" p14="0.50000006 0.999998093" p15="0.250001758 0.999996126"/>
+            </Wall>
+        </Entity>
+        <Entity template="tank_t72_woodland_turret_heat_NGF" id="269" pos="43.8750038 -0.093985796 -22.1250019" scale="1.10000002" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="75">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="270" pos="43.875 1.66601419 -21.7746067" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="75">
+            <SoundEmitter/>
+        </Entity>
+        <Entity template="tank_t72_woodland_track_NGF" id="271" pos="43.8750038 -0.093985796 -22.1250019" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="75"/>
+        <Entity template="tank_t72_woodland_chassie_NGF" id="272" pos="43.8750038 -0.0794637203 -22.1965008" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="75"/>
+        <Entity template="Trigger" id="273" pos="44.2875023 -0.0609858036 -22.1250019" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="75">
+            <Targets num="1" id0="270"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="274" pos="43.8750038 0.511014104 -22.1250019" scale="1.10000002" rot="1 0 0 0 1 0 0 0 1" group="75">
+            <Targets num="1" id0="273"/>
+        </Entity>
+        <Entity template="Custom Cover" id="275" pos="42.2550049 0 -25.3750019" rot="1 0 0 0 1 0 0 0 1" group="75">
+            <Wall numTrees="1" numNodes="9">
+                <Branch parent="0" p0="0 0" p1="0.5 0" p2="0.875 0.375000238" p3="2.37500048 0.375000238" p4="2.75000048 0" p5="3.25000024 0" p6="3.25000024 6.625" p7="0 6.625" p8="0 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Movement Blocker" id="276" pos="42.260006 0 -25.3750019" rot="1 0 0 0 1 0 0 0 1" group="75">
+            <Wall numTrees="1" numNodes="14">
+                <Branch parent="0" p0="0 0" p1="0 6.5" p2="0.75 6.5" p3="0.75 6.875" p4="2.50000048 6.875" p5="2.50000048 6.5" p6="3.25000024 6.5" p7="3.25000024 0" p8="2.75000072 0" p9="2.37500048 0.375000238" p10="0.875 0.375" p11="0.5 0" p12="0.375 0"/>
+                <Branch parent="0" p13="0.375 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="277" pos="43.5001068 0 -22.5030308" rot="1 0 -4.54485416e-07 0 1 0 4.54485416e-07 -0 1" group="75">
+            <Wall numTrees="1" numNodes="16">
+                <Branch parent="0" p0="0 0" p1="-0.125000522 0.124999985" p2="-0.250000507 0.5" p3="-0.124999747 0.75" p4="-8.38190246e-08 0.874998093" p5="0.250000298 0.999999046"/>
+                <Branch parent="0" p6="0.125001386 -0.125003859" p7="0.37499997 -0.249999523" p8="0.625001371 -0.125004023" p9="0.75 0" p10="0.87499994 0.12500003" p11="0.999999702 0.5" p12="0.874999702 0.75" p13="0.749999881 0.874997854" p14="0.50000006 0.999998093" p15="0.250001758 0.999996126"/>
+            </Wall>
+        </Entity>
+        <Entity template="apc_btr80_chassie_NGF" id="296" pos="49.7500038 0 -33" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78"/>
+        <Entity template="apc_btr80_turret_NGF" id="297" pos="49.7500038 0 -33" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Movement Blocker" id="298" pos="51.0000038 0 -28.3749981" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="2.50000095 0" p2="2.50000095 6.5" p3="2.00000095 7.5" p4="0.500000954 7.5" p5="0 6.5" p6="0 0.249999881"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="299" pos="51.0000038 0 -28.3749981" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="2.50000095 0" p2="2.50000095 6.5" p3="2.00000095 7.5" p4="0.500000954 7.5" p5="0 6.5" p6="0 0.249999881"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="300" pos="50.3750076 0 -32.625" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Wall numTrees="1" numNodes="9">
+                <Branch parent="0" p0="0 0" p1="0 0.75" p2="0.25 1" p3="1 1" p4="1.25 0.75" p5="1.25 0" p6="1 -0.25" p7="0.25 -0.25"/>
+                <Branch parent="0" p8="0.25 -0.25"/>
+            </Wall>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="301" pos="49.7815857 0.487842083 -32.1250038" scale="1.13919103" rot="1 0 -1.41561031e-07 0 1 0 1.41561031e-07 -0 1" group="78">
+            <Targets num="2" id0="299" id1="300"/>
+        </Entity>
+        <Entity template="Trigger" id="302" pos="49.694603 -0.104537487 -31.0554123" scale="1.13919103" rot="1 0 -1.41561031e-07 0 1 0 1.41561031e-07 -0 1" group="78">
+            <Targets num="3" id0="300" id1="308" id2="301"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="303" pos="49.7390175 1.6763773 -32.1109238" scale="1.10000002" rot="1 0 -1.71363354e-07 0 1 0 1.71363354e-07 -0 1" group="78">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="DamageArea" id="304" pos="49.6250153 1.5 -32.9999962" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <DamageArea radius="1.4" damage="1000" damageType="2" armorPenetration="1000" pushForce="10" knockbackDistance="0" suppressionScale="1" stunTimeMs="0" burnTimeMs="0" screenShake="-1" triggerAtSpawn="false"/>
+        </Entity>
+        <Entity template="Trigger" id="305" pos="50.1249962 0.0300002098 -30.0000057" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Targets num="3" id0="304" id1="307" id2="309"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="apc_btr80_weakpoint" id="306" pos="49.6250076 0 -30.0000019" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Targets num="1" id0="305"/>
+        </Entity>
+        <Entity template="Spawner" id="307" pos="49.625 0.0999999046 -29.8749943" scale="1.80000019" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Spawner nameHash="2387244449">
+                <Clone template="PS_Fire_01" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Spawner" id="308" pos="49.8750076 0.0399999619 -31.6250038" scale="1.50000012" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Spawner nameHash="2048234480"/>
+        </Entity>
+        <Entity template="Spawner" id="309" pos="49.6250076 1.5 -29.3749943" scale="1.20000005" rot="-1 0 1.1920929e-07 0 1 0 -1.1920929e-07 0 -1" group="78">
+            <Spawner nameHash="2550095531">
+                <Clone template="PS_RpgExplosion" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="apc_btr80_woodland_chassie_NGF" id="334" pos="49.7500038 0 -23" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84"/>
+        <Entity template="apc_btr80_woodland_turret_NGF" id="338" pos="49.7500038 0 -23" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Trigger" id="339" pos="49.6946068 -0.104537487 -21.0554085" scale="1.13919103" rot="1 0 -1.04308128e-07 0 1 0 1.04308128e-07 -0 1" group="84">
+            <Targets num="3" id0="334" id1="349" id2="338"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="340" pos="49.7390251 1.6763773 -22.11092" scale="1.10000002" rot="1 0 -1.41561031e-07 0 1 0 1.41561031e-07 -0 1" group="84">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="DamageArea" id="341" pos="49.7500038 1.5 -23" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <DamageArea radius="1.4" damage="1000" damageType="2" armorPenetration="1000" pushForce="10" knockbackDistance="0" suppressionScale="1" stunTimeMs="0" burnTimeMs="0" screenShake="-1" triggerAtSpawn="false"/>
+        </Entity>
+        <Entity template="Trigger" id="342" pos="50.2500038 0.0300002098 -20" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Targets num="3" id0="339" id1="342" id2="343"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="apc_btr80_weakpoint" id="343" pos="49.75 0 -19.9999924" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Targets num="1" id0="340"/>
+        </Entity>
+        <Entity template="Spawner" id="344" pos="49.7500038 0.0999999046 -19.8750019" scale="1.80000019" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Spawner nameHash="2387244449">
+                <Clone template="PS_Fire_01" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Spawner" id="345" pos="49.7500114 1.5 -19.3750057" scale="1.20000005" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Spawner nameHash="2550095531">
+                <Clone template="PS_RpgExplosion" id="0" pos="0 0 0" rot="1 0 0 0 1 0 0 0 1">
+                    <EnvParticles/>
+                </Clone>
+            </Spawner>
+        </Entity>
+        <Entity template="Movement Blocker" id="346" pos="51.0000114 0 -18.3750019" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="2.50000095 0" p2="2.50000095 6.5" p3="2.00000095 7.5" p4="0.500000954 7.5" p5="0 6.5" p6="0 0.249999881"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="347" pos="51.0000114 0 -18.3750019" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="2.50000095 0" p2="2.50000095 6.5" p3="2.00000095 7.5" p4="0.500000954 7.5" p5="0 6.5" p6="0 0.249999881"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="348" pos="50.3750114 0 -22.625" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Wall numTrees="1" numNodes="9">
+                <Branch parent="0" p0="0 0" p1="0 0.75" p2="0.25 1" p3="1 1" p4="1.25 0.75" p5="1.25 0" p6="1 -0.25" p7="0.25 -0.25"/>
+                <Branch parent="0" p8="0.25 -0.25"/>
+            </Wall>
+        </Entity>
+        <Entity template="Spawner" id="349" pos="49.6250076 0.0399999619 -21.5000076" scale="1.50000012" rot="-1 0 1.04308128e-07 0 1 0 -1.04308128e-07 0 -1" group="84">
+            <Spawner nameHash="2048234480"/>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="350" pos="49.781601 0.487842083 -22.125" scale="1.13919103" rot="1 0 -1.04308128e-07 0 1 0 1.04308128e-07 -0 1" group="84">
+            <Targets num="2" id0="350" id1="334"/>
+        </Entity>
+        <Entity template="ifv_bmp2_chassie_NGF" id="359" pos="55.8750038 -0.0765153766 -30.6250019" scale="1.10000002" rot="-1 0 0 0 1 0 0 0 -1" group="87"/>
+        <Entity template="ifv_bmp2_turret_pkt_2a42_NGF" id="360" pos="55.8750038 -0.0836226344 -30.6250019" scale="1.10000002" rot="-1 0 1.49011612e-07 0 1 0 -1.49011612e-07 0 -1" group="87">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="361" pos="55.8434143 0.487841964 -32.125" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="87">
+            <Targets num="1" id0="362"/>
+        </Entity>
+        <Entity template="Trigger" id="362" pos="56.9304085 -0.104537368 -32.0695953" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="87">
+            <Targets num="1" id0="363"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="tank_idle_NGF" id="363" pos="55.8859863 1.67637742 -32.1390839" scale="1.10000002" rot="-1 0 1.49011612e-07 0 1 0 -1.49011612e-07 0 -1" group="87">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="ifv_bmp2_track_NGF" id="364" pos="55.8750038 -0.0836226344 -30.6250019" scale="1.10000002" rot="-1 0 1.49011612e-07 0 1 0 -1.49011612e-07 0 -1" group="87"/>
+        <Entity template="Movement Blocker" id="365" pos="54.2850037 0 -34.625" rot="1 0 0 0 1 0 0 0 1" group="87">
+            <Wall numTrees="1" numNodes="8">
+                <Branch parent="0" p0="0 0" p1="0 6.375" p2="3.125 6.375" p3="3.125 0" p4="2.625 -0.374999762" p5="1.625 -0.375000238"/>
+                <Branch parent="0" p6="0.625 -0.374999762" p7="1.375 -0.374999762"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="366" pos="54.2750053 0 -34.625" rot="1 0 0 0 1 0 0 0 1" group="87">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="0 6.37500048"/>
+                <Branch parent="0" p2="0.5 -0.374999762" p3="2.625 -0.374999762" p4="3.125 0" p5="3.125 6.37500048" p6="0 6.37500048"/>
+            </Wall>
+        </Entity>
+        <Entity template="ifv_bmp2_woodland_turret_pkt_2a42_NGF" id="375" pos="55.7500038 -0.0836226344 -20.5000019" scale="1.10000002" rot="-1 0 1.49011612e-07 0 1 0 -1.49011612e-07 0 -1" group="90">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="sound_remover_trigger_NGF" id="376" pos="55.7184143 0.487841964 -22.0000019" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="90">
+            <Targets num="1" id0="377"/>
+        </Entity>
+        <Entity template="Trigger" id="377" pos="56.8054085 -0.104537368 -21.9445972" scale="1.13919103" rot="-1 0 -5.96046448e-08 0 1 0 5.96046448e-08 0 -1" group="90">
+            <Targets num="1" id0="380"/>
+            <Trigger/>
+        </Entity>
+        <Entity template="ifv_bmp2_woodland_track_NGF" id="378" pos="55.7500038 -0.0836226344 -20.5000019" scale="1.10000002" rot="-1 0 1.49011612e-07 0 1 0 -1.49011612e-07 0 -1" group="90"/>
+        <Entity template="ifv_bmp2_woodland_chassie_NGF" id="379" pos="55.7500038 -0.0765153766 -20.5000019" scale="1.10000002" rot="-1 0 0 0 1 0 0 0 -1" group="90"/>
+        <Entity template="tank_idle_NGF" id="380" pos="55.7609863 1.67637742 -22.0140858" scale="1.10000002" rot="-1 0 1.49011612e-07 0 1 0 -1.49011612e-07 0 -1" group="90">
+            <SoundEmitter volume="0.69999999"/>
+        </Entity>
+        <Entity template="Movement Blocker" id="381" pos="54.1600037 0 -24.5000019" rot="1 0 0 0 1 0 0 0 1" group="90">
+            <Wall numTrees="1" numNodes="8">
+                <Branch parent="0" p0="0 0" p1="0 6.375" p2="3.125 6.375" p3="3.125 0" p4="2.625 -0.374999762" p5="1.625 -0.375000238"/>
+                <Branch parent="0" p6="0.625 -0.374999762" p7="1.375 -0.374999762"/>
+            </Wall>
+        </Entity>
+        <Entity template="Custom Cover" id="382" pos="54.1500053 0 -24.5000019" rot="1 0 0 0 1 0 0 0 1" group="90">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="0 6.37500048"/>
+                <Branch parent="0" p2="0.5 -0.374999762" p3="2.625 -0.374999762" p4="3.125 0" p5="3.125 6.37500048" p6="0 6.37500048"/>
+            </Wall>
+        </Entity>
+        <Entity template="sedan_police" id="424" pos="34.75 -4.4408921e-16 -6.00000048" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="sedan_police_door_right" id="425" pos="35.8852081 0 -6.32821512" rot="0.707106829 0 0.707106829 0 1 -0 -0.707106829 0 0.707106829" group="93"/>
+        <Entity template="sedan_02_glass_door_right" id="426" pos="35.856926 5.96046448e-08 -6.24336481" rot="0.707106829 0 0.707106829 0 1 -0 -0.707106829 0 0.707106829" group="93"/>
+        <Entity template="sedan_police_door_left" id="427" pos="33.5272713 0 -6.43233156" rot="0.50000006 0 -0.866025388 0 1 0 0.866025388 -0 0.50000006" group="93"/>
+        <Entity template="sedan_02_glass_door_left" id="428" pos="33.5326309 5.96046448e-08 -6.34304953" rot="0.50000006 0 -0.866025388 0 1 0 0.866025388 -0 0.50000006" group="93"/>
+        <Entity template="sedan_police_light" id="429" pos="34.75 1.48440981 -5.87500048" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="sedan_02_glass_back" id="430" pos="34.75 1.26848509e-09 -4.64000034" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="sedan_02_glass_front" id="431" pos="34.75 -5.91873928e-09 -6.58500051" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="sedan_02_glass_right" id="432" pos="35.4199982 8.01250195e-08 -5.26000023" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="sedan_02_glass_left" id="433" pos="34.0849991 8.01250195e-08 -5.25500011" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="FX_police_light_red" id="434" pos="34.4044228 1.65000033 -5.83612919" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="FX_police_light_blue" id="435" pos="35.0907593 1.65000033 -5.85364199" rot="1 0 0 0 1 0 0 0 1" group="93"/>
+        <Entity template="Light Point" id="436" pos="35.1205521 2.0999999 -5.86945772" rot="1.41561031e-07 0 1 0 1 0 -1 0 1.41561031e-07" group="93">
+            <Light color="4055E8" radiusMeters="4" limitType="None" colorMultiplier="3.0599999" animation="pulse" animRate="2.8" animAmount="1.7" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Point" id="437" pos="34.3990097 2.0999999 -5.86750746" rot="1.41561031e-07 0 1 0 1 0 -1 0 1.41561031e-07" group="93">
+            <Light color="E02121" radiusMeters="4" limitType="None" colorMultiplier="3.0599999" animation="pulse" animRate="2.2" animAmount="1.7" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="sedan_police" id="453" pos="38 0 -6.00000048" rot="0.9993909 0 0.0348995812 0 1 0 -0.0348995812 0 0.9993909" group="96"/>
+        <Entity template="sedan_police_door_right" id="454" pos="39.1230621 0 -6.36763239" rot="0.681998432 0 0.731353641 0 1 0 -0.731353641 0 0.681998432" group="96"/>
+        <Entity template="sedan_02_glass_door_right" id="455" pos="39.0977631 5.96046448e-08 -6.28184462" rot="0.681998432 0 0.731353641 0 1 0 -0.731353641 0 0.681998432" group="96"/>
+        <Entity template="sedan_02_glass_back" id="456" pos="38.0474625 0 -4.64082289" rot="0.9993909 0 0.0348995812 0 1 0 -0.0348995812 0 0.9993909" group="96"/>
+        <Entity template="sedan_02_glass_left" id="457" pos="37.3614006 5.96046448e-08 -5.23224783" rot="0.9993909 0 0.0348995812 0 1 0 -0.0348995812 0 0.9993909" group="96"/>
+        <Entity template="sedan_police_light" id="458" pos="38.0043564 1.48440981 -5.87507582" rot="0.9993909 0 0.0348995812 0 1 0 -0.0348995812 0 0.9993909" group="96"/>
+        <Entity template="sedan_02_glass_right" id="459" pos="38.6954193 5.96046448e-08 -5.28383493" rot="0.9993909 0 0.0348995812 0 1 0 -0.0348995812 0 0.9993909" group="96"/>
+        <Entity template="Decal Dust Small 03" id="460" pos="37.5746918 0.981562495 -7.42815161" scale="0.5" rot="-0.939692497 0 0.342020422 0 1 0 -0.342020422 0 -0.939692497" group="96"/>
+        <Entity template="Decal Dust Large 04" id="461" pos="38.4434662 0.981562495 -7.3893609" rot="-0.32556808 0 0.945518613 0 1 0 -0.945518613 0 -0.32556808" group="96"/>
+        <Entity template="Decal Dust Large 01" id="462" pos="37.7470779 0.981562495 -4.2466054" rot="-0.499999881 0 0.866025567 0 1 0 -0.866025567 0 -0.499999881" group="96"/>
+        <Entity template="Decal Dust Small 04" id="463" pos="38.3584404 0.981562495 -5.3332572" scale="0.5" rot="0.325567961 0 -0.945518732 0 1 0 0.945518732 0 0.325567961" group="96"/>
+        <Entity template="Scorch Mark" id="464" pos="37.707695 0.981562495 -7.78729248" scale="0.200000003" rot="-1 0 1.56462178e-07 0 1 0 -1.56462178e-07 0 -1" group="96"/>
+        <Entity template="Scorch Mark" id="465" pos="37.3380051 0.981562495 -7.04928255" scale="0.200000003" rot="0.57357645 0 0.819152057 0 1 0 -0.819152057 0 0.57357645" group="96"/>
+        <Entity template="Scorch Mark" id="466" pos="38.1595154 0.981562495 -7.84465408" scale="0.200000003" rot="0.656059027 0 -0.754709721 0 1 0 0.754709721 0 0.656059027" group="96"/>
+        <Entity template="Scorch Mark" id="467" pos="38.4518356 0.981562495 -4.25370073" scale="0.200000003" rot="0.838670492 0 -0.544639289 0 1 0 0.544639289 0 0.838670492" group="96"/>
+        <Entity template="pickup_02_yellow" id="550" pos="40.8750038 0 -5.75000048" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_glass_door_right" id="551" pos="41.5171547 0 -6.29441261" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_yellow_door_right" id="552" pos="41.5772781 0 -6.32418442" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_yellow_door_left" id="553" pos="40.1751518 0 -6.32748795" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_glass_door_left" id="554" pos="40.2200394 0 -6.29730606" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_glass_front" id="555" pos="40.8786278 0 -6.64999771" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_glass_left" id="556" pos="40.2246437 0 -5.66262579" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_glass_back" id="557" pos="40.8736649 0 -5.42000341" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="pickup_02_glass_right" id="558" pos="41.5246239 0 -5.6573863" rot="0.999991953 0 -0.00402843207 0 1 0 0.00402843207 0 0.999991953" group="99"/>
+        <Entity template="dshk_truck_mount" id="559" pos="40.8925133 1.56085682 -5.54459238" rot="-0.999991894 0 0.00402866304 0 1 0 -0.00402866304 0 -0.999991894" group="99"/>
+        <Entity template="barricade_sack_04" id="560" pos="40.8523445 0.994563103 -5.09477949" scale="0.799999952" rot="-0.999991894 0 0.00402866304 0 1 0 -0.00402866304 0 -0.999991894" group="99" editorAutoHeight="false"/>
+        <Entity template="barricade_sack_02" id="561" pos="41.4554558 0.919851303 -4.48278427" scale="0.499999911" rot="0.00402843207 0 0.999991953 0 1 0 -0.999991953 0 0.00402843207" group="99"/>
+        <Entity template="barricade_sack_02" id="562" pos="40.2734489 0.919851303 -4.52262831" scale="0.499999911" rot="0.00402843207 0 0.999991953 0 1 0 -0.999991953 0 0.00402843207" group="99"/>
+        <Entity template="FOV Blocker" id="563" pos="41.4922142 0 -5.50753927" rot="-0.999991894 0 0.00402866304 0 1 0 -0.00402866304 0 -0.999991894" group="99">
+            <Wall numTrees="1" numNodes="2">
+                <Branch parent="0" p0="0 0" p1="1.25 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="rug_bent_02_03" id="564" pos="40.6487465 0.997447014 -5.05455065" rot="0.995835543 0 -0.0911679938 0 1 0 0.0911679938 0 0.995835543" group="99"/>
+        <Entity template="pallet_01" id="565" pos="40.8632851 0.703242302 -4.2071805" rot="0.999918699 0 -0.012755096 0 1 0 0.012755096 0 0.999918699" group="99"/>
+        <Entity template="pickup_02_yellow" id="578" pos="43.8750038 0 -5.75000048" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_glass_door_right" id="579" pos="44.5149574 0 -6.29700089" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_yellow_door_right" id="580" pos="44.5749626 1.1920929e-07 -6.32700348" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_yellow_door_left" id="581" pos="43.1728363 1.1920929e-07 -6.32466125" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_glass_door_left" id="582" pos="43.2178421 1.1920929e-07 -6.29466248" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_glass_front" id="583" pos="43.8750038 -5.96046448e-08 -6.65000725" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_glass_left" id="584" pos="43.2250061 0 -5.66000605" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_glass_back" id="585" pos="43.8749962 -1.1920929e-07 -5.42000437" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="pickup_02_glass_right" id="586" pos="44.5249977 -5.96046448e-08 -5.66000414" rot="1 0 -8.94069672e-08 0 1 0 8.94069672e-08 0 1" group="102"/>
+        <Entity template="booth_bazar_01_03" id="587" pos="43.9994621 1.33799982 -4.44504976" scale="0.599999905" rot="0 0 -1 0 1 0 1 0 0" group="102" editorAutoHeight="false"/>
+        <Entity template="booth_bazar_01_03" id="592" pos="43.7494583 1.32617784 -4.4600482" scale="0.599999905" rot="1.49011612e-07 0 1 0 1 0 -1 0 1.49011612e-07" group="102"/>
+        <Entity template="FOV Blocker" id="593" pos="43.2500038 0 -5.50000048" rot="1 0 0 0 1 0 0 0 1" group="102">
+            <Wall numTrees="1" numNodes="5">
+                <Branch parent="0" p0="0 0" p1="1.25 8.94069672e-08" p2="1.25 1.875" p3="0 1.875" p4="0 0.25000006"/>
+            </Wall>
+        </Entity>
+        <Entity template="humvee_cover" id="634" pos="47.2500038 0 -5.50000048" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee" id="635" pos="47.2500038 0 -5.50000048" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_topshield" id="636" pos="47.2500038 0 -5.50000048" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_door_frontleft" id="637" pos="46.0550194 0 -5.98000336" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_door_frontright" id="638" pos="48.4449959 0 -5.9750042" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_door_backleft" id="639" pos="46.0550194 0 -4.91501474" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_door_backright" id="640" pos="48.4449959 0 -4.9200139" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_glass_front" id="641" pos="47.2500038 -1.32442247e-20 -6.50000381" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_glass_door_frontleft" id="642" pos="46.0550194 2.15537236e-21 -5.98000336" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_glass_door_frontright" id="643" pos="48.4449959 2.19507683e-21 -5.9750042" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_glass_door_backleft" id="644" pos="46.0550194 2.20169468e-21 -4.91501474" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="humvee_glass_door_backright" id="645" pos="48.4449959 1.97670135e-21 -4.9200139" rot="1 0 0 0 1 0 0 0 1" group="105"/>
+        <Entity template="dshk_truck_mount" id="646" pos="47.2500114 2.10460734 -6.25000381" rot="-1 0 0 0 1 0 0 0 -1" group="105"/>
+        <Entity template="militaryvehicle" id="691" pos="51.2500038 3.71015062e-07 -5.37500048" rot="1 0 0 0 1 0 0 0 1" group="108"/>
+        <Entity template="militaryvehicle_door_frontleft" id="692" pos="49.7620621 0 -6.0627861" rot="0.422618449 0 -0.906307995 0 1 0 0.906307995 0 0.422618449" group="108"/>
+        <Entity template="militaryvehicle_door_frontright" id="693" pos="52.7139893 0 -6.19953346" rot="0.173648179 0 0.984807909 0 1 0 -0.984807909 0 0.173648179" group="108"/>
+        <Entity template="militaryvehicle_door_backleft" id="694" pos="49.8547096 0 -4.3054328" rot="0.342020273 0 0.939692795 0 1 0 -0.939692795 0 0.342020273" group="108"/>
+        <Entity template="militaryvehicle_door_backright" id="695" pos="52.6610451 0 -4.19797373" rot="0 0 -1.00000012 0 1 0 1.00000012 0 0" group="108"/>
+        <Entity template="militaryvehicle_glass_front" id="696" pos="51.2500038 3.68465365e-08 -5.95498276" rot="1 0 0 0 1 0 0 0 1" group="108"/>
+        <Entity template="militaryvehicle_glass_door_frontleft" id="697" pos="49.8195419 0 -5.79491425" rot="0.422618449 0 -0.906307995 0 1 0 0.906307995 0 0.422618449" group="108"/>
+        <Entity template="militaryvehicle_glass_door_frontright" id="698" pos="52.7487526 0 -5.93893814" rot="0.173648179 0 0.984807909 0 1 0 -0.984807909 0 0.173648179" group="108"/>
+        <Entity template="militaryvehicle_glass_door_backleft" id="699" pos="49.9265976 0 -4.23938608" rot="0.342020273 0 0.939692795 0 1 0 -0.939692795 0 0.342020273" group="108"/>
+        <Entity template="militaryvehicle_glass_door_backright" id="700" pos="52.566391 0 -4.16072798" rot="0 0 -1.00000012 0 1 0 1.00000012 0 0" group="108"/>
+        <Entity template="militaryvehicle" id="734" pos="55.2500038 3.57627869e-07 -5.25000048" rot="1 0 0 0 1 0 0 0 1" group="111"/>
+        <Entity template="militaryvehicle_door_frontleft" id="735" pos="54.0249901 0 -5.39700937" rot="1 0 0 0 1 0 0 0 1" group="111"/>
+        <Entity template="militaryvehicle_door_frontright" id="736" pos="56.4726524 0 -5.3953824" rot="1 0 0 0 1 0 0 0 1" group="111"/>
+        <Entity template="militaryvehicle_door_backright" id="737" pos="56.2096176 0 -4.43609667" rot="1 0 0 0 1 0 0 0 1" group="111"/>
+        <Entity template="militaryvehicle_door_backleft" id="738" pos="54.276947 0 -4.44270086" rot="1 0 0 0 1 0 0 0 1" group="111"/>
+        <Entity template="Decal Dust Large 02" id="739" pos="54.4499092 1.85460937 -7.57859993" rot="-0.99862951 0 -0.052335687 0 1 0 0.052335687 0 -0.99862951" group="111"/>
+        <Entity template="Decal Dust Large 03" id="740" pos="55.728756 1.85460937 -5.12509966" rot="-0.743144989 0 -0.669130504 0 1 0 0.669130504 0 -0.743144989" group="111"/>
+        <Entity template="Decal Dust Large 04" id="741" pos="55.6764336 1.85460937 -3.03876925" rot="0.719339907 0 0.694658339 0 1 0 -0.694658339 0 0.719339907" group="111"/>
+        <Entity template="Decal Dust Large 01" id="742" pos="55.9759674 1.85460937 -7.4060688" rot="0.0348997042 0 0.999390841 0 1 0 -0.999390841 0 0.0348997042" group="111"/>
+        <Entity template="Explosion Scorch Mark" id="743" pos="56.0623817 1.85460937 -7.61209679" scale="1.10000002" rot="-0.974370122 0 -0.224950939 0 1 0 0.224950939 0 -0.974370122" group="111"/>
+        <Entity template="Scorch Mark" id="744" pos="54.7441521 1.85460937 -5.38789225" scale="0.300000012" rot="-0.99862957 0 -0.0523357466 0 1 0 0.0523357466 0 -0.99862957" group="111"/>
+        <Entity template="Scorch Mark" id="745" pos="54.8182449 1.85460937 -5.07284594" scale="0.300000012" rot="0.9993909 0 0.034899272 0 1 0 -0.034899272 0 0.9993909" group="111"/>
+        <Entity template="Scorch Mark" id="746" pos="55.6338158 1.85460937 -5.43654871" scale="0.300000012" rot="0.669130385 0 -0.743145108 0 1 0 0.743145108 0 0.669130385" group="111"/>
+        <Entity template="Scorch Mark" id="747" pos="54.4656677 1.85460937 -4.23499537" scale="0.300000012" rot="-0.62932086 0 -0.777145684 0 1 0 0.777145684 0 -0.62932086" group="111"/>
+        <Entity template="Scorch Mark" id="748" pos="55.9711761 1.85460937 -4.58530283" scale="0.300000012" rot="0.891006649 0 0.453990281 0 1 0 -0.453990281 0 0.891006649" group="111"/>
+        <Entity template="Scorch Mark" id="749" pos="56.0066414 1.85460937 -4.05095911" scale="0.300000012" rot="-0.656059146 0 -0.754709482 0 1 0 0.754709482 0 -0.656059146" group="111"/>
+        <Entity template="Scorch Mark" id="750" pos="54.8209038 1.85460937 -7.11822128" scale="0.300000012" rot="0.838670731 0 0.544638813 0 1 0 -0.544638813 0 0.838670731" group="111"/>
+        <Entity template="Scorch Mark" id="751" pos="54.9274559 1.85460937 -7.60157585" scale="0.300000012" rot="0.342020005 0 -0.939692736 0 1 0 0.939692736 0 0.342020005" group="111"/>
+        <Entity template="Scorch Mark" id="752" pos="55.5481949 1.85460937 -6.86180305" scale="0.300000012" rot="-0.99619472 0 0.0871558934 0 1 0 -0.0871558934 0 -0.99619472" group="111"/>
+        <Entity template="USA_signal_panel_01" id="753" pos="55.2451897 2.6614244 -4.44797659" scale="1.30000007" rot="1.49011612e-07 0 1 0 1 0 -1 0 1.49011612e-07" group="111"/>
+        <Entity template="Decal Dust Large 03" id="754" pos="55.2279282 1.85460937 -4.41268206" rot="-0.17364803 0 0.984807849 0 1 0 -0.984807849 0 -0.17364803" group="111"/>
+        <Entity template="Decal Blood Directional 3" id="755" pos="55.6088676 1.85460937 -3.53783274" rot="-0.104529113 0 -0.994521916 0 1 0 0.994521916 0 -0.104529113" group="111"/>
+        <Entity template="Decal Blood Splatter 6" id="756" pos="54.9943123 1.85460937 -2.84938955" scale="0.5" rot="0.965925872 0 -0.258819193 0 1 0 0.258819193 0 0.965925872" group="111"/>
+        <Entity template="camera_view_01" id="6" pos="2.25000191 1.76138401 -5.49999809" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="camera_view_01" id="15" pos="28 1.76138401 -37.1250076" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="camera_view_01" id="17" pos="47.0000038 1.76138401 -26.1250057" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="camera_view_01" id="19" pos="4.5 1.76138401 20.25" rot="1 0 0 0 1 0 0 0 1">
+            <FOVCamera>
+                <FOV degrees="180" distanceMeters="30" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="Fake Militia" id="23" pos="-6.50000048 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0.2"/>
+            </Human>
+        </Entity>
+        <Entity template="Rabble" id="27" pos="-5.50000048 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rabble Shotgun" id="39" pos="-4.5 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rabble Bolt Action" id="43" pos="-3.50000024 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rabble PM" id="46" pos="-2.5 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rabble Weaponless" id="60" pos="-1.50000012 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Grunt Insurgent" id="64" pos="-6.50000048 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Pistol Insurgent" id="78" pos="-5.50000048 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Pistol Insurgent Weaponless" id="82" pos="-4.5 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Veteran Insurgent" id="84" pos="-3.50000024 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Veteran Insurgent LongRange" id="100" pos="-2.5 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rocket Insurgent" id="104" pos="-1.50000012 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Blackhead Elite" id="108" pos="-6.50000048 9.31322575e-10 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Grunt + Rocket Insurgent" id="112" pos="-5.50000048 0 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Sniper Insurgent" id="116" pos="-4.5 9.31322575e-10 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Machinegunner" id="120" pos="-3.50000024 0 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Machinegunner 762" id="124" pos="-2.5 0 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Machinegunner OldSchool" id="128" pos="-1.50000012 0 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Machinegunner Weaponless" id="132" pos="-6.50000048 0 11.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Foreign Advisor" id="136" pos="-5.50000048 0 11.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Foreign Advisor Weaponless" id="140" pos="-4.5 0 11.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Foreign Advisor Fanatic" id="167" pos="-3.50000024 0 11.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="FAdvisor Fanatic Weaponless" id="169" pos="-2.5 0 11.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="FAdvisor Leader" id="171" pos="-1.50000012 0 11.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Executioner" id="173" pos="-6.50000048 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Suicide Bomber" id="175" pos="-5.50000048 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Suicide Bomber Strong" id="177" pos="-4.5 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Suicide Executioner" id="179" pos="-3.50000024 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Grunt Insurgent Weaponless" id="181" pos="-2.5 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Veteran Weaponless" id="183" pos="-1.50000012 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rocket Weaponless" id="185" pos="-6.50000048 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Rabble MP40" id="207" pos="-5.50000048 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Melee Guy" id="209" pos="-4.5 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Melee Executioner" id="211" pos="-3.50000024 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="PKMer" id="213" pos="-2.5 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard PM" id="225" pos="1.50000012 9.31322575e-10 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard SMG" id="227" pos="2.5 9.31322575e-10 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard SMG Noob" id="229" pos="3.50000024 9.31322575e-10 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard AKSU" id="231" pos="4.5 9.31322575e-10 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard AKSU Armored" id="242" pos="5.50000048 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Weaponless" id="244" pos="1.50000012 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Heavy AKSU" id="246" pos="2.5 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Heavy RPK16S" id="248" pos="3.50000024 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Heavy Weaponless" id="250" pos="4.5 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Heavy Pistol" id="261" pos="5.50000048 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia" id="264" pos="8.5 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia Weaponless" id="266" pos="9.5 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia LongRange" id="268" pos="10.500001 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia Sergeant" id="279" pos="11.500001 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia Sergeant Rifleless" id="281" pos="12.500001 9.31322575e-10 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia Sergeant Weaponless" id="283" pos="8.5 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia Machinegunner" id="285" pos="9.5 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia Grenadier" id="288" pos="10.500001 0 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Elite" id="290" pos="11.500001 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Elite Heavy" id="292" pos="12.500001 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Elite Heavy Gunner" id="294" pos="8.5 9.31322575e-10 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord BodyGuard" id="310" pos="9.5 9.31322575e-10 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia NVG LongRange" id="312" pos="10.500001 9.31322575e-10 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Warlord Militia NVG Sergeant" id="314" pos="11.500001 9.31322575e-10 10.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Elite Bren" id="318" pos="6.50000048 9.31322575e-10 9.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bodyguard Elite Weaponless" id="320" pos="6.50000048 9.31322575e-10 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Bluebandz Assaulter" id="323" pos="14.500001 0 8.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango" id="325" pos="8.5 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango Shottie" id="327" pos="9.5 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango 2 M4" id="329" pos="10.500001 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango 2 Uzi" id="331" pos="11.500001 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango 3" id="333" pos="8.5 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango Weaponless" id="352" pos="9.5 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango 2 Weaponless" id="354" pos="10.5 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Generic Tango 3 Weaponless" id="356" pos="11.500001 0 13.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Noob" id="358" pos="-6.50000048 9.31322575e-10 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Grunt" id="368" pos="-5.50000048 9.31322575e-10 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Shotgun" id="370" pos="-4.5 9.31322575e-10 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_BoltAction" id="372" pos="-3.50000024 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_PM63" id="374" pos="-2.5 9.31322575e-10 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_MP40" id="384" pos="-1.50000012 9.31322575e-10 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Weaponless" id="386" pos="-6.50000048 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Melee" id="388" pos="-5.50000048 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Instructor" id="390" pos="-4.5 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Machinegunner" id="392" pos="-3.50000024 0 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Rocketeer" id="394" pos="-2.5 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Executioner_Melee" id="396" pos="-1.50000012 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Weaponless" id="398" pos="1.5 9.31322575e-10 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Weaponless_WPgrenade" id="400" pos="2.5 9.31322575e-10 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountainners_Rifleman_Green" id="402" pos="3.50000048 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountainners_Rifleman_Trained" id="404" pos="4.50000048 0 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Veteran" id="406" pos="5.50000048 9.31322575e-10 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Machinegunner" id="408" pos="6.50000048 9.31322575e-10 12.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineer_Sergeant" id="410" pos="1.5 9.31322575e-10 13.5000038" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Leader" id="412" pos="2.5 9.31322575e-10 13.5000038" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Leader_Pistol" id="414" pos="3.50000048 9.31322575e-10 13.5000038" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Commando" id="416" pos="4.50000048 9.31322575e-10 13.5000038" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Commando_Pointman" id="418" pos="5.50000048 9.31322575e-10 13.5000038" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Mountaineers_Commando_MG" id="420" pos="6.50000048 9.31322575e-10 13.5000038" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HVT_Suit" id="422" pos="17.5 0 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HVT_Warlord" id="438" pos="16.5 9.31322575e-10 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HVT_Special" id="440" pos="15.500001 0 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="HVT" id="442" pos="14.500001 0 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Lieutenant_Tariq_Captured" id="444" pos="-6.50000381 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Lieutenant_Tariq_Secured" id="446" pos="-5.50000381 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Corporal_Habib" id="448" pos="-4.5 0 -6.37500048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Sergeant_Hakim" id="450" pos="-3.62500381 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Corporal_Bassam" id="452" pos="-2.5 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Unarmed" id="469" pos="-1.50000191 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Soldier_AK" id="472" pos="-0.5 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Soldier_M16" id="474" pos="0.5 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Soldier_RPK" id="476" pos="1.50000012 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Soldier_RPG" id="478" pos="2.5 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_FNF_Soldier_RP46" id="480" pos="3.5 0 -6.50000048" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="tripod" id="25" pos="6.50000048 0.952930927 -8.375" rot="1 0 -4.91738319e-07 0 1 0 4.91738319e-07 -0 1" group="114"/>
+        <Entity template="dshk_usable" id="29" pos="6.50000048 0.957146287 -8.375" rot="1 0 -4.91738319e-07 0 1 0 4.91738319e-07 -0 1" group="114"/>
+        <Entity template="tripod" id="41" pos="14.500001 0.952930927 10.625001" rot="1 0 -4.91738319e-07 0 1 0 4.91738319e-07 -0 1" group="116"/>
+        <Entity template="dshk_usable" id="44" pos="14.500001 0.957146287 10.625001" rot="1 0 -4.91738319e-07 0 1 0 4.91738319e-07 -0 1" group="116"/>
+        <Entity template="NGF_SOF_Marksman" id="249" pos="8.5 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_SOF_Pointman" id="262" pos="9.5 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_SOF_Assaulter" id="265" pos="10.500001 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_SOF_CQB_Assaulter" id="278" pos="11.500001 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_SOF_Leader" id="282" pos="12.500001 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="SSI Assaulter" id="286" pos="8.5 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="SSI Leader" id="289" pos="9.5 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="SSI CQB Assaulter" id="293" pos="10.500001 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="SSI Marksman" id="311" pos="11.500001 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="SSI Pointman" id="315" pos="12.500001 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Prisoner" id="330" pos="-6.50000048 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Advisor" id="351" pos="-5.50000048 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Advisor_Weaponless" id="355" pos="-4.5 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Advisor_Suicide_Bomber" id="367" pos="-3.50000024 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Advisor_Suicide_Bomber_Weaponless" id="371" pos="-2.5 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Advisor_Stormtroop_RPG26" id="383" pos="-1.50000012 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Advisor_Stormtroop" id="387" pos="-6.50000048 0 20.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Heavy_Contractor" id="391" pos="-5.50000048 0 20.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_PMC_Heavy_Tagilla" id="395" pos="-4.5 0 20.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Ultran_Vodka_Enjoyer_alt" id="403" pos="-3.50000024 0 20.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Ultran_Fighter" id="407" pos="-1.50000012 0 20.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Ultran_Fighter_LongRange" id="415" pos="-2.5 0 20.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Ultran_Elite_Guard" id="445" pos="-6.50000048 0 21.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Ultran_Elite_Guard_alt" id="451" pos="-5.50000048 0 21.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Leader" id="470" pos="-4.5 0 21.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Rifleman_OTS" id="473" pos="-2.50000048 0 21.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Grenadier" id="477" pos="-1.50000012 9.31322575e-10 21.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Rifleman" id="481" pos="-3.50000024 0 21.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Machinegunner" id="483" pos="-6.50000048 9.31322575e-10 22.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Rocketeer" id="485" pos="-5.50000048 0 22.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Rocketeer_Thermobaric" id="487" pos="-4.5 9.31322575e-10 22.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_VDV_Rifleman_RPG26" id="489" pos="-3.50000024 0 22.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Spetsnaz_01" id="491" pos="-2.5 0 22.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Spetsnaz_02" id="493" pos="-1.50000012 0 22.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+    </Entities>
+</Map>
