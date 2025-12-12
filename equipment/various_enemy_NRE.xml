@@ -227,11 +227,11 @@ SUICIDE BOMB
 	<Helmet name="Balistic_Helmet_RogueSwat" inventoryBinding="Helmet" unlockCost="0"
 			tooltip=""
 			description=""
-			img="data/models/humans/attachments/balistic_helmet_NGF_ui.dd"
+			img="data/models/humans/attachments/balistic_helmet_NGF_ui.dds"
 		>
 		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-2"/>
 		<ConcealmentModifier add="0" />
-		<RenderObject3D model="data/models/humans/attachments/helmet_pagst_pr.khm" diffuseTex="data/models/humans/attachments/helmet_pagst_blk_pr.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/helmet_nws_srt_NGF.khm" diffuseTex="data/models/humans/attachments/helmet_nws_srt_NGF.dds" attachSlot="Bip001 Head"/>
 		<Params protectionInfoText="@equipment_protect2">
 			<ProtectionArc degrees="360" coveragePercent="14" piercingProtectionLevel="40"/>
 		</Params>	
