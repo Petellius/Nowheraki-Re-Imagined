@@ -197,7 +197,7 @@
 		
 	<Entity name="Veteran Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_03_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/chest_rig_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_NGF.dds" alphaTest="true"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
 		<Breakable template="HumanGib_default_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -293,6 +293,7 @@
 			<Equipment>
 				<Item name="NRE_Ins_Type56_Veteran"/>
 				<Item name="Kobra"/>
+				
 			</Equipment>
 		</Human>
 	</Entity>

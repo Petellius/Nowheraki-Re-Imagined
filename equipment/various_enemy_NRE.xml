@@ -60,7 +60,7 @@ SUICIDE BOMB
 		</Projectile>
 	</SuicideBomb>
 
-	<Armor name="Bodyguard SoftArmor" inventoryBinding="Armor" unlockCost="0"
+	<Armor name="NRE Military SoftArmor" inventoryBinding="Armor" unlockCost="0"
 			tooltip="@armor_enemy_softarmor_name"
 			img="data/models/equipment/armor_softleveliiia_ui.dds"
 		>
@@ -76,9 +76,11 @@ SUICIDE BOMB
 			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="40"/>
 			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="40"/>
 		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/chest_carrier_ultran_NGF.khm" diffuseTex="data/models/humans/attachments/chest_carrier_ultran_NGF.dds"/>
 	</Armor>
 
-	<Armor name="Bodyguard HeavyArmor" inventoryBinding="Armor" unlockCost="0"
+	<Armor name="NRE Military HeavyArmor" inventoryBinding="Armor" unlockCost="0"
 			tooltip="@armor_enemy_heavyarmor_name"
 			img="data/models/equipment/armor_basic_ui.dds"
 		>
@@ -94,34 +96,8 @@ SUICIDE BOMB
 			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="40"/>
 			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="50"/>
 		</Params>
-	</Armor>
 
-	<Helmet name="SSI HelmetFAST" inventoryBinding="Helmet"
-			tooltip="@helmet_rangers_fast_name"
-			description="@helmet_rangers_fast_desc"
-			img="data/models/humans/attachments/ranger_helmet_ui.dds"
-		>
-		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
-		<ConcealmentModifier add="0" />
-
-		<Params>
-			<ProtectionArc degrees="360" coveragePercent="10" piercingProtectionLevel="30"/>
-		</Params>
-	</Helmet>
-
-	<Armor name="SSI Raid Vest" inventoryBinding="Armor"
-			tooltip="@armor_rangers_jump_swimmeriv_name"
-			description="@armor_rangers_jump_swimmeriv_desc"
-			img="data/models/equipment/armor_jump_swimmeriv_ui.dds"
-		>
-		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
-		<ConcealmentModifier add="-3" />
-
-		<Params>
-			<ProtectionArc degrees="86" coveragePercent="34" piercingProtectionLevel="60"/>
-			<ProtectionArc degrees="270" coveragePercent="0" piercingProtectionLevel="0"/>
-			<ProtectionArc degrees="360" coveragePercent="34" piercingProtectionLevel="60"/>
-		</Params>
+		<RenderObject3D model="data/models/humans/attachments/plate_carrier_mtn_NGF.khm" diffuseTex="data/models/humans/attachments/plate_carrier_mtn_NGF.dds"/>		
 	</Armor>
 
 	<HelmetNVG name="SSI NVG" inventoryBinding="HelmetNVG"
