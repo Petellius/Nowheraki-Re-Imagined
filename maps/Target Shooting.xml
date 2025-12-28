@@ -1778,5 +1778,125 @@
                 <Traits/>
             </Human>
         </Entity>
+        <Entity template="Advisor Merc OpFor ESP" id="58" pos="8.5 0 19.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_HVT_Al_Khasad" id="110" pos="13.500001 9.31322575e-10 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Militia_Warlord_HVT" id="118" pos="12.500001 0 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Ultran_Executioner" id="134" pos="-4.5 0 18.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_HVT_VDV" id="166" pos="11.500001 0 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_HVT_Suit" id="170" pos="10.500001 0 25.5000019" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Reservist_Rifleman" id="174" pos="1.50000012 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Reservist_Weaponless" id="178" pos="2.5 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Reservist_Machinegunner" id="182" pos="3.50000024 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Regular_Rifleman_AK" id="206" pos="4.5 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Regular_Rifleman_G3" id="210" pos="5.50000048 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Regular_Radioman" id="214" pos="6.50000048 0 15.500001" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Regular_Sniper" id="226" pos="1.50000012 0 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Suicide_Bomber" id="230" pos="2.5 0 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Radioman" id="243" pos="3.50000024 0 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Rifleman_G3" id="247" pos="4.5 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Machinegunner_HK21E" id="263" pos="5.50000048 9.31322575e-10 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Assaulter" id="280" pos="6.50000048 0 16.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Grenadier_Shotgun" id="287" pos="2.5 2.80329641e-05 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Grenadier" id="295" pos="3.50000024 9.31322575e-10 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Veteran_AK" id="316" pos="4.5 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Weaponless_01" id="319" pos="5.50000048 9.31322575e-10 17.625" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Reservist_NGF" id="326" pos="6.50000048 9.31322575e-10 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="NGF_Greencamp_Leader_G3" id="80" pos="1.50000012 0 17.5" rot="1 0 0 0 1 0 0 0 1">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
     </Entities>
 </Map>
