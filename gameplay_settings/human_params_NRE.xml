@@ -13,7 +13,7 @@
 	grenadeWarningAdvanceMS = "200"
 
 	grenadeThrowSoundRadiusMeters="5.0"
-	enemyGrenadeThrowMinDistMeters="12.0"
+	enemyGrenadeThrowMinDistMeters="6.0"
 	enemyGrenadeThrowMaxDistMeters="30.0"	
 
 	suppressiveFireRadius="0.42"
