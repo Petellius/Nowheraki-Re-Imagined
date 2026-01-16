@@ -1,0 +1,17 @@
+#
+# Entities
+#
+
+@NRE_entity_military_militia=Conscript
+@NRE_entity_military_militia_leader=Conscript Sergeant
+@NRE_entity_military=Regular
+@NRE_entity_military_rpg=Regular (RPG)
+@NRE_entity_military_grenadier=Regular (Grenadier)
+@NRE_entity_military_lmg=Regular MachineGunner
+@NRE_entity_military_radio=Radioman
+@NRE_entity_military_vet_breacher=Veteran Breacher
+@NRE_entity_military_vet_grenadier=Veteran Grenadier
+@NRE_entity_military_vet_long=Veteran Marksman
+@NRE_entity_military_vet_leader=Captain
+@NRE_entity_military_vet_lmg=Veteran MachineGunner
+@NRE_entity_military_elite=Commando
