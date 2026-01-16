@@ -8,7 +8,7 @@
 
 	<!-- Reservist Tier - Slow Reactions, Flees, Weak Vs Suppression, Requires Leader to function -->
 
-	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security">
+	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -19,20 +19,21 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.5" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.5" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="PM63" />
+				<Item name="Nowheraki_Army_G3A4_NGF"/>
+				<Item name="Frag Grenade Enemy Noob"/>
 				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -42,21 +43,22 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="Mini Uzi" />
+				<Item name="Nowheraki_Army_G3A4_NGF"/>
 				<Item name="NRE Military SoftArmor" />
+				<Item name="Frag Grenade Enemy Noob"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
 
-	<Entity name="Bodyguard SMG Noob" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security">
+	<Entity name="Bodyguard SMG Noob" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -66,19 +68,19 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.5" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.5" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="Mini Uzi Folded" />
+				<Item name="Nowheraki_Army_G3A4_NGF"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security">
+	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -88,19 +90,20 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="AKS 74U Security"/> 
+				<Item name="Nowheraki_Army_G3A4_NGF"/>
+				<Item name="NRE Military SoftArmor" />				
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Bodyguard Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless,security,armored">
+	<Entity name="Bodyguard Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
@@ -108,7 +111,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat"  suppressionRecovery="10.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="true" roamAround="true"/>
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" roamAround="true"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -126,9 +129,7 @@
 
 	<!-- Tier 2 Regular Military - More grenades and weapon options, better armour, better suppression -->	
 
-
-<!-- This guy has visible Soft Armor under the suit (and the stats to go with it), but its not clear from top down so maybe don't use? " /-->
-	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_army_NGF.dds" attachSlot="Bip001 Head"/>
@@ -139,7 +140,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true"  stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -148,12 +149,13 @@
 			<Equipment>
 				<Item name="Nowheraki_Army_G3A4_NGF"/>
 				<Item name="ZF_4x_NGF"/>
-				<Item name="NRE Military SoftArmor" />
+				<Item name="NRE Military HeavyArmor" />
+				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Bodyguard Heavy AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard Heavy AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -165,7 +167,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="false" />
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -174,11 +176,12 @@
 			<Equipment>
 				<Item name="AKS 74U Security"/> 
 				<Item name="NRE Military HeavyArmor" />
+				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Bodyguard Heavy RPK16S" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard Heavy RPK16S" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -199,6 +202,7 @@
 			<Equipment>
 				<Item name="RPK16 Short LMG"/> 
 				<Item name="NRE Military HeavyArmor" />
+				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
@@ -207,7 +211,7 @@
 	</Entity>
 
 
-	<Entity name="Bodyguard Heavy Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored,weaponless">
+	<Entity name="Bodyguard Heavy Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,weaponless">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -219,7 +223,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="false" roamAround="true"/>
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" roamAround="true"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -236,7 +240,7 @@
 		</Human>
 	</Entity>
 		
-	<Entity name="Bodyguard Heavy Pistol" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard Heavy Pistol" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -247,7 +251,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="false" roamAround="true"/>
+			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" roamAround="true"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -257,6 +261,7 @@
 				<Item name="Nowheraki_Army_IZh81_NGF"/>
 				<Item name="Nowheraki_Army_AKM_GP34_02_NGF"/>
 				<Item name="NRE Military HeavyArmor" />
+				<!-- Smoke Grenade -->
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
@@ -265,7 +270,7 @@
 	</Entity>
 
 
-	<Entity name="Warlord Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -284,14 +289,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="M16 WM"/>
+				<Item name="Nowheraki_Army_G3A4_NGF"/>
 				<Item name="Frag Grenade Enemy"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>
 	
-	<Entity name="Warlord Militia Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord,weaponless">
+	<Entity name="Warlord Militia Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,weaponless">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -316,7 +321,7 @@
 	</Entity>
 
 
-	<Entity name="Warlord Militia LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -342,7 +347,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Militia Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -362,13 +367,13 @@
 			<Equipment>
 				<Item name="M14 WM"/> 
 				<Item name="Frag Grenade Enemy"/>
-				<Item name="NRE Military SoftArmor" />
+				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>
 
 
-	<Entity name="Warlord Militia Machinegunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia Machinegunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -396,7 +401,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Militia Grenadier" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia Grenadier" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -424,7 +429,7 @@
 	<!-- Nowheraki Special Forces - Elite weapon control, heavy armour, NVGs and fast grenades -->
 
 
-	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -447,13 +452,13 @@
 			<Equipment>
 				<Item name="MK17 WM"/> 
 				<Item name="SpecterDR"/> 
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Elite Heavy" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Elite Heavy" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -476,13 +481,13 @@
 			<Equipment>
 				<Item name="MK17/GL WM"/> 
 				<Item name="M68CCO"/> 
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Elite Heavy Gunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Elite Heavy Gunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -512,7 +517,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord BodyGuard" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord BodyGuard" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -534,13 +539,13 @@
 
 			<Equipment>
 				<Item name="MP5K WM"/> 
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>	
 
-	<Entity name="Warlord Militia Sergeant Rifleless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia Sergeant Rifleless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -563,13 +568,13 @@
 
 			<Equipment>
 				<Item name="1911 Pistol Enemy"/>
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>
 	
-	<Entity name="Warlord Militia Sergeant Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia Sergeant Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -591,14 +596,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>	
 
 
-	<Entity name="Warlord Militia NVG LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia NVG LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		
@@ -626,7 +631,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Militia NVG Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+	<Entity name="Warlord Militia NVG Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		
@@ -646,7 +651,7 @@
 
 			<Equipment>
 				<Item name="M14 WM"/> 
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="HelmetSkullCrusherNWS"/>
 				<Item name="NVGSkullCrusherNWS"/>
 				<Item name="NRE Military HeavyArmor" />
@@ -654,7 +659,7 @@
 		</Human>
 	</Entity>
 	
-	<Entity name="Bodyguard Elite Bren" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard Elite Bren" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -683,7 +688,7 @@
 		</Human>
 	</Entity>	
 		
-	<Entity name="Bodyguard Elite MP9" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard Elite MP9" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -698,7 +703,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.0" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -715,7 +720,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Bodyguard Elite Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+	<Entity name="Bodyguard Elite Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>

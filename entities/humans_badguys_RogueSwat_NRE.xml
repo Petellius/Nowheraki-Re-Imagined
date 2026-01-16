@@ -6,7 +6,7 @@
 
 	<!-- Police Tier - Low calibre weapons, no armour -->
 <Entities>	
-	<Entity name="Generic Tango" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+	<Entity name="Generic Tango" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
@@ -16,7 +16,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
 			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.2" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.2" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -28,7 +28,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Generic Tango Shottie" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+	<Entity name="Generic Tango Shottie" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
@@ -38,7 +38,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
 			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.2" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.2" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -51,7 +51,7 @@
 	</Entity>
 
 
-	<Entity name="Generic Tango 2 M4" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+	<Entity name="Generic Tango 2 M4" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
@@ -76,7 +76,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Generic Tango 2 Uzi" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+	<Entity name="Generic Tango 2 Uzi" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
@@ -101,7 +101,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Generic Tango 3" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+	<Entity name="Generic Tango 3" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
@@ -126,7 +126,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Generic Tango Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic,weaponless">
+	<Entity name="Generic Tango Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat,weaponless">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -135,7 +135,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.2" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.2" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -146,7 +146,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Generic Tango 2 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic,weaponless">
+	<Entity name="Generic Tango 2 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat,weaponless">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
@@ -168,7 +168,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Generic Tango 3 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy generic">
+	<Entity name="Generic Tango 3 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
@@ -195,7 +195,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Fake Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+	<Entity name="Fake Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
@@ -205,14 +205,14 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@entity_human_traitormilitia" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
-			<Traits chanceToBlindFire="0.3" stopsToShoot="true" />
+			<Traits chanceToBlindFire="0.3" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.8" defaultMetersPerSec="2.1" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="Type 56 Noob" />
+				<Item name="NRE_Ins_Type56_Rabble"/> 
 			</Equipment>
 		</Human>
 	</Entity>	
