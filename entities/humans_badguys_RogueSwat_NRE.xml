@@ -50,7 +50,7 @@
 		</Human>
 	</Entity>
 
-
+	<!-- Generic Rogue SWAT -->
 	<Entity name="Generic Tango 2 M4" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
@@ -69,13 +69,15 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="M4 ACOG Tango" />
+				<Item name="NRE M4 ACOG Tango" />
 				<Item name="M150RCO" />
 				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 		</Human>
 	</Entity>
 
+	<!-- Rogue Police Marksman -->
 	<Entity name="Generic Tango 2 Uzi" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
@@ -95,12 +97,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="Mini Uzi SUP Tango" />
+				<Item name="NRE_Army_SVD_NGF"/>
 				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 		</Human>
 	</Entity>
 
+	<!-- Rogue SWAT Elite -->
 	<Entity name="Generic Tango 3" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
@@ -121,7 +125,9 @@
 			<Equipment>
 				<Item name="Alpha AK Spectre Sup Tango" />
 				<Item name="LPVO_6X" />
-				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Flashbang Single"/>
+				<Item name="Balistic_Helmet_RogueSwat" />	
+				<Item name="Bodyguard HeavyArmor"/>				
 			</Equipment>
 		</Human>
 	</Entity>
@@ -164,6 +170,7 @@
 
 			<Equipment>
 				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 		</Human>
 	</Entity>
@@ -189,6 +196,7 @@
 
 			<Equipment>
 				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Bodyguard HeavyArmor"/>	
 				<Item name="Shield_RogueSwat" />
 				<Item name="TT 33 Pistol" />
 			</Equipment>
