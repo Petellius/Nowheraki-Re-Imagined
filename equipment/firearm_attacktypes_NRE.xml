@@ -115,6 +115,107 @@
 	</AttackType>
 
 	<!--
+		MILITARY STANDARD ATTACK TYPES
+	-->
+	<AttackType name="NRE_Military_Rifle_1"> <!-- + 50 aim and +100 reset compared to elite -->
+		<ModifiableParams
+			minAimTime="310"
+			maxAimTime="340"
+			roundsPerSecondOverride="5.5"
+			minShots="6"
+			maxShots="6"
+			resetTime="210"
+			accuracyAdd="-160"
+			followupShotAccuracyAdd="-1"
+			critChanceAdd="10"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_Military_Rifle_2">
+		<ModifiableParams
+			minAimTime="350"
+			maxAimTime="450"
+			roundsPerSecondOverride="5"
+			minShots="3"
+			maxShots="5"
+			resetTime="235"
+			accuracyAdd="-150"
+			followupShotAccuracyAdd="2"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_Military_Rifle_3"> <!-- + 100 aim compared to elite -->
+		<ModifiableParams
+			minAimTime="500"
+			maxAimTime="590"
+			roundsPerSecondOverride="3.7"
+			minShots="4"
+			maxShots="6"
+			resetTime="265"
+			accuracyAdd="-125"
+			followupShotAccuracyAdd="8"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_Military_Rifle_3_Mounted">
+		<ModifiableParams
+			minAimTime="550"
+			maxAimTime="640"
+			roundsPerSecondOverride="3.3"
+			minShots="2"
+			maxShots="2"
+			resetTime="215"
+			accuracyAdd="-90"
+			followupShotAccuracyAdd="17"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_Military_Rifle_4">
+		<ModifiableParams
+			minAimTime="570"
+			maxAimTime="670"
+			roundsPerSecondOverride="2.5"
+			minShots="2"
+			maxShots="3"
+			resetTime="300"
+			accuracyAdd="-120"
+			followupShotAccuracyAdd="12"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_Military_Rifle_4_Mounted">
+		<ModifiableParams
+			minAimTime="620"
+			maxAimTime="720"
+			roundsPerSecondOverride="2.2"
+			minShots="1"
+			maxShots="2"
+			resetTime="250"
+			accuracyAdd="-90"
+			followupShotAccuracyAdd="25"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_Military_Rifle_5">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="1000"
+			roundsPerSecondOverride="1.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="400"
+			accuracyAdd="-125"
+			followupShotAccuracyAdd="17.5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<!--
 		TIMID FIRE DEFAULT
 		MILITIA ATTACK TYPES
 	-->
