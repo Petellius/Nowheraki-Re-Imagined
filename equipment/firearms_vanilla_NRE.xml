@@ -70,5 +70,145 @@
 			<Empty name="gen_empty"/>
 		</Sounds>
 	</Firearm>
+
+
+	<Bind eqp="M4/M203 NWS">
+		<to name="SwatLeader"/>
+
+		<to name="556FMJM855_M4"/>
+
+		<to name="IronSights"/>
+		<to name="M68CCO"/>
+		<to name="M150RCO"/>
+	</Bind>
+	<Firearm name="M4/M203 NWS" inventoryBinding="PrimaryWeapon" category="usrifle" unlockCost="10"
+			tooltip="@firearm_m4_m203_name"
+			img="data/models/weapons/m4_m203_ui.dds"
+			description="@firearm_m4_m203_desc"
+			animationSet="rifle"
+			soundUseVoice="VOX_GEAR_LAUNCHER"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-5"/>
+		<RenderObject3D model="data/models/weapons/m4.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m4_gl.dds"/>
+		<RenderObject3D model="data/models/weapons/m203.khm" attachSlot="underbarrel" skipGOSSAO="true" diffuseTex="data/models/weapons/m203.dds"/>
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="1"
+
+			projectilesPerMagazine="5"
+
+			cyclicReload="0"
+			reloadTime="2650"
+			reloadEmptyTime="3500"
+			changeInTime="1150"
+			changeOutTime="1250"
+			readyTime="500"
+			guardTime="250"
+
+			accuracyStart="230"
+			accuracyEnd="200"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+		
+		<Params
+			caliberInfoText="@firearm_caliber_556GL40_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m4_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="40.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="false"
+			hasLaser="true"
+			suppressedSwitch="M4/M203 NWSSup"
+		/>
+
+		<AttackTypes>
+			<AttackType name="NRE_Military_Rifle_1" rangeMeters="5"/>
+			<AttackType name="NRE_Military_Rifle_2" rangeMeters="12"/>
+			<AttackType name="NRE_Military_Rifle_3" inCoverOverride="NRE_Military_Rifle_3_Mounted" rangeMeters="22"/>
+			<AttackType name="NRE_Military_Rifle_4" inCoverOverride="NRE_Military_Rifle_4_Mounted" rangeMeters="50"/>
+			<AttackType name="NRE_Military_Rifle_5" rangeMeters="9999"/>
+		</AttackTypes>
+		
+		<AttackTypesProjectile>
+			<AttackType name="RPG_QuickAimClose" rangeMeters="15"/>
+			<AttackType name="RPG_QuickAim" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="m4_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+
+		<Projectile
+			bodyTemplate="M203GrenadeBody"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="grenade_launcher_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="50000.0"
+			maxVelocity="50000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="1.7"
+			accuracyPercent="70"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+			</EffectRange>
+
+		</Projectile>
+	</Firearm>	
 	
 </Equipment>
