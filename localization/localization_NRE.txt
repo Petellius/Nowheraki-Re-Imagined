@@ -15,3 +15,5 @@
 @NRE_entity_military_vet_leader=Captain
 @NRE_entity_military_vet_lmg=Veteran MachineGunner
 @NRE_entity_military_elite=Commando
+@NRE_entity_rogue_cop=Rogue Cop
+@NRE_entity_rogue_SWAT=Rogue SWAT

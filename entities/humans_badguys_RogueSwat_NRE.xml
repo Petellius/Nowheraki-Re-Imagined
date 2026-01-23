@@ -15,7 +15,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
-			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.2" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -37,7 +37,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
-			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.2" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -60,8 +60,8 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
-			<Id name="@entity_human_tangoelite" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0" chanceToAmbush="0.3" stopsToShoot="false" usesSuppressionFire="true"/>
+			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" usesSuppressionFire="true"/>
 
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -88,8 +88,8 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
-			<Id name="@entity_human_tangoelite" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0" chanceToAmbush="0.3" stopsToShoot="false" usesSuppressionFire="true"/>
+			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.0" stopsToShoot="false" usesSuppressionFire="false"/>
 
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -115,8 +115,8 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
-			<Id name="@entity_human_tango" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" />
+			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" usesSuppressionFire="true"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -140,7 +140,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
-			<Id name="@entity_human_tangogrunt" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.2" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -161,7 +161,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
-			<Id name="@entity_human_tangoelite" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0" chanceToAmbush="0.3" stopsToShoot="false" usesSuppressionFire="true"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -187,7 +187,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
-			<Id name="@entity_human_tango" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
+			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -212,7 +212,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
-			<Id name="@entity_human_traitormilitia" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.3" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
 				<MoveSpeed min="0.8" defaultMetersPerSec="2.1" max="10"/>
