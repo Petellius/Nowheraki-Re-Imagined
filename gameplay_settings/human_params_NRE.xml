@@ -2,7 +2,7 @@
 	surrenderTimeMsec="200"
 
 	crouchDownTimeMsec="250"
-	crouchUpTimeMsec="300"
+	crouchUpTimeMsec="200"
 	openDoorTimeMsec="600"
 	closeDoorTimeMsec="1200"	
 
@@ -32,7 +32,7 @@
 
 	suppressedMovePercent="-25"
 	suppressedTurnPercent="-50"
-	suppressedAimTimePercent="10"
+	suppressedAimTimePercent="-5"
 	suppressedAccuracyPercent="-25"
 
 	coverBlockPercent = "80"
