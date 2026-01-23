@@ -9,8 +9,8 @@
 	civilianScareDistanceMeters="3.0"
 	runAwayDistanceMeters="3.0"
 
-	grenadeReactionTime="0.35"
-	grenadeWarningAdvanceMS = "200"
+	grenadeReactionTime="0.3"
+	grenadeWarningAdvanceMS = "400"
 
 	grenadeThrowSoundRadiusMeters="5.0"
 	enemyGrenadeThrowMinDistMeters="6.0"
