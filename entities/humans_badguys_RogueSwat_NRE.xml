@@ -23,7 +23,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble" />
+				<Item name="1911 Pistol" />
 			</Equipment>
 		</Human>
 	</Entity>
@@ -123,9 +123,8 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="Alpha AK Spectre Sup Tango" />
-				<Item name="LPVO_6X" />
-				<Item name="Flashbang Single"/>
+				<Item name="NRE M4 ACOG Tango" />
+				<Item name="M150RCO" />
 				<Item name="Balistic_Helmet_RogueSwat" />	
 				<Item name="Bodyguard HeavyArmor"/>				
 			</Equipment>

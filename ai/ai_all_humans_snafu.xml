@@ -169,8 +169,7 @@
 	<!-- Skittish - retreats more easily -->
 	<Behavior name="Skittish Combat" inherit="Normal Combat">
 		<Bind evt="SELF_TOOK_DAMAGE" 		prio="18" activity="FLEE" alwaysSwitch="true" />
-		<Bind evt="SEE_DEAD_FRIENDLY" 		prio="16" becomeAlerted="1" activity="FLEE" />
-		<Bind evt="HEAR_SNIPER_SHOT" 		prio="16" activity="FLEE" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 		prio="8" becomeAlerted="1" activity="FLEE" />
 	</Behavior>
 	
 	<!-- Aggressive - ignores danger -->

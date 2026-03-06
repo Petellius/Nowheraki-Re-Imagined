@@ -3,7 +3,7 @@
 #
 
 @NRE_entity_military_militia=Conscript
-@NRE_entity_military_militia_leader=Conscript Sergeant
+@NRE_entity_military_militia_leader=Sergeant
 @NRE_entity_military=Regular
 @NRE_entity_military_rpg=Regular (RPG)
 @NRE_entity_military_grenadier=Regular (Grenadier)
@@ -17,3 +17,16 @@
 @NRE_entity_military_elite=Commando
 @NRE_entity_rogue_cop=Rogue Cop
 @NRE_entity_rogue_SWAT=Rogue SWAT
+
+#
+# RMG Group Names
+#
+
+@group_defaultmix=Local Insurgents
+@group_rabble=Local Militia
+@group_lowlevel=poorly-organized insurgents
+@group_insurgency=well organized insurgents
+@group_privsec=Rogue Nowheraki Swat
+@group_forbiddentree=Forbidden Tree Militants
+@group_blackheads=Blackhead Fanatics
+@group_warmilitia=Remnants of Nowheraki Ground Forces
