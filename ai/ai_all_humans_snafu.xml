@@ -24,6 +24,27 @@
 		<Bind evt="HEAR_ALARM" 			prio="13" activity="SWITCH_TO_COMBAT" />
 		<Bind evt="SET_ON_FIRE"			prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
 	</Behavior>
+
+	<!-- Militia Troops - Flee more often and notice enemies less quickly -->
+	<Behavior name="Militia" inherit="Normal Guy">
+		<Bind evt="HEAR_SNIPER_SHOT" 		prio="6" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_FRIENDLY_COMBAT" 		prio="6" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DOOR_OPEN" 			prio="5" activity="INVESTIGATE" />
+		<Bind evt="SELF_TOOK_DAMAGE" 		prio="14" becomeAlerted="1" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_ENEMY" 				prio="11" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="12" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"				prio="15" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>	
+
+	<!-- Skittish - retreats more easily -->
+	<Behavior name="Militia Combat" inherit="Normal Combat">
+		<Bind evt="SELF_TOOK_DAMAGE" 		prio="9" activity="FLEE" alwaysSwitch="true" />
+		<Bind evt="SEE_FRIENDLY_COMBAT" 	prio="8" activity="FLEE" alwaysSwitch="true" />
+		<Bind evt="HEAR_SNIPER_SHOT" 		prio="7" activity="AVOID_SNIPER" />		
+		<Bind evt="SEE_DOOR_OPEN" 			prio="9" activity="INVESTIGATE" />
+		<Bind evt="SEE_ENEMY" 				prio="11" activity="ENGAGE_ENEMY" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="12" activity="AVOID_RADIUS" />		
+	</Behavior>	
 	
 	<Behavior name="Concealed Guy" >
 		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_SNEAK" />
@@ -164,12 +185,6 @@
 		<Bind evt="SELF_TOOK_DAMAGE" 		prio="10" becomeAlerted="1" activity="ENGAGE_ENEMY" />
 		<Bind evt="SEE_DEAD_FRIENDLY" 	    prio="8" activity="ENGAGE_ENEMY" />
 		<Bind evt="IN_BLAST_RADIUS" 		prio="16" activity="AVOID_RADIUS" />
-	</Behavior>
-	
-	<!-- Skittish - retreats more easily -->
-	<Behavior name="Skittish Combat" inherit="Normal Combat">
-		<Bind evt="SELF_TOOK_DAMAGE" 		prio="18" activity="FLEE" alwaysSwitch="true" />
-		<Bind evt="SEE_DEAD_FRIENDLY" 		prio="8" becomeAlerted="1" activity="FLEE" />
 	</Behavior>
 	
 	<!-- Aggressive - ignores danger -->
