@@ -128,8 +128,9 @@ SUICIDE BOMB
 		</RenderObject3D>
 	</HelmetNVG>
 
-	<Grenade name="Frag Grenade Enemy" inventoryBinding="UtilityPouch"
-			quantity="2"
+	<!-- Frag slow innacurate -->
+	<Grenade name="Frag Grenade Enemy Noob" inventoryBinding="UtilityPouch"
+			quantity="1"
 
 			tooltip="@grenade_frag_name"
 			description="@grenade_frag_desc"
@@ -144,10 +145,10 @@ SUICIDE BOMB
 		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
 
 		<ModifiableParams
-			changeInTime="800"
+			changeInTime="900"
 			changeOutTime="0"
-			throwTime="2000"
-			throwTimeCorner="1500"
+			throwTime="2200"
+			throwTimeCorner="1600"
 		/>
 
 		<Projectile
@@ -161,7 +162,80 @@ SUICIDE BOMB
 			triggerOnImpact="false"
 			triggerTimeAfterTargetHitMsec="2500"
 
-			accuracyPercent="50"
+			accuracyPercent="25"
+
+			physicsDetonationForce="60"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="30">
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				deleteAfterMS3="20000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="700" />
+			</EffectRange>
+			<EffectRange radiusMeters="2.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+			<EffectRange radiusMeters="8.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="800" outerRangeTimeMSec="200"/>
+				<DamageEffect chancePercent="25" damage="80" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="0"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>	
+
+	<!-- Frag Fast Innacurate -->
+	<Grenade name="Frag Grenade Enemy" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@grenade_frag_name"
+			description="@grenade_frag_desc"
+			img="data/models/equipment/frag_grenade_ui.dds"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+			soundUseVoice="VOX_GEAR_FRAG"
+		>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="600"
+			changeOutTime="0"
+			throwTime="1500"
+			throwTimeCorner="1400"
+		/>
+
+		<Projectile
+			bodyTemplate="FragGrenade"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			soundExplosion="frag_expl"
+			soundHitFloor="grenade_hit_floor"
+
+			friendlyFire="true"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="2500"
+
+			accuracyPercent="40"
 
 			physicsDetonationForce="60"
 			audibleLaunchSoundRadius="0"
@@ -200,8 +274,9 @@ SUICIDE BOMB
 		</Projectile>
 	</Grenade>
 
+	<!-- Frag fast, accurate-->
 	<Grenade name="Frag Grenade Enemy Elite" inventoryBinding="UtilityPouch"
-			quantity="2"
+			quantity="1"
 
 			tooltip="@grenade_frag_name"
 			description="@grenade_frag_desc"
@@ -216,7 +291,7 @@ SUICIDE BOMB
 		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
 
 		<ModifiableParams
-			changeInTime="600"
+			changeInTime="300"
 			changeOutTime="0"
 			throwTime="1500"
 			throwTimeCorner="1400"
@@ -233,7 +308,7 @@ SUICIDE BOMB
 			triggerOnImpact="false"
 			triggerTimeAfterTargetHitMsec="2500"
 
-			accuracyPercent="80"
+			accuracyPercent="70"
 
 			physicsDetonationForce="60"
 			audibleLaunchSoundRadius="0"
@@ -270,79 +345,8 @@ SUICIDE BOMB
 				<SuppressEffect amount="20"/>
 			</EffectRange>
 		</Projectile>
-	</Grenade>	
+	</Grenade>		
 
-	<Grenade name="Frag Grenade Enemy Noob" inventoryBinding="UtilityPouch"
-			quantity="1"
-
-			tooltip="@grenade_frag_name"
-			description="@grenade_frag_desc"
-			img="data/models/equipment/frag_grenade_ui.dds"
-
-			animationSet="grenade"
-			soundUse="grenade_use"
-			soundUseVoice="VOX_GEAR_FRAG"
-		>
-		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
-		<ConcealmentModifier add="-1"/>
-		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
-
-		<ModifiableParams
-			changeInTime="900"
-			changeOutTime="0"
-			throwTime="2200"
-			throwTimeCorner="1600"
-		/>
-
-		<Projectile
-			bodyTemplate="FragGrenade"
-			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
-
-			soundExplosion="frag_expl"
-			soundHitFloor="grenade_hit_floor"
-
-			friendlyFire="true"
-			triggerOnImpact="false"
-			triggerTimeAfterTargetHitMsec="2500"
-
-			accuracyPercent="35"
-
-			physicsDetonationForce="60"
-			audibleLaunchSoundRadius="0"
-			audibleDetonationSoundRadius="30">
-
-			<!-- spawn these when exploding -->
-			<FX
-				particles="FragGrenade"
-				entity1="ExplosionLight"
-				entity2="explosion_mark"
-				randRotation2="true"
-				entity3="FX_dust_small"
-				deleteAfterMS3="20000"
-				anim2D="">
-			</FX>
-
-			<EffectRange radiusMeters="1.7">
-				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
-				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
-				<ScatterEffect chancePercent="100" armorPenetration="30"/>
-				<SuppressEffect amount="20"/>
-				<SmokeEffect durationMSec="700" />
-			</EffectRange>
-			<EffectRange radiusMeters="2.0">
-				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
-				<DamageEffect chancePercent="100" damage="100" damageType="1"/>
-				<ScatterEffect chancePercent="100" armorPenetration="30"/>
-				<SuppressEffect amount="20"/>
-			</EffectRange>
-			<EffectRange radiusMeters="8.0">
-				<StunEffect chancePercent="100" innerRangeTimeMSec="800" outerRangeTimeMSec="200"/>
-				<DamageEffect chancePercent="25" damage="80" damageType="1"/>
-				<ScatterEffect chancePercent="100" armorPenetration="0"/>
-				<SuppressEffect amount="20"/>
-			</EffectRange>
-		</Projectile>
-	</Grenade>	
 
 	<Grenade name="Smoke Grenade Enemy" inventoryBinding="UtilityPouch"
 			quantity="1"

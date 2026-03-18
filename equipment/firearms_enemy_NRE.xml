@@ -259,8 +259,8 @@
 			readyTime="500"
 			guardTime="250"
 
-			accuracyStart="150"
-			accuracyEnd="70"
+			accuracyStart="230"
+			accuracyEnd="180"
 			accuracyStartDist="0"
 			accuracyEndDist="100"
 			suppressionScale="1.1"
@@ -277,12 +277,11 @@
 		/>
 
 		<AttackTypes>
-			<AttackType name="burst_heavy_Proximity_NGF" rangeMeters="5"/>
-			<AttackType name="burst_heavy_Close_NGF" rangeMeters="10"/>
-			<AttackType name="burst_heavy_Med_NGF" rangeMeters="15"/>
-			<AttackType name="aimed_Long_NGF" rangeMeters="22"/>
-			<AttackType name="aimed_LongX_NGF" rangeMeters="40"/>
-			<AttackType name="aimed_LongXX_NGF" rangeMeters="9999"/>
+			<AttackType name="NRE_Military_Rifle_1" rangeMeters="5"/>
+			<AttackType name="NRE_Military_Rifle_2" rangeMeters="12"/>
+			<AttackType name="NRE_Military_Rifle_3" rangeMeters="22" inCoverOverride="NRE_Military_Rifle_3_Mounted"/>
+			<AttackType name="NRE_Military_Rifle_4" rangeMeters="50" inCoverOverride="NRE_Military_Rifle_4_Mounted"/>
+			<AttackType name="NRE_Military_Rifle_5" rangeMeters="9999"/>
 		</AttackTypes>
 
 		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
@@ -330,8 +329,8 @@
 			readyTime="500"
 			guardTime="250"
 
-			accuracyStart="150"
-			accuracyEnd="70"
+			accuracyStart="240"
+			accuracyEnd="190"
 			accuracyStartDist="0"
 			accuracyEndDist="100"
 			suppressionScale="1.1"
@@ -348,12 +347,11 @@
 		/>
 
 		<AttackTypes>
-			<AttackType name="burst_heavy_Proximity_NGF" rangeMeters="5"/>
-			<AttackType name="burst_heavy_Close_NGF" rangeMeters="10"/>
-			<AttackType name="burst_heavy_Med_NGF" rangeMeters="15"/>
-			<AttackType name="aimed_Long_NGF" rangeMeters="22"/>
-			<AttackType name="aimed_LongX_NGF" rangeMeters="40"/>
-			<AttackType name="aimed_LongXX_NGF" rangeMeters="9999"/>
+			<AttackType name="Militia_Rifle_Heavy_1" rangeMeters="5"/>
+			<AttackType name="Militia_Rifle_Heavy_2" rangeMeters="12"/>
+			<AttackType name="Militia_Rifle_Heavy_3" rangeMeters="22" inCoverOverride="RPKStrafeMounted"/>
+			<AttackType name="Militia_Rifle_Heavy_4" rangeMeters="50" inCoverOverride="RPKStrafeMounted"/>
+			<AttackType name="Militia_Rifle_Heavy_5" rangeMeters="9999"/>
 		</AttackTypes>
 
 		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">

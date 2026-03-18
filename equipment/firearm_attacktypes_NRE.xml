@@ -220,7 +220,7 @@
 		MILITIA ATTACK TYPES
 	-->
 
-	<AttackType name="Militia_Rifle_Heavy_1"> 
+	<AttackType name="Militia_Rifle_Heavy_1">  <!-- + 50 aim and +200 reset compared to elite -->
 		<ModifiableParams
 			minAimTime="310"
 			maxAimTime="340"

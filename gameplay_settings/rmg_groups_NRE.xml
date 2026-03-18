@@ -101,10 +101,10 @@
 	</Group>
 
 	<Group name="Warlord Militia" localizedName="@group_warmilitia">
-		<Troop entity="Warlord Militia"				danger="15"	weightChance="30" />
+		<Troop entity="Warlord Militia"					danger="15"	weightChance="30" />
 		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
 		<Troop entity="Warlord Militia Sergeant"		danger="20"	weightChance="10"/>
-		<Troop entity="Warlord Militia Machinegunner"		danger="20"	weightChance="20" /> 
+		<Troop entity="Warlord Militia Machinegunner"	danger="20"	weightChance="20" /> 
 		<Troop entity="Warlord Militia Grenadier"		danger="22"	weightChance="20" />
 	</Group>	
 
@@ -126,29 +126,34 @@
 		<Troop entity="Veteran Insurgent" 			danger="10" weightChance="20" />
 	</Group>	-->
 
-	<!-- Weak Military 
-	<Group name="NRE Military 1" localizedName="@group_defaultmix">
-		<Troop entity="Bodyguard PM" 			danger="10" weightChance="20" />
-	</Group>	-->
+	<!-- Weak Military --> 
+	<Group name="NRE Military 1" localizedName="@group_warmilitia">
+		<Troop entity="Bodyguard PM" 				danger="10" weightChance="20" />
+		<Troop entity="Bodyguard SMG Noob" 			danger="12" weightChance="8" />
+		<Troop entity="Bodyguard AKSU" 				danger="12" weightChance="5" />	
+	</Group>
 
-	<!-- Military Commandos 
-	<Group name="NRE Military 2" localizedName="@group_defaultmix">
-		<Troop entity="Warlord Militia" 			danger="10" weightChance="20" />
-	</Group>	-->
+	<!-- Military Commandos --> 
+	<Group name="NRE Military 2" localizedName="@group_veterans">
+		<Troop entity="Warlord Militia" 				danger="20" weightChance="20" />
+		<Troop entity="Warlord Militia Sergeant"		danger="20" weightChance="5" />
+		<Troop entity="Warlord Militia Machinegunner"	danger="20" weightChance="8" />
+		<Troop entity="Bodyguard Heavy Weaponless"		danger="20" weightChance="5" />
+	</Group>
 
-	<!-- Elite Military Commandos 
-	<Group name="NRE Military Elite" localizedName="@group_defaultmix">
-		<Troop entity="Warlord Elite" 			danger="10" weightChance="20" />
-	</Group>	-->
+	<!-- Elite Military Commandos --> 
+	<Group name="NRE Military Elite" localizedName="@group_veterans">
+		<Troop entity="Warlord Elite" 			danger="30" weightChance="20" />
+	</Group>
 
 	<!-- Rogue Police -->	
-	<Group name="NRE Police 1" localizedName="@group_defaultmix">
+	<Group name="NRE Police 1" localizedName="@group_privsec">
 		<Troop entity="Generic Tango" 				danger="10" weightChance="45" />
 		<Troop entity="Generic Tango Shottie" 		danger="15" weightChance="45" />
 		<Troop entity="Generic Tango 2 M4" 			danger="25" weightChance="10" />
 	</Group>	
 
-	<Group name="NRE Police 2" localizedName="@group_defaultmix">
+	<Group name="NRE Police 2" localizedName="@group_privsec">
 		<!-- <Troop entity="Generic Tango 3" 			danger="30" weightChance="20" /> Causing crash? -->
 		<Troop entity="Generic Tango Shottie" 		danger="15" weightChance="15" />
 		<Troop entity="Generic Tango 2 Uzi" 		danger="25" weightChance="15" onlyOutside="true"/>
