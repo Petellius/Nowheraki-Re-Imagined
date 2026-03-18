@@ -13,7 +13,7 @@
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
 			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
-			<Brain startingBehavior="Militia" defaultBehavior="Militia" combatBehavior="Militia Combat" suppressionRecovery="5.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.8" chanceToAmbush="1.0" usesSuppressionFire="true" chanceToInvestigate="0.25" />
 			<Mobility>
@@ -34,7 +34,7 @@
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
 			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
-			<Brain startingBehavior="Militia" defaultBehavior="Militia" combatBehavior="Militia Combat" suppressionRecovery="5.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.4" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
@@ -55,7 +55,7 @@
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
 			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
-			<Brain startingBehavior="Militia" defaultBehavior="Militia" combatBehavior="Militia Combat" suppressionRecovery="5.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
 
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.8" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" />
