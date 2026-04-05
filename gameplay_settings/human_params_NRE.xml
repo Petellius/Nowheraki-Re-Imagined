@@ -31,7 +31,7 @@
 	suppressedMovePercent="-25"
 	suppressedTurnPercent="-50"
 	suppressedAimTimePercent="5"
-	suppressedAccuracyPercent="-25"
+	suppressedAccuracyPercent="-35"
 
 	coverBlockPercent = "80"
 	fullCoverBlockPercent = "95"
