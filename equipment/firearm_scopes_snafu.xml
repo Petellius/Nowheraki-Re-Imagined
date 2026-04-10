@@ -34,7 +34,7 @@ ex:
 
 
 <Equipment>
-	<Scope name="M150RCO"
+	<Scope name="NRE_M150RCO_Enemy"
 			inventoryBinding="PrimaryWeaponScope"
 			tooltip="@scope_rangersM150acog_name"
 			description="@scope_rangersM150acog_desc"
@@ -56,37 +56,37 @@ ex:
 				/>
 			</EquipmentModifier>
 
-			<AttackTypeModifier minRange="7" maxRange="15">
+			<AttackTypeModifier minRange="5" maxRange="12">
 				<AddTo
-					minAimTime2="-40"
-					maxAimTime2="-120"
-					resetTime="-30"
-					accuracyAdd="+20"
+					minAimTime2="-25"
+					maxAimTime2="-50"
+					resetTime="-25"
+					accuracyAdd="+5"
 					critChanceAdd="+10"
 					coverReductionMin="50" 
 					coverReductionMax="30"
 				/>
 			</AttackTypeModifier>
 
-			<AttackTypeModifier minRange="15" maxRange="25">
+			<AttackTypeModifier minRange="12" maxRange="22">
 				<AddTo
 					minAimTime2="-120"
 					maxAimTime2="-120"
 					resetTime="-50"
-					accuracyAdd="+50"
+					accuracyAdd="+8"
 					critChanceAdd="+15"
 					coverReductionMin="40" 
 					coverReductionMax="25"					
 				/>
 			</AttackTypeModifier>
 
-			<AttackTypeModifier minRange="25" maxRange="50">
+			<AttackTypeModifier minRange="22" maxRange="50">
 				<AddTo
 					minAimTime2="-120"
 					maxAimTime2="-50"
 					resetTime="-50"
-					accuracyAdd="+25"
-					critChanceAdd="+5"
+					accuracyAdd="+10"
+					critChanceAdd="+10"
 					coverReductionMin="15" 
 					coverReductionMax="10"					
 				/>
@@ -97,8 +97,8 @@ ex:
 					minAimTime2="-50"
 					maxAimTime2="-30"
 					resetTime="+0"
-					accuracyAdd="+10"
-					critChanceAdd="+0"
+					accuracyAdd="+15"
+					critChanceAdd="+5"
 					coverReductionMin="15" 
 					coverReductionMax="10"					
 				/>

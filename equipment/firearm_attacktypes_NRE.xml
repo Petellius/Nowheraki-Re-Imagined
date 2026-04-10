@@ -125,8 +125,8 @@
 			minShots="6"
 			maxShots="6"
 			resetTime="210"
-			accuracyAdd="-160"
-			followupShotAccuracyAdd="-1"
+			accuracyAdd="-135"
+			followupShotAccuracyAdd="-5"
 			critChanceAdd="10"
 		/>
 	</AttackType>
@@ -138,9 +138,9 @@
 			roundsPerSecondOverride="5"
 			minShots="3"
 			maxShots="5"
-			resetTime="235"
-			accuracyAdd="-150"
-			followupShotAccuracyAdd="2"
+			resetTime="265"
+			accuracyAdd="-135"
+			followupShotAccuracyAdd="-5"
 			critChanceAdd="5"
 		/>
 	</AttackType>
@@ -152,22 +152,22 @@
 			roundsPerSecondOverride="3.7"
 			minShots="4"
 			maxShots="6"
-			resetTime="265"
-			accuracyAdd="-125"
-			followupShotAccuracyAdd="8"
+			resetTime="400"
+			accuracyAdd="-130"
+			followupShotAccuracyAdd="1"
 			critChanceAdd="0"
 		/>
 	</AttackType>
 
-	<AttackType name="NRE_Military_Rifle_3_Mounted">
+	<AttackType name="NRE_Military_Rifle_3_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
 			minAimTime="550"
 			maxAimTime="640"
 			roundsPerSecondOverride="3.3"
 			minShots="2"
 			maxShots="2"
-			resetTime="215"
-			accuracyAdd="-90"
+			resetTime="300"
+			accuracyAdd="-100"
 			followupShotAccuracyAdd="17"
 			critChanceAdd="0"
 		/>
@@ -180,22 +180,22 @@
 			roundsPerSecondOverride="2.5"
 			minShots="2"
 			maxShots="3"
-			resetTime="300"
-			accuracyAdd="-120"
-			followupShotAccuracyAdd="12"
+			resetTime="450"
+			accuracyAdd="-135"
+			followupShotAccuracyAdd="8"
 			critChanceAdd="0"
 		/>
 	</AttackType>
 
-	<AttackType name="NRE_Military_Rifle_4_Mounted">
+	<AttackType name="NRE_Military_Rifle_4_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
 			minAimTime="620"
 			maxAimTime="720"
 			roundsPerSecondOverride="2.2"
 			minShots="1"
 			maxShots="2"
-			resetTime="250"
-			accuracyAdd="-90"
+			resetTime="350"
+			accuracyAdd="-100"
 			followupShotAccuracyAdd="25"
 			critChanceAdd="0"
 		/>
@@ -208,9 +208,9 @@
 			roundsPerSecondOverride="1.5"
 			minShots="1"
 			maxShots="1"
-			resetTime="400"
-			accuracyAdd="-125"
-			followupShotAccuracyAdd="17.5"
+			resetTime="550"
+			accuracyAdd="-120"
+			followupShotAccuracyAdd="10"
 			critChanceAdd="0"
 		/>
 	</AttackType>
@@ -518,6 +518,90 @@
 			resetTime="600"
 			critChanceAdd="-20"
 		/>
-	</AttackType>		
+	</AttackType>	
+
+	<!-- SHOTGUN ATTACKTYPES -->	
+
+	<AttackType name="NRE_PumpFire_Noob">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			minShots="1"
+			maxShots="1"
+			resetTime="400"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_PumpFireLong_Noob">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="900"
+			minShots="1"
+			maxShots="1"
+			resetTime="800"
+			accuracyAdd="-50"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-1"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_PumpFireLongXX_Noob">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1500"
+			accuracyAdd="-70"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
+
+	<AttackType name="NRE_PumpFire">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			minShots="1"
+			maxShots="1"
+			resetTime="100"
+			accuracyAdd="0"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+	
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_PumpFireLong">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="900"
+			minShots="1"
+			maxShots="1"
+			resetTime="600"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-1"
+		/>
+	</AttackType>
+
+	<AttackType name="NRE_PumpFireLongXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="1100"
+			roundsPerSecondOverride="1"
+			minShots="1"
+			maxShots="1"
+			resetTime="1100"
+			accuracyAdd="-35"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="-10"
+		/>
+	</AttackType>	
 		
 </FirearmAttackTypes>

@@ -70,7 +70,7 @@
 
 			<Equipment>
 				<Item name="NRE M4 ACOG Tango" />
-				<Item name="M150RCO" />
+				<Item name="NRE_M150RCO_Enemy" />
 				<Item name="Balistic_Helmet_RogueSwat" />
 				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
