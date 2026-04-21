@@ -229,6 +229,145 @@
 			<ShellDrop name="rifle_shell_drop"/>
 			<Empty name="gen_empty"/>
 		</Sounds>		
-	</Firearm>		
+	</Firearm>
+
+	<!-- LMGs -->
+
+	<Bind eqp="NRE_RPK_74_LMG">
+		<to name="545x39FMJ_RPK 74 LMG"/>
+	</Bind>
+	<Firearm name="NRE_RPK_74_LMG" inventoryBinding="PrimaryWeapon" category="lmg" 
+			tooltip="@firearm_rpk74lmg_name"
+			img="data/models/weapons/rpk_bad_guy_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-20" turnSpeedModifierPercent="-5"/>
+		<RenderObject3D model="data/models/weapons/rpk74.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/rpk74.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="45"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="4200"
+			reloadEmptyTime="4800"
+			changeInTime="1000"
+			changeOutTime="1000"
+			readyTime="600"
+			guardTime="225"
+
+			accuracyStart="110"
+			accuracyEnd="90"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+
+			suppressionScale="1.4"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_545x39_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="rpk74_mag"
+			ai_rangeMin="3.0"
+			ai_rangeOptimal="45.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="RPKStrafe" inCoverOverride="RPKStrafeMounted" rangeMeters="5"/>
+			<AttackType name="RPKStrafeBurst" inCoverOverride="RPKStrafeMounted" rangeMeters="12"/>
+			<AttackType name="RPKStrafeMed" inCoverOverride="RPKStrafeMedMounted" rangeMeters="22"/>
+			<AttackType name="RPKStrafeLong" inCoverOverride="RPKStrafeLongMounted" rangeMeters="50"/>
+			<AttackType name="RPKStrafeLongXX" inCoverOverride="RPKStrafeLongMounted" rangeMeters="9999"/>		
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_LMG_01" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_02" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_03" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="rpk74_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+	<Bind eqp="NRE_RPK_LMG">
+		<to name="545x39FMJ_RPK 74 LMG"/>
+	</Bind>
+	<Firearm name="NRE_RPK_LMG" inventoryBinding="PrimaryWeapon" category="lmg" 
+			tooltip="@firearm_rpklmg_name"
+			img="data/models/weapons/rpk74_drum_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-22" turnSpeedModifierPercent="-5"/>
+		<RenderObject3D model="data/models/weapons/rpk74_drum.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/rpk74_drum.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="97"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="4000"
+			reloadEmptyTime="4800"
+			changeInTime="1000"
+			changeOutTime="1000"
+			readyTime="700"
+			guardTime="300"
+
+			accuracyStart="110"
+			accuracyEnd="90"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+
+			suppressionScale="1.2"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x39_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="rpk74_mag"
+			ai_rangeMin="3.0"
+			ai_rangeOptimal="35.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="RPKStrafe" inCoverOverride="RPKStrafeMounted" rangeMeters="10"/>
+			<AttackType name="RPKStrafeMed" inCoverOverride="RPKStrafeMedMounted" rangeMeters="30"/>
+			<AttackType name="RPKStrafeLong" inCoverOverride="RPKStrafeLongMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_LMG_01" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_02" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_03" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="rpk_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>			
 
 </Equipment>

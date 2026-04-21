@@ -50,6 +50,7 @@
 	<!-- Base game RMGGroup overrides -->
 	<Group name="Default Mix" localizedName="@group_defaultmix">
 		<Troop entity="Rabble"						danger="8"	weightChance="20" />
+		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
 		
@@ -64,7 +65,7 @@
 
 	<Group name="Low Level Insurgents" localizedName="@group_lowlevel">		
 		<Troop entity="Rabble"						danger="10"	weightChance="20" />
-
+		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
 		
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />
@@ -72,7 +73,7 @@
 
 	<Group name="Insurgency" localizedName="@group_insurgency">
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
-
+		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
 		
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />
@@ -80,7 +81,7 @@
 
 	<Group name="Forbidden Tree" localizedName="@group_forbiddentree">
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
-
+		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
 		
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />
@@ -88,7 +89,7 @@
 	
 	<Group name="Forbidden Tree Assaultgroup" localizedName="@group_forbiddentree">
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
-
+		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
 		
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />

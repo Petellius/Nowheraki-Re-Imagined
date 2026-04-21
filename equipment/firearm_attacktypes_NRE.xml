@@ -603,5 +603,113 @@
 			critChanceAdd="-10"
 		/>
 	</AttackType>	
+
+	<!-- RPK LMG -->
+	<AttackType name="RPKStrafe">
+		<ModifiableParams
+			minAimTime="360"
+			maxAimTime="390"
+			minShots="10"
+			maxShots="25"
+			resetTime="900"
+			accuracyAdd="-65"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="10"
+			suppressionScale="0.8"
+		/>
+	</AttackType>	
+
+	<AttackType name="RPKStrafeBurst">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="600"
+			minShots="8"
+			maxShots="20"
+			resetTime="1200"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeMed">
+		<ModifiableParams
+			minAimTime="650"
+			maxAimTime="740"
+			minShots="6"
+			maxShots="12"
+			resetTime="1500"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="-5"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeLong">
+		<ModifiableParams
+			minAimTime="720"
+			maxAimTime="820"
+			minShots="4"
+			maxShots="8"
+			resetTime="950"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeLongXX">
+		<ModifiableParams
+			minAimTime="1000"
+			maxAimTime="1350"
+			minShots="2"
+			maxShots="6"
+			resetTime="1200"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-2"
+			critChanceAdd="0"
+		/>
+	</AttackType>	
+
+	<!-- Mounted -->
+
+	<AttackType name="RPKStrafeMounted"> <!-- Mounted +50 aim +15 aim: reduced reset and increased accuracy per shot -->
+		<ModifiableParams
+			minAimTime="360"
+			maxAimTime="390"
+			minShots="8"
+			maxShots="25"
+			resetTime="450"
+			accuracyAdd="-45"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="15"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeMedMounted"> <!-- Mounted +50 aim +15 aim: reduced reset and increased accuracy per shot -->
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="790"
+			minShots="5"
+			maxShots="15"
+			resetTime="550"
+			followupShotAccuracyAdd="+2"
+			accuracyAdd="-45"
+			critChanceAdd="5"
+		/>
+	</AttackType>
+
+	<AttackType name="RPKStrafeLongMounted"> <!-- Mounted +50 aim +15 aim: reduced reset and increased accuracy per shot -->
+		<ModifiableParams
+			minAimTime="770"
+			maxAimTime="1400"
+			minShots="3"
+			maxShots="8"
+			resetTime="700"
+			accuracyAdd="-45"
+			followupShotAccuracyAdd="+2"
+			critChanceAdd="2"
+		/>
+	</AttackType>
 		
 </FirearmAttackTypes>

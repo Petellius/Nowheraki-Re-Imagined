@@ -17,7 +17,7 @@
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.8" chanceToAmbush="1.0" usesSuppressionFire="true" chanceToInvestigate="0.25" />
 			<Mobility>
-				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
@@ -38,7 +38,7 @@
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.4" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
-				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
@@ -60,7 +60,7 @@
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.8" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Mobility>
-				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
@@ -83,7 +83,7 @@
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToBlindFire="0.4" usesSuppressionFire="false" stopsToShoot="false" />
 			<Mobility>
-				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
@@ -108,7 +108,7 @@
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
 			<Traits chanceToInvestigate="0.0" stopsToShoot="false" usesSuppressionFire="true"/>
 			<Mobility>
-				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
@@ -355,12 +355,12 @@
 			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" stopsToShoot="false" usesSuppressionFire="true"/>
 			<Id name="@entity_human_machinegunner" portrait="data/textures/portraits/enemy_machinegun.dds" gender="0" voicePack="enemy arabic"/>
 			<Mobility>
-				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="9"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="RPK 74 LMG"/>
+				<Item name="NRE_RPK_74_LMG"/>
 			</Equipment>
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
 		</Human>
