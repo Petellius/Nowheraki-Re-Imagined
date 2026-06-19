@@ -158,8 +158,11 @@
 		<Bind evt="IDLE_TICK" 				prio="0" becomeAlerted="1" activity="IDLE_HOSTAGE" />
 	</Behavior>
 	
-	<Behavior name="Fake Hostage" inherit="Normal Combat">
+	<Behavior name="Fake Hostage">
 		<Bind evt="IDLE_TICK" 				prio="0" becomeAlerted="1" activity="IDLE_HOSTAGE" />
+		<!--<Bind evt="IN_BLAST_RADIUS" 		prio="3" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<Bind evt="SEE_FRIENDLY_COMBAT" 	prio="5" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="8" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />		-->
 	</Behavior>
 	
 	

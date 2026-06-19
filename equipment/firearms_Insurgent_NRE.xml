@@ -368,6 +368,74 @@
 			<ShellDrop name="rifle_shell_drop"/>
 			<Empty name="gen_empty"/>
 		</Sounds>
-	</Firearm>			
+	</Firearm>	
+
+	<!-- Concealed Insurgent Weapon -->
+	<!-- Concealed Uzi -->
+	<Bind eqp="Mini Uzi Folded">
+		<to name="9x19FMJ_MiniUzi"/>
+	</Bind>
+	<Firearm name="Mini Uzi Folded" inventoryBinding="PrimaryWeapon" category="rifle" 
+			tooltip="@firearm_miniuzi_name"
+			img="data/models/weapons/mini_uzi_ui.dds"
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/mini_uzi_folded.khm" attachSlot="prop_sidearm" skipGOSSAO="true" diffuseTex="data/models/weapons/mini_uzi.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="32"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="1200"
+			reloadEmptyTime="1200"
+			changeInTime="500"
+			changeOutTime="500"
+			readyTime="300"
+			guardTime="200"
+
+			accuracyStart="60"
+			accuracyEnd="30"
+			accuracyStartDist="5"
+			accuracyEndDist="20"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="5.0"
+			ai_rangeMax="25.0"
+		/>
+
+		<AttackTypes>
+			<AttackType name="UziWildFireClose" rangeMeters="1.5"/>
+			<AttackType name="UziWildFire" rangeMeters="8"/>
+			<AttackType name="AKWildBurst" rangeMeters="20"/>
+			<AttackType name="AKWildBurstLongXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="uzi_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>	
+
 
 </Equipment>

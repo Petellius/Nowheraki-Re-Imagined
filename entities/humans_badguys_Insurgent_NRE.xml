@@ -586,17 +586,66 @@
 			<Brain startingBehavior="Concealed Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" />
 			<Id name="Concealed Insurgent" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic"/>
 			<IdConcealed name="Civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" />
 			<Equipment>
-				<Item name="Type 56"/>
+				<Item name="Mini Uzi Folded"/>
 			</Equipment>
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
-			<Concealment default="1"/>
+			<Concealment default="20" canHide="true"/>
 		</Human>
 	</Entity>
+
+	<Entity name="Concealed Suicide Bomber" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" hideInEditor="true" editorTags="enemy,NRE_insurgent">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<Brain startingBehavior="Concealed Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" />
+			<Id name="Concealed Insurgent" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic"/>
+			<IdConcealed name="Civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" />
+			<Equipment>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+			<Concealment default="20" canHide="true"/>
+		</Human>
+	</Entity>	
+
+	<Entity name="Fake Hostage" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_hostage_civ" hideInEditor="true" editorTags="enemy,NRE_insurgent">
+		<RenderObject3D model="data/models/humans/civilian_female_fat.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="2.0"/>
+			<Brain startingBehavior="Fake Hostage" defaultBehavior="Normal Combat" combatBehavior="Suicide Combat" suppressionRecovery="40.0"/>
+			<Traits chanceToAmbush="1.0" />
+			<Id name="@entity_human_fakehostage" portrait="data/textures/portraits/civilian_female.dds" gender="1" voicePack="civilian_female"/>
+			<IdConcealed name="@entity_human_hostage" portrait="data/textures/portraits/civilian_female.dds" gender="1" voicePack="civilian_female"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+			<Concealment default="100" canHide="true"/>
+
+			<Equipment>
+				<Item name="Suicide Bomb"/>
+				<Item name="M9 Pistol"/>
+				<Item name="HostageHandTies"/>
+			</Equipment>
+		</Human>
+	</Entity>	
 	
 	<!-- NOTE: This name is used by RMG. don't change it please -->
 	<Entity name="Executioner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,executioner,NRE_insurgent">
@@ -807,27 +856,6 @@
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
-		</Human>
-	</Entity>
-	
-	<Entity name="Fake Hostage" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent">
-		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
-		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
-		<PhysicalParams health="100" />
-		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="2.0"/>
-			<Brain startingBehavior="Fake Hostage" defaultBehavior="Normal Combat" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
-			<Traits chanceToAmbush="0.7" usesSuppressionFire="false" />
-			<Id name="@entity_human_fakehostage" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
-			<Mobility>
-				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
-				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
-			</Mobility>
-
-			<Equipment>
-				<Item name="M9 Pistol"/>
-			</Equipment>
 		</Human>
 	</Entity>
 	
