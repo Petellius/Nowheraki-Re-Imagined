@@ -117,7 +117,7 @@
 	<!--
 		MILITARY STANDARD ATTACK TYPES
 	-->
-	<AttackType name="NRE_Military_Rifle_1"> <!-- + 50 aim and +100 reset compared to elite -->
+	<AttackType name="NRE_Military_Rifle_1"> <!-- + 20 aim and +100 reset compared to elite -->
 		<ModifiableParams
 			minAimTime="310"
 			maxAimTime="340"
@@ -222,8 +222,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_1">  <!-- + 50 aim and +200 reset compared to elite -->
 		<ModifiableParams
-			minAimTime="310"
-			maxAimTime="340"
+			minAimTime="280"
+			maxAimTime="310"
 			minShots="4"
 			maxShots="6"
 			resetTime="450"
@@ -237,8 +237,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_2">
 		<ModifiableParams
-			minAimTime="350"
-			maxAimTime="450"
+			minAimTime="320"
+			maxAimTime="380"
 			minShots="3"
 			maxShots="4"
 			resetTime="650"
@@ -249,10 +249,10 @@
 		/>
 	</AttackType>
 
-	<AttackType name="Militia_Rifle_Heavy_3"> <!-- +200 compared to elite -->
+	<AttackType name="Militia_Rifle_Heavy_3"> <!-- +100 compared to elite -->
 		<ModifiableParams
-			minAimTime="600"
-			maxAimTime="690"
+			minAimTime="500"
+			maxAimTime="590"
 			minShots="2"
 			maxShots="3"
 			resetTime="900"
@@ -264,8 +264,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_3_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
-			minAimTime="650"
-			maxAimTime="740"
+			minAimTime="550"
+			maxAimTime="640"
 			roundsPerSecondOverride="3.1"
 			minShots="2"
 			maxShots="3"
@@ -278,8 +278,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_4">
 		<ModifiableParams
-			minAimTime="670"
-			maxAimTime="770"
+			minAimTime="570"
+			maxAimTime="670"
 			roundsPerSecondOverride="2.3"
 			minShots="1"
 			maxShots="2"
@@ -292,8 +292,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_4_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
-			minAimTime="720"
-			maxAimTime="820"
+			minAimTime="620"
+			maxAimTime="720"
 			roundsPerSecondOverride="2.1"
 			minShots="1"
 			maxShots="2"
@@ -306,7 +306,7 @@
 
 	<AttackType name="Militia_Rifle_Heavy_5">
 		<ModifiableParams
-			minAimTime="950"
+			minAimTime="750"
 			maxAimTime="1300"
 			roundsPerSecondOverride="2.1"
 			minShots="1"

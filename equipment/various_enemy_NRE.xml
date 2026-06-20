@@ -145,10 +145,10 @@ SUICIDE BOMB
 		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
 
 		<ModifiableParams
-			changeInTime="900"
+			changeInTime="500"
 			changeOutTime="0"
-			throwTime="2200"
-			throwTimeCorner="1600"
+			throwTime="1600"
+			throwTimeCorner="1800"
 		/>
 
 		<Projectile
@@ -218,10 +218,10 @@ SUICIDE BOMB
 		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
 
 		<ModifiableParams
-			changeInTime="600"
+			changeInTime="300"
 			changeOutTime="0"
-			throwTime="1500"
-			throwTimeCorner="1400"
+			throwTime="1400"
+			throwTimeCorner="1600"
 		/>
 
 		<Projectile
@@ -291,9 +291,9 @@ SUICIDE BOMB
 		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
 
 		<ModifiableParams
-			changeInTime="300"
+			changeInTime="0"
 			changeOutTime="0"
-			throwTime="1500"
+			throwTime="1000"
 			throwTimeCorner="1400"
 		/>
 
