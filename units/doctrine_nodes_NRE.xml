@@ -240,6 +240,7 @@
 		<EquipmentModifier
 			suppressionRecoveryAdd="100"
 			flinchResistance="25"
+			conditioning="20"
 		/>
 	</Node>	
 
