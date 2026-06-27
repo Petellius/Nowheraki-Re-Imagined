@@ -246,6 +246,20 @@
 	<Node name="FanaticLeader_Text" nameUI="" description="@NRE_fanatic_leader">
 	</Node>	
 
+	<Node name="FanaticLeaderOnKill">
+		<GiveBuff nodeName="FanaticalKill" when="kill" target="friends_in_radius" radius="15.0" durationMs="6000" />
+	</Node>
+	
+	<Node name="FanaticalKill" nameUI="" description="@NRE_buff_fanatic">
+		<AttackTypeModifier target="" minRange="0" maxRange="15"
+			minAimTime="-50"
+			maxAimTime="-50"
+			resetTime="-100"
+			MaxShots="+10"
+			minShots="+5"
+		/>	
+	</Node>		
+
 	<Node name="MilitaryOfficer">
 		<GiveBuff nodeName="NearbyOfficerBuff" target="friends_in_radius" radius="25.0" durationMs="2500" />
 		<GiveBuff nodeName="MilitaryOfficer_Text" target="self" durationMs="2500" />
