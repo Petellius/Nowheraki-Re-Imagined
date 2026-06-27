@@ -207,8 +207,8 @@
 		<EquipmentModifier target="Grenade"
 			throwTime="-300"
 			throwTimeCorner="-400"
-			changeInTime="-300"
-			changeOutTime="-300"
+			changeInTime="-500"
+			changeOutTime="-500"
 		/>
 	</Node>
 

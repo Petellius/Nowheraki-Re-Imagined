@@ -4,9 +4,9 @@
 <Entities>	
 
 	<!-- MILITARY ENEMIES -->
-	<!-- TIER 1 -->
 
-	<!-- Conscript Tier - Slow Reactions, Flees, Weak Vs Suppression, Requires Leader to function -->
+	<!-- SUBFACTION: NWK REGULARS -->
+	<!-- Standard military guys with little training. Very role focused but slow, with limited equipment and light armour. -->
 	<!-- Standard Guy -->
 	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,conscript">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
@@ -126,9 +126,6 @@
 		</Human>
 	</Entity>
 
-
-	<!-- Tier 2 Regular Military - More grenades and weapon options, better armour, better suppression -->	
-
 	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
@@ -209,7 +206,6 @@
 		</Human>
 	</Entity>
 
-
 	<Entity name="Bodyguard Heavy Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,weaponless">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
@@ -266,7 +262,14 @@
 
 		</Human>
 	</Entity>
+<!-- _________________________________________________________________________________________________________________________________-->
 
+
+	<!-- 
+	###################
+	SUBFACTION: MILITIA 
+	###################
+	-->
 
 	<Entity name="Warlord Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
@@ -423,9 +426,6 @@
 	</Entity>
 
 
-	<!-- Nowheraki Special Forces - Elite weapon control, heavy armour, NVGs and fast grenades -->
-
-
 	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>		
 				
@@ -486,9 +486,7 @@
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
-		
-		
-				
+						
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">

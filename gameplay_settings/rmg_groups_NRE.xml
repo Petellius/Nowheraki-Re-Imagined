@@ -153,20 +153,20 @@
 		<Troop entity="Bodyguard AKSU" 				danger="12" weightChance="5" />	
 	</Group>
 
-	<!-- Military Commandos --> 
+	<!-- Military Commandos 
 	<Group name="NRE Military 2" localizedName="@group_veterans">
 		<Troop entity="Warlord Militia" 				danger="20" weightChance="20" />
 		<Troop entity="Warlord Militia Sergeant"		danger="20" weightChance="5" />
 		<Troop entity="Warlord Militia Machinegunner"	danger="20" weightChance="8" />
 		<Troop entity="Bodyguard Heavy Weaponless"		danger="20" weightChance="5" />
-	</Group>
+	</Group> --> 
 
-	<!-- Elite Military Commandos --> 
+	<!-- Elite Military Commandos 
 	<Group name="NRE Military Elite" localizedName="@group_veterans">
 		<Troop entity="Warlord Elite" 			danger="30" weightChance="20" />
-	</Group>
+	</Group> --> 
 
-	<!-- Rogue Police -->	
+	<!-- Rogue Police 	
 	<Group name="NRE Police 1" localizedName="@group_privsec">
 		<Troop entity="Generic Tango" 				danger="10" weightChance="45" />
 		<Troop entity="Generic Tango Shottie" 		danger="15" weightChance="45" />
@@ -179,6 +179,6 @@
 		<Troop entity="Generic Tango 2 Uzi" 		danger="25" weightChance="15" onlyOutside="true"/>
 		<Troop entity="Generic Tango 2 M4" 			danger="25" weightChance="40" />
 		<Troop entity="Generic Tango 3 Weaponless" 	danger="25" weightChance="20" />
-	</Group>		
+	</Group>	-->	
 
 </RMGGroups>
