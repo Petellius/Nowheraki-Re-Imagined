@@ -107,11 +107,174 @@
 		/>
 	</Node>
 
-		<Node name="FastGrenades" nameUI="" description="" texturePrefix="">
+	<Node name="MilitaryI" nameUI="" description="" texturePrefix="">
+		<AttackTypeModifier target="" minRange="0" maxRange="7"
+			minAimTime="-50"
+			maxAimTime="-100"
+			resetTime="-100"
+		/>
+		<AttackTypeModifier target="pistol" minRange="0" maxRange="7"
+			minAimTime="-50" 
+			maxAimTime="-100" 
+			resetTime="-100"
+		/>
+		<AttackTypeModifier target="shotgun" minRange="0" maxRange="7"
+			minAimTime="-50"
+			maxAimTime="-100" 
+			resetTime="-50"
+		/>
+		<AttackTypeModifier target="" minRange="7" maxRange="15"
+			minAimTime="-100"
+			maxAimTime="-200"
+			resetTime="-100"
+		/>		
+		<AttackTypeModifier target="pistol" minRange="7" maxRange="15"
+			minAimTime="-50"
+			maxAimTime="-50"
+			resetTime="-50"
+		/>
+		<AttackTypeModifier target="dmr" minRange="7" maxRange="15"
+			minAimTime="-100"
+			maxAimTime="-200"
+			resetTime="-100"
+		/>
+		<AttackTypeModifier target="shotgun" minRange="7" maxRange="15"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="pistol" minRange="15" maxRange="100"
+			minAimTime="-50"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="rifle" minRange="15" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="lmg" minRange="15" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="lmg" minRange="15" maxRange="100" onlyFromCover="true"
+			minAimTime="-100"
+			maxAimTime="-100"
+			resetTime="-100"
+			accuracyAdd="15"
+
+			roundsPerSecondAdd="+1"
+			minShots="+1"
+			maxShots="+1" 
+		/>		
+		<AttackTypeModifier target="dmr" minRange="15" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<EquipmentModifier target="pistol"
+			reloadTime="-250"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="rifle"
+			reloadTime="-300"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="lmg"
+			reloadTime="-300"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="dmr"
+			reloadTime="-300"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="shotgun"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+	</Node>	
+
+	<Node name="FastGrenades" nameUI="" description="" texturePrefix="">
 		<EquipmentModifier target="Grenade"
 			throwTime="-300"
 			throwTimeCorner="-400"
+			changeInTime="-300"
+			changeOutTime="-300"
 		/>
 	</Node>
+
+	<Node name="SniperVsCover" nameUI="" description="" texturePrefix="">
+		<AttackTypeModifier target="" minRange="7" maxRange="100"
+			coverReductionMin="15" coverReductionMax="50"
+		/>	
+	</Node>	
+
+	<Node name="SuppressionScaleMod" nameUI="" description="" texturePrefix="">
+		<AttackTypeModifier target="" minRange="0" maxRange="7"
+			suppressionScale="0.7"
+		/>	
+		<!-- Add extra suppresion scales per weapon here -->
+	</Node>		
+
+	<Node name="BonusVsCover" nameUI="" description="" texturePrefix="">
+		<AttackTypeModifier target="" minRange="0" maxRange="100"
+			coverReductionMin="15" coverReductionMax="15"
+		/>	
+	</Node>		
+
+	<Node name="FanaticLeader">
+		<GiveBuff nodeName="FanaticalInspiration" target="friends_in_radius" radius="15.0" durationMs="2500" />
+		<GiveBuff nodeName="FanaticLeader_Text" target="self" durationMs="2500" />
+	</Node>
+	
+	<Node name="FanaticalInspiration" nameUI="" description="@NRE_buff_fanatic">
+		<EquipmentModifier
+			suppressionRecoveryAdd="100"
+			flinchResistance="25"
+		/>
+	</Node>	
+
+	<Node name="FanaticLeader_Text" nameUI="" description="@NRE_fanatic_leader">
+	</Node>	
+
+	<Node name="MilitaryOfficer">
+		<GiveBuff nodeName="NearbyOfficerBuff" target="friends_in_radius" radius="25.0" durationMs="2500" />
+		<GiveBuff nodeName="MilitaryOfficer_Text" target="self" durationMs="2500" />
+	</Node>
+	
+	<Node name="NearbyOfficerBuff" nameUI="" description="@NRE_buff_military">
+		<AttackTypeModifier target="" minRange="0" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>	
+
+		<AttackTypeModifier target="" minRange="0" maxRange="100" onlyOnSuppressed="true"
+			minAimTime="-100"
+			maxAimTime="-100"
+			accuracyAdd="+10"
+			critChanceAdd="+5"
+			coverReductionMin="15" coverReductionMax="15"
+		/>				
+		<EquipmentModifier
+			suppressionRecoveryAdd="10"
+			conditioning="10"
+			changeInTime="-250"
+			changeOutTime="-250"			
+		/>
+	</Node>	
+
+	<Node name="MilitaryOfficer_Text" nameUI="" description="@NRE_military_officer">
+	</Node>				
+
+	
 
 </DoctrineNodes>

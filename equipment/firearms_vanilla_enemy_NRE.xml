@@ -327,7 +327,7 @@
 			accuracyEnd="100"
 			accuracyStartDist="0"
 			accuracyEndDist="100"
-			suppressionScale="1.3"
+			suppressionScale="2.0"
 	
 		/>
 

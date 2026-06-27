@@ -31,3 +31,12 @@
 @group_blackheads=Blackhead Fanatics
 @group_warmilitia=Remnants of Nowheraki Ground Forces
 @group_veterans=Nowheraki Commandos
+
+#
+# Abilities
+#
+
+@NRE_fanatic_leader=Increases Suppression and Flinch restistance of nearby allies, also increase fire rates after kill.
+@NRE_buff_fanatic=Inspired by nearby Fanatic.
+@NRE_military_officer=Nearby allies gain increased damage against suppressed enemies.
+@NRE_buff_military=Inspired by nearby Officer.
