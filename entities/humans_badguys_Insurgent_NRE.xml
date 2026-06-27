@@ -27,6 +27,7 @@
 		</Human>
 	</Entity>
 
+	<!-- Rabble Charger - Roams -->
 	<Entity name="Rabble Shotgun" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble,NRE_insurgent">
 		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
@@ -36,7 +37,7 @@
 			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
-			<Traits chanceToBlindFire="0.4" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" />
+			<Traits chanceToBlindFire="0.4" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" chanceToInvestigate="0.5" roamAround="true"/>
 			<Mobility>
 				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -65,8 +66,10 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble"/> 
+				<Item name="FAL Rifle"/> 
 			</Equipment>
+
+			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>
 
@@ -81,15 +84,14 @@
 			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
-			<Traits chanceToBlindFire="0.4" usesSuppressionFire="false" stopsToShoot="false" />
+			<Traits chanceToBlindFire="0.4" chanceToAmbush="1.0" usesSuppressionFire="false" stopsToShoot="false" chanceToInvestigate="0.5" />
 			<Mobility>
 				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble_Fanatic" />
-				<Item name="Molotov Single" />
+				<Item name="PM63" />
 			</Equipment>
 		</Human>
 	</Entity>
@@ -116,6 +118,7 @@
 			</Equipment>
 			
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			<Doctrine name="InsurgencyI"/>
 		</Human>
 		
 	</Entity>
@@ -142,7 +145,6 @@
 
 			<Equipment>
 				<Item name="NRE_Ins_Type56_Veteran"/> <!-- AK47 -->
-				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
 		</Human>
 	</Entity>
@@ -158,15 +160,19 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@entity_human_gruntbasic" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
-			<Traits chanceToBlindFire="0.8" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" />
+			<Traits chanceToAmbush="0.5" usesSuppressionFire="false" chanceToThrowGrenade="1.0"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble" />
+				<Item name="TT 33 Pistol" />
+				<Item name="Molotov Single" />
+				<Item name="Molotov Single" />				
 			</Equipment>
+
+			<Doctrine name="FastGrenades"/>
 		</Human>
 	</Entity>
 
@@ -210,7 +216,6 @@
 			</Mobility>
 
 			<Equipment>
-				<!-- Item name="1911 Pistol"/-->
 				<Item name="NRE_Ins_Type56_Veteran"/> <!-- AK47 -->
 				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
@@ -238,11 +243,12 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/> 
+				<Item name="FAL Rifle"/> 
 				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
 			
 			<Doctrine name="Enemy_VeteranBuff"/>
+			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>
 	
@@ -338,6 +344,7 @@
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>
 
@@ -388,6 +395,7 @@
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			<Doctrine name="InsurgencyI"/>
 
 		</Human>
 	</Entity>
@@ -415,6 +423,7 @@
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			<Doctrine name="InsurgencyI"/>
 
 		</Human>
 	</Entity>

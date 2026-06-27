@@ -230,5 +230,141 @@
 			<Empty name="gen_empty"/>
 		</Sounds>		
 	</Firearm>	
+
+	<!-- FAL -->
+
+	<Bind eqp="FAL Rifle">
+		<to name="762x51FMJ_FAL Rifle"/>
+	</Bind>
+	<Firearm name="FAL Rifle" inventoryBinding="PrimaryWeapon" category="rifle" 
+			tooltip="@firearm_fal_name"
+			img="data/models/weapons/fal_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-1"/>
+		<RenderObject3D model="data/models/weapons/fal.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/fal.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="20"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="3500"
+			reloadEmptyTime="3500"
+			changeInTime="1000"
+			changeOutTime="1000"
+			readyTime="450"
+			guardTime="250"
+
+			accuracyStart="150"
+			accuracyEnd="70"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+			suppressionScale="1.1"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x51_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="mk17_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="20.0"
+			ai_rangeMax="55.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="FAL_RapidFireMed" rangeMeters="10"/>
+			<AttackType name="FAL_AimedFire" rangeMeters="40"/>
+			<AttackType name="FAL_AimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="fnfal_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<Bind eqp="SVD63">
+		<to name="762RAP7N13_SVD"/>
+	</Bind>
+	<Firearm name="SVD63" inventoryBinding="PrimaryWeapon" category="dmr" 
+			tooltip="@firearm_SVD_name"
+			img="data/models/weapons/dragunov_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/dragunov_svd.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/dragunov_svd.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="10"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="3500"
+			reloadEmptyTime="4000"
+			changeInTime="1200"
+			changeOutTime="1200"
+			readyTime="800"
+			guardTime="600"
+
+			accuracyStart="120"
+			accuracyEnd="100"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+			suppressionScale="1.3"
+	
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x54_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="dragunov_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="40.0"
+			ai_rangeMax="100.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="SVD_TooClose" rangeMeters="5"/>
+			<AttackType name="SVD_QuickFire" rangeMeters="15"/>
+			<AttackType name="SVD_AimedFire" rangeMeters="45"/>
+			<AttackType name="SVD_AimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="svd_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>	
 	
 </Equipment>

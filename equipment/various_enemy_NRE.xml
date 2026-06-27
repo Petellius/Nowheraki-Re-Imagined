@@ -160,7 +160,7 @@ SUICIDE BOMB
 
 			friendlyFire="true"
 			triggerOnImpact="false"
-			triggerTimeAfterTargetHitMsec="2500"
+			triggerTimeAfterTargetHitMsec="3000"
 
 			accuracyPercent="25"
 
@@ -306,7 +306,7 @@ SUICIDE BOMB
 
 			friendlyFire="true"
 			triggerOnImpact="false"
-			triggerTimeAfterTargetHitMsec="2500"
+			triggerTimeAfterTargetHitMsec="2200"
 
 			accuracyPercent="70"
 

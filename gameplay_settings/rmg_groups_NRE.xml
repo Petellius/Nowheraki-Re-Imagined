@@ -83,6 +83,16 @@
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
 		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
+		<Troop entity="Concealed Insurgent"			danger="10"	weightChance="8" />
+		<Troop entity="Concealed Suicide Bomber"	danger="15"	weightChance="5" />
+		<Troop entity="Fake Hostage"				danger="20"	weightChance="2" />
+
+		<Troop entity="Civilian Male 01"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Male 02"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Male 03"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Female 01"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Female 02"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5" />		
 		
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />
 	</Group>
@@ -91,7 +101,16 @@
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
 		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
 		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
-		
+		<Troop entity="Concealed Insurgent"			danger="10"	weightChance="8" />
+		<Troop entity="Concealed Suicide Bomber"	danger="15"	weightChance="5" />
+		<Troop entity="Fake Hostage"				danger="20"	weightChance="2" />
+
+		<Troop entity="Civilian Male 01"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Male 02"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Male 03"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Female 01"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Female 02"			danger="5"	weightChance="5" />
+		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5" />			
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />
 	</Group>
 
