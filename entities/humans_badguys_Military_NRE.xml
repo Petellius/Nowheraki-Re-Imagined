@@ -80,7 +80,7 @@
 	</Entity>
 
 	<!-- Militia Sergeant -->
-	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,leader">
+	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,Officer">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_army_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/chest_rig_aws_tacpvest_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_aws_blk_NGF.dds"/>
@@ -267,7 +267,7 @@
 
 	<!-- 
 	###################
-	SUBFACTION: MILITIA 
+	SUBFACTION: COMMANDOS 
 	###################
 	-->
 
@@ -349,7 +349,7 @@
 	</Entity>
 
 	<!-- Veteran Leader-->
-	<Entity name="Warlord Militia Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,leader">
+	<Entity name="Warlord Militia Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Officer">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
@@ -426,7 +426,7 @@
 	</Entity>
 
 
-	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
+	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>		
 				
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -452,7 +452,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Elite Heavy" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
+	<Entity name="Warlord Elite Heavy" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -481,7 +481,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord Elite Heavy Gunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
+	<Entity name="Warlord Elite Heavy Gunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -511,7 +511,7 @@
 		</Human>
 	</Entity>
 
-	<Entity name="Warlord BodyGuard" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
+	<Entity name="Warlord BodyGuard" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
@@ -539,7 +539,7 @@
 		</Human>
 	</Entity>	
 
-	<Entity name="Warlord Militia Sergeant Rifleless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
+	<Entity name="Warlord Militia Sergeant Rifleless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
