@@ -1,0 +1,19 @@
+<Entities>
+
+	<Entity name="FragGrenadeNoob" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FragGrenadeElite" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>	
+
+</Entities>
