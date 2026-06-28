@@ -57,36 +57,67 @@
 		<Troop entity="Executioner"					danger="20"	weightChance="4" />
 	</Group>
 
+	<!-- Rabble Insurgents -->
 	<Group name="Rabble Force" localizedName="@group_rabble">
 		<Troop entity="Rabble"						danger="8"	weightChance="20" />
+		<Troop entity="Rabble Shotgun"				danger="8"  weightChance="10" />
+		<Troop entity="Rabble Bolt Action"			danger="8"  weightChance="10" onlyOutside="true"/>
+		<Troop entity="Rocket Insurgent"			danger="12" weightChance="8" onlyOutside="true" />
+		<Troop entity="Pistol Insurgent"			danger="10" weightChance="4"  />
+		<Troop entity="Rabble PM"					danger="8"  weightChance="10" />
+		<Troop entity="Rabble Weaponless"			danger="6"  weightChance="4"  />
+		<Troop entity="Rabble MP40"					danger="8"  weightChance="10" />
+		<Troop entity="Foreign Advisor"				danger="15" weightChance="4"  />
 
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
+		<Troop entity="Executioner"					danger="20"	weightChance="4"  />
 	</Group>
 
+	<!-- Relaxed Insurgents -->
 	<Group name="Low Level Insurgents" localizedName="@group_lowlevel">		
-		<Troop entity="Rabble"						danger="10"	weightChance="20" />
-		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
-		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
-		
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
+		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
+		<Troop entity="Pistol Insurgent"  			danger="10" weightChance="10" />
+		<Troop entity="Pistol Insurgent Weaponless"	danger="8" weightChance="4"   />
+		<Troop entity="Rocket Insurgent"			danger="12" weightChance="8" onlyOutside="true" />
+		<Troop entity="Machinegunner 762"			danger="12" weightChance="10" />
+		<Troop entity="Grunt Insurgent Weaponless"	danger="8" weightChance="4"   />
+		<Troop entity="Rocket Weaponless"			danger="10" weightChance="4"  />
+		<Troop entity="Foreign Advisor"				danger="15"  weightChange="4" />
+
+		<Troop entity="Executioner"					danger="20"	weightChance="4"  />
 	</Group>
 
+	<!-- Mid-Tier Combat-Ready Insurgents -->
 	<Group name="Insurgency" localizedName="@group_insurgency">
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
-		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
-		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
-		
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
+		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2"  />
+		<Troop entity="Pistol Insurgent" 			danger="10" weightChance="8"  />
+		<Troop entity="Rocket Insurgent"			danger="10" weightChance="8"  />
+		<Troop entity="Sniper Insurgent"			danger="15" weightChance="8" onlyOutside="true" />
+		<Troop entity="Machinegunner 762"			danger="12" weightChance="10" />
+		<Troop entity="PKMer"						danger="15" weightChance="8" onlyOutside="true" />
+
+		<Troop entity="Executioner"					danger="20"	weightChance="4"  />
 	</Group>
 
+	<!-- Forbidden Tree Insurgents -->
 	<Group name="Forbidden Tree" localizedName="@group_forbiddentree">
-		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
-		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
-		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
-		<Troop entity="Concealed Insurgent"			danger="10"	weightChance="8" />
-		<Troop entity="Concealed Suicide Bomber"	danger="15"	weightChance="5" />
-		<Troop entity="Fake Hostage"				danger="20"	weightChance="2" />
+		<!-- Generic Grunts -->
+		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="10" />
+		<Troop entity="Machinegunner 762"			danger="12" weightChance="8"  />
+		<Troop entity="Pistol Insurgent" 			danger="10" weightChance="8"  />
+		<Troop entity="Sniper Insurgent"			danger="15" weightChance="5" onlyOutside="true" />
+		<Troop entity="PKMer"						danger="15" weightChance="8" onlyOutside="true" />
 
+		<!--FT Special Troops -->
+		<Troop entity="Suicide Bomber"				danger="15"	weightChance="8"  />
+		<Troop entity="Suicide Bomber Strong"		danger="18"	weightChance="5"  />
+		<Troop entity="Melee Guy"					danger="10"	weightChance="8"  />
+		<Troop entity="Concealed Insurgent"			danger="15"	weightChance="10" />
+		<Troop entity="Concealed Suicide Bomber"	danger="18"	weightChance="8"  />
+		<Troop entity="Fake Hostage"				danger="20"	weightChance="2"  />
+		<Troop entity="Foreign Advisor Fanatic"		danger="10"	weightChance="8"  />
+
+		<!-- Civilians - Human Shields -->
 		<Troop entity="Civilian Male 01"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Male 02"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Male 03"			danger="5"	weightChance="5" />
@@ -94,53 +125,87 @@
 		<Troop entity="Civilian Female 02"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5" />		
 		
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
+		<Troop entity="Suicide Executioner"			danger="25"	weightChance="4" />
 	</Group>
 	
+	<!-- Forbidden Tree Insurgents - Combat Assault Group -->
 	<Group name="Forbidden Tree Assaultgroup" localizedName="@group_forbiddentree">
-		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
-		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
-		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
-		<Troop entity="Concealed Insurgent"			danger="10"	weightChance="8" />
-		<Troop entity="Concealed Suicide Bomber"	danger="15"	weightChance="5" />
-		<Troop entity="Fake Hostage"				danger="20"	weightChance="2" />
+		<!-- Generic Grunts -->
+		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="10" />
+		<Troop entity="Machinegunner 762"			danger="12" weightChance="8"  />
+		<Troop entity="Sniper Insurgent"			danger="15" weightChance="5" onlyOutside="true" />
+		<Troop entity="PKMer"						danger="15" weightChance="8" onlyOutside="true" />
 
+		<!--FT Special Troops -->
+		<Troop entity="Suicide Bomber Strong"		danger="18"	weightChance="5"  />
+		<Troop entity="Concealed Insurgent"			danger="15"	weightChance="10" />
+		<Troop entity="Concealed Suicide Bomber"	danger="18"	weightChance="8"  />
+		<Troop entity="Fake Hostage"				danger="20"	weightChance="2"  />
+		<Troop entity="Foreign Advisor Fanatic"		danger="10"	weightChance="8"  />
+		<Troop entity="FAdvisor Leader"					danger="20"	weightChance="2" />
+		<Troop entity="FA Fanatic Stormtrooper"			danger="18"	weightChance="5" />
+		<Troop entity="FA Fanatic Stormtrooper G"		danger="18"	weightChance="5" onlyOutside="true" />		
+
+		<!-- Civilians - Human Shields -->
 		<Troop entity="Civilian Male 01"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Male 02"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Male 03"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Female 01"			danger="5"	weightChance="5" />
 		<Troop entity="Civilian Female 02"			danger="5"	weightChance="5" />
-		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5" />			
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
-	</Group>
-
-	<Group name="Blackheads" localizedName="@group_blackheads">
-		<Troop entity="Blackhead Elite"				danger="10"	weightChance="20" />
+		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5" />		
 		
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
+		<Troop entity="Suicide Executioner"			danger="25"	weightChance="4" />
 	</Group>
 
+	<!-- Blackhead Insurgents -->
+	<Group name="Blackheads" localizedName="@group_blackheads">
+		<!-- Generic Grunts -->
+		<Troop entity="Pistol Insurgent"			danger="10"	weightChance="5" />
+		<Troop entity="Sniper Insurgent"			danger="15" weightChance="5" onlyOutside="true" />
+		<Troop entity="PKMer"						danger="15" weightChance="8" onlyOutside="true" />
+		
+		<!-- Blackheads -->
+		<Troop entity="Veteran Insurgent"				danger="12"	weightChance="15" />
+		<Troop entity="Veteran Insurgent Long Range"	danger="12"	weightChance="12" />
+		<Troop entity="Grunt + Rocket Insurgent"		danger="15"	weightChance="10" onlyOutside="true" />
+		<Troop entity="Blackhead Elite"					danger="18"	weightChance="8" />
+		<Troop entity="Machinegunner"					danger="15"	weightChance="10" />
+		<Troop entity="Veteran Weaponless"				danger="10"	weightChance="4" />
+		<Troop entity="FAdvisor Leader"					danger="20"	weightChance="2" />
+		<Troop entity="FA Fanatic Stormtrooper"			danger="18"	weightChance="5" />
+		<Troop entity="FA Fanatic Stormtrooper G"		danger="18"	weightChance="5" onlyOutside="true" />
+		
+		<Troop entity="Executioner"						danger="20"	weightChance="4" />
+	</Group>
+
+	<!-- Mid-Tier Military -->
 	<Group name="Warlord Militia" localizedName="@group_warmilitia">
 		<Troop entity="Warlord Militia"					danger="15"	weightChance="30" />
 		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
-		<Troop entity="Warlord Militia Sergeant"		danger="20"	weightChance="10"/>
+		<Troop entity="Warlord Militia Sergeant"		danger="20"	weightChance="10" />
 		<Troop entity="Warlord Militia Machinegunner"	danger="20"	weightChance="20" /> 
 		<Troop entity="Warlord Militia Grenadier"		danger="22"	weightChance="20" />
 	</Group>	
 
+	<!-- Rogue SWAT Insurgents -->
 	<Group name="Private Security" localizedName="@group_privsec">
-		<Troop entity="Generic Tango" 				danger="10" weightChance="30" />
-		<Troop entity="Generic Tango Shottie" 		danger="15" weightChance="30" />
+		<Troop entity="Generic Tango" 				danger="15" weightChance="15" />
+		<Troop entity="Generic Tango Weaponless"	danger="8"  weightChance="4"  />
+		<Troop entity="Generic Tango Shottie" 		danger="15" weightChance="15" />
 		<Troop entity="Generic Tango 2 Uzi" 		danger="25" weightChance="5" onlyOutside="true"/>
-		<Troop entity="Generic Tango 2 M4" 			danger="25" weightChance="20" />
-		<Troop entity="Generic Tango 3 Weaponless" 	danger="25" weightChance="10" />
+		<Troop entity="Generic Tango 2 M4" 			danger="20" weightChance="10" />
+		<Troop entity="Generic Tango 3 Weaponless" 	danger="25" weightChance="5"  />
 	</Group>	
 
-	<!-- Weak Military --> 
-	<Group name="NRE Military 1" localizedName="@group_warmilitia">
-		<Troop entity="Bodyguard PM" 				danger="10" weightChance="20" />
-		<Troop entity="Bodyguard SMG Noob" 			danger="12" weightChance="8" />
-		<Troop entity="Bodyguard AKSU" 				danger="12" weightChance="5" />	
-	</Group>
+	<!-- SSI -->
+	<Group name="SSI" localizedName="@group_privsec">
+		<Troop entity="SSI Assaulter" 				danger="30" weightChance="10" />
+		<Troop entity="SSI Leader" 					danger="33" weightChance="5"  />
+		<Troop entity="SSI CQB Assaulter" 			danger="30" weightChance="10" />
+		<Troop entity="SSI Marksman" 				danger="30" weightChance="10" />
+		<Troop entity="SSI Pointman" 				danger="30" weightChance="10" />
+	</Group>		
+
+
 
 </RMGGroups>
