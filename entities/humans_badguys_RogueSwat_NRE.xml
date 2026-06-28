@@ -168,8 +168,11 @@
 				<Item name="NRE M4 ACOG Tango" />
 				<Item name="M150RCO" />
 				<Item name="Balistic_Helmet_RogueSwat" />	
-				<Item name="Bodyguard HeavyArmor"/>				
+				<Item name="Bodyguard HeavyArmor"/>	
+				<Item name="Frag Grenade Enemy Elite"/>			
 			</Equipment>
+
+			<Doctine name="FastGrenades"/> 
 		</Human>
 	</Entity>
 
@@ -240,7 +243,7 @@
 				<Item name="Bodyguard HeavyArmor"/>	
 				<Item name="Shield_RogueSwat" />
 				<Item name="TT 33 Pistol" />
-				<Item name="Flashbang Single"/>
+				<Item name="Flashbang"/>
 			</Equipment>
 
 			<Doctine name="FastGrenades"/> 
