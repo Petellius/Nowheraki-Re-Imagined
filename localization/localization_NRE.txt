@@ -17,6 +17,8 @@
 @NRE_entity_military_elite=Commando
 @NRE_entity_rogue_cop=Rogue Cop
 @NRE_entity_rogue_SWAT=Rogue SWAT
+@entity_human_fakecivilian_NRE=Concealed Insurgent
+@entity_human_civilian_NRE=Civilian
 
 #
 # RMG Group Names
