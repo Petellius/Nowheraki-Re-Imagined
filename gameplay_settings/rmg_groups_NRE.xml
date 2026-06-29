@@ -142,19 +142,19 @@
 		<Troop entity="Concealed Suicide Bomber"	danger="18"	weightChance="8"  />
 		<Troop entity="Fake Hostage"				danger="20"	weightChance="2"  />
 		<Troop entity="Foreign Advisor Fanatic"		danger="10"	weightChance="8"  />
-		<Troop entity="FAdvisor Leader"					danger="20"	weightChance="2" />
-		<Troop entity="FA Fanatic Stormtrooper"			danger="18"	weightChance="5" />
-		<Troop entity="FA Fanatic Stormtrooper G"		danger="18"	weightChance="5" onlyOutside="true" />		
+		<Troop entity="FAdvisor Leader"				danger="20"	weightChance="2"  />
+		<Troop entity="FA Fanatic Stormtroop"		danger="18"	weightChance="5" onlyOutside="true" />
+		<Troop entity="FA Fanatic Stormtroop G"		danger="18"	weightChance="5"  />		
 
 		<!-- Civilians - Human Shields -->
-		<Troop entity="Civilian Male 01"			danger="5"	weightChance="5" />
-		<Troop entity="Civilian Male 02"			danger="5"	weightChance="5" />
-		<Troop entity="Civilian Male 03"			danger="5"	weightChance="5" />
-		<Troop entity="Civilian Female 01"			danger="5"	weightChance="5" />
-		<Troop entity="Civilian Female 02"			danger="5"	weightChance="5" />
-		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5" />		
+		<Troop entity="Civilian Male 01"			danger="5"	weightChance="5"  />
+		<Troop entity="Civilian Male 02"			danger="5"	weightChance="5"  />
+		<Troop entity="Civilian Male 03"			danger="5"	weightChance="5"  />
+		<Troop entity="Civilian Female 01"			danger="5"	weightChance="5"  />
+		<Troop entity="Civilian Female 02"			danger="5"	weightChance="5"  />
+		<Troop entity="Civilian Female 03"			danger="5"	weightChance="5"  />		
 		
-		<Troop entity="Suicide Executioner"			danger="25"	weightChance="4" />
+		<Troop entity="Suicide Executioner"			danger="25"	weightChance="4"  />
 	</Group>
 
 	<!-- Blackhead Insurgents -->
@@ -166,16 +166,16 @@
 		
 		<!-- Blackheads -->
 		<Troop entity="Veteran Insurgent"				danger="12"	weightChance="15" />
-		<Troop entity="Veteran Insurgent Long Range"	danger="12"	weightChance="12" />
+		<Troop entity="Veteran Insurgent LongRange"		danger="12"	weightChance="12" />
 		<Troop entity="Grunt + Rocket Insurgent"		danger="15"	weightChance="10" onlyOutside="true" />
-		<Troop entity="Blackhead Elite"					danger="18"	weightChance="8" />
+		<Troop entity="Blackhead Elite"					danger="18"	weightChance="8"  />
 		<Troop entity="Machinegunner"					danger="15"	weightChance="10" />
-		<Troop entity="Veteran Weaponless"				danger="10"	weightChance="4" />
-		<Troop entity="FAdvisor Leader"					danger="20"	weightChance="2" />
-		<Troop entity="FA Fanatic Stormtrooper"			danger="18"	weightChance="5" />
-		<Troop entity="FA Fanatic Stormtrooper G"		danger="18"	weightChance="5" onlyOutside="true" />
+		<Troop entity="Veteran Weaponless"				danger="10"	weightChance="4"  />
+		<Troop entity="FAdvisor Leader"					danger="20"	weightChance="2"  />
+		<Troop entity="FA Fanatic Stormtroop"			danger="18"	weightChance="5" onlyOutside="true" />
+		<Troop entity="FA Fanatic Stormtroop G"			danger="18"	weightChance="5"  />
 		
-		<Troop entity="Executioner"						danger="20"	weightChance="4" />
+		<Troop entity="Executioner"						danger="20"	weightChance="4"  />
 	</Group>
 
 	<!-- Mid-Tier Military -->
