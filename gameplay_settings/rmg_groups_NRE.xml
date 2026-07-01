@@ -179,31 +179,31 @@
 	</Group>
 
 	<!-- Mid-Tier Military -->
-	<Group name="Warlord Militia" localizedName="@group_warmilitia">
-		<Troop entity="Warlord Militia"					danger="15"	weightChance="30" />
+	<Group name="Warlord Militia" localizedName="@group_military_nre">
+		<Troop entity="Warlord Militia"					danger="12"	weightChance="30" />
 		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
-		<Troop entity="Warlord Militia Sergeant"		danger="20"	weightChance="10" />
-		<Troop entity="Warlord Militia Machinegunner"	danger="20"	weightChance="20" /> 
-		<Troop entity="Warlord Militia Grenadier"		danger="22"	weightChance="20" />
+		<Troop entity="Warlord Militia Sergeant"		danger="18"	weightChance="10" />
+		<Troop entity="Warlord Militia Machinegunner"	danger="15"	weightChance="20" /> 
+		<Troop entity="Warlord Militia Grenadier"		danger="15"	weightChance="20" />
 	</Group>	
 
 	<!-- Rogue SWAT Insurgents -->
 	<Group name="Private Security" localizedName="@group_privsec">
-		<Troop entity="Generic Tango" 				danger="15" weightChance="15" />
+		<Troop entity="Generic Tango" 				danger="12" weightChance="15" />
 		<Troop entity="Generic Tango Weaponless"	danger="8"  weightChance="4"  />
-		<Troop entity="Generic Tango Shottie" 		danger="15" weightChance="15" />
-		<Troop entity="Generic Tango 2 Uzi" 		danger="25" weightChance="5" onlyOutside="true"/>
-		<Troop entity="Generic Tango 2 M4" 			danger="20" weightChance="10" />
-		<Troop entity="Generic Tango 3 Weaponless" 	danger="25" weightChance="5"  />
+		<Troop entity="Generic Tango Shottie" 		danger="12" weightChance="15" />
+		<Troop entity="Generic Tango 2 Uzi" 		danger="20" weightChance="5" onlyOutside="true"/>
+		<Troop entity="Generic Tango 2 M4" 			danger="18" weightChance="10" />
+		<Troop entity="Generic Tango 3 Weaponless" 	danger="22" weightChance="5"  />
 	</Group>	
 
 	<!-- SSI -->
 	<Group name="SSI" localizedName="@group_privsec">
-		<Troop entity="SSI Assaulter" 				danger="30" weightChance="10" />
-		<Troop entity="SSI Leader" 					danger="33" weightChance="5"  />
-		<Troop entity="SSI CQB Assaulter" 			danger="30" weightChance="10" />
-		<Troop entity="SSI Marksman" 				danger="30" weightChance="10" />
-		<Troop entity="SSI Pointman" 				danger="30" weightChance="10" />
+		<Troop entity="SSI Assaulter" 				danger="22" weightChance="10" />
+		<Troop entity="SSI Leader" 					danger="25" weightChance="5"  />
+		<Troop entity="SSI CQB Assaulter" 			danger="23" weightChance="10" />
+		<Troop entity="SSI Marksman" 				danger="26" weightChance="10" />
+		<Troop entity="SSI Pointman" 				danger="24" weightChance="10" />
 	</Group>		
 
 
