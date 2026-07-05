@@ -25,7 +25,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
 			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.2" usesSuppressionFire="true" stopsToShoot="false" />
+			<Traits chanceToBlindFire="0.0" chanceToThrowGrenade="1.0" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -33,6 +33,7 @@
 
 			<Equipment>
 				<Item name="1911 Pistol" />
+				<Item name="Flashbang"/>
 			</Equipment>
 		</Human>
 	</Entity>
@@ -47,7 +48,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
 			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.2" usesSuppressionFire="true" stopsToShoot="false" />
+			<Traits chanceToBlindFire="0.2" usesSuppressionFire="false" stopsToShoot="false" chanceToInvestigate="1.0" investigateMaxDistanceMeters="8.0"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
@@ -103,7 +104,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" usesSuppressionFire="true"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.5" stopsToShoot="false" chanceToInvestigate="0.5" investigateMaxDistanceMeters="8.0" usesSuppressionFire="true"/>
 
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
@@ -158,7 +159,7 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@NRE_entity_rogue_SWAT" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" usesSuppressionFire="true"/>
+			<Traits chanceToBlindFire="0" chanceToAmbush="0.6" stopsToShoot="false" chanceToThrowGrenade="0.5" usesSuppressionFire="true"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
