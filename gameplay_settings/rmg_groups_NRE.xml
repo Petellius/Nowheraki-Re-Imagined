@@ -49,12 +49,16 @@
 <RMGGroups>
 	<!-- Base game RMGGroup overrides -->
 	<Group name="Default Mix" localizedName="@group_defaultmix">
-		<Troop entity="Rabble"						danger="8"	weightChance="20" />
-		<Troop entity="Machinegunner"  				danger="10" weightChance="8" />
-
-		<Troop entity="Suicide Bomber"				danger="15"	weightChance="2" />
-		
-		<Troop entity="Executioner"					danger="20"	weightChance="4" />
+		<Troop entity="Bodyguard PM"				danger="8"	weightChance="20" />
+		<Troop entity="Bodyguard SMG"  				danger="15" weightChance="10" />
+		<Troop entity="Bodyguard SMG Noob"			danger="15" weightChance="10" />	
+		<Troop entity="Bodyguard AKSU"				danger="15" weightChance="10" />
+		<Troop entity="Bodyguard Weaponless"		danger="15" weightChance="10" />
+		<Troop entity="Bodyguard AKSU Armored"		danger="15" weightChance="10" />
+		<Troop entity="Bodyguard Heavy AKSU"		danger="15" weightChance="10" />
+		<Troop entity="Bodyguard Heavy RPK16S"		danger="15" weightChance="10" />
+		<Troop entity="Bodyguard Heavy Weaponless"	danger="15" weightChance="10" />
+		<Troop entity="Bodyguard Heavy Pistol"		danger="15" weightChance="10" />
 	</Group>
 
 	<!-- Rabble Insurgents -->
@@ -62,7 +66,7 @@
 		<Troop entity="Rabble"						danger="8"	weightChance="20" />
 		<Troop entity="Rabble Shotgun"				danger="8"  weightChance="10" />
 		<Troop entity="Rabble Bolt Action"			danger="8"  weightChance="10" onlyOutside="true"/>
-		<Troop entity="Rocket Insurgent"			danger="12" weightChance="8" onlyOutside="true" />
+		<Troop entity="Rocket Insurgent"			danger="12" weightChance="8"  onlyOutside="true" />
 		<Troop entity="Pistol Insurgent"			danger="10" weightChance="4"  />
 		<Troop entity="Rabble PM"					danger="8"  weightChance="10" />
 		<Troop entity="Rabble Weaponless"			danger="6"  weightChance="4"  />
@@ -77,7 +81,7 @@
 		<Troop entity="Grunt Insurgent"				danger="10"	weightChance="20" />
 		<Troop entity="Pistol Insurgent"  			danger="10" weightChance="10" />
 		<Troop entity="Pistol Insurgent Weaponless"	danger="8" weightChance="4"   />
-		<Troop entity="Rocket Insurgent"			danger="12" weightChance="8" onlyOutside="true" />
+		<Troop entity="Rocket Insurgent"			danger="12" weightChance="8"  onlyOutside="true" />
 		<Troop entity="Machinegunner 762"			danger="12" weightChance="10" />
 		<Troop entity="Grunt Insurgent Weaponless"	danger="8" weightChance="4"   />
 		<Troop entity="Rocket Weaponless"			danger="10" weightChance="4"  />
@@ -189,13 +193,23 @@
 
 	<!-- Rogue SWAT Insurgents -->
 	<Group name="Private Security" localizedName="@group_privsec">
-		<Troop entity="Generic Tango" 				danger="12" weightChance="15" />
+		<Troop entity="Fake Militia" 				danger="10"	weightChance="5" />
+		<Troop entity="Generic Tango" 				danger="10" weightChance="15" />
 		<Troop entity="Generic Tango Weaponless"	danger="8"  weightChance="4"  />
 		<Troop entity="Generic Tango Shottie" 		danger="12" weightChance="15" />
 		<Troop entity="Generic Tango 2 Uzi" 		danger="20" weightChance="5" onlyOutside="true"/>
 		<Troop entity="Generic Tango 2 M4" 			danger="18" weightChance="10" />
 		<Troop entity="Generic Tango 3 Weaponless" 	danger="22" weightChance="5"  />
 	</Group>	
+
+	<!-- Rogue SWAT Insurgents -->
+	<Group name="SWAT Elite" localizedName="@group_privsec">
+		<Troop entity="Generic Tango Shottie" 		danger="12" weightChance="10" />
+		<Troop entity="Generic Tango 2 Uzi" 		danger="20" weightChance="5" onlyOutside="true" />
+		<Troop entity="Generic Tango 2 M4" 			danger="18" weightChance="15" />
+		<Troop entity="Generic Tango 3"				danger="20" weightChance="5"  />
+		<Troop entity="Generic Tango 3 Weaponless" 	danger="22" weightChance="10" />
+	</Group>		
 
 	<!-- SSI -->
 	<Group name="SSI" localizedName="@group_privsec">
