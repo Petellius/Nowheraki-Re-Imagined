@@ -33,7 +33,7 @@
 
 			<Equipment>
 				<Item name="1911 Pistol" />
-				<Item name="Flashbang"/>
+				<Item name="Flashbang NRE"/>
 			</Equipment>
 		</Human>
 	</Entity>
@@ -244,7 +244,7 @@
 				<Item name="Bodyguard HeavyArmor"/>	
 				<Item name="Shield_RogueSwat" />
 				<Item name="TT 33 Pistol" />
-				<Item name="Flashbang"/>
+				<Item name="Flashbang NRE"/>
 			</Equipment>
 
 			<Doctine name="FastGrenades"/> 

@@ -16,4 +16,21 @@
 		</RenderObject2D>
 	</Entity>	
 
+	<Entity name="FlashbangGrenadeNRE" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/flashbang.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/flashbang.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ffff00" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="SmokeGrenadeNRE" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/smoke_grenade.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/smoke_grenade.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ffffff" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+
 </Entities>
