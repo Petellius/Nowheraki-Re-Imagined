@@ -8,10 +8,6 @@
 		<Bind evt="HEAR_SUSPICIOUS" 		prio="2" activity="INVESTIGATE" />
 		<Bind evt="HEAR_COMBAT" 			prio="3" becomeAlerted="1" activity="INVESTIGATE" />
 		<Bind evt="SEE_FRIENDLY_COMBAT"	prio="4" becomeAlerted="1" activity="INVESTIGATE" />
-		<!-- NOTE: CRB this was a hack to make maps more active when trying to extract the VIP -->
-		<!-- Disabled because it doesn't make sense with stealth troops -->
-		<!-- We can use triggers to accomplish the same thing on specific maps -->
-		<!-- <Bind evt="TROOPERS_REACHED_TARGET" prio="4" becomeAlerted="1" activity="INVESTIGATE" /> -->
 		<Bind evt="HEAR_SNIPER_SHOT" 		prio="5" activity="SWITCH_TO_COMBAT" />
 		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="SWITCH_TO_COMBAT" />
 		<Bind evt="SEE_DOOR_OPEN" 			prio="5" activity="INVESTIGATE" />

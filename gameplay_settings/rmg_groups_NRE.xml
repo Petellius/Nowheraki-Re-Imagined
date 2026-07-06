@@ -48,7 +48,7 @@
 
 <RMGGroups>
 	<!-- Base game RMGGroup overrides -->
-	<Group name="Default Mix" localizedName="@group_defaultmix">
+	<Group name="Default Mix" localizedName="@group_military_nre">
 		<Troop entity="Bodyguard PM"				danger="8"	weightChance="20" />
 		<Troop entity="Bodyguard SMG"  				danger="15" weightChance="10" />
 		<Troop entity="Bodyguard SMG Noob"			danger="15" weightChance="10" />	

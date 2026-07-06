@@ -99,7 +99,7 @@
 			<Equipment>
 				<Item name="NRE_Army_G3A3_NGF"/>
 				<Item name="NRE Military SoftArmor" />
-				<Item name="Smoke Grenade Enemy" />				
+				<Item name="Smoke Grenade NRE" />				
 			</Equipment>
 
 			<!-- Add Leadership Doctrine -->
@@ -368,7 +368,7 @@
 
 			<Equipment>
 				<Item name="NRE_Army_G3A4_NGF"/>
-				<Item name="Smoke Grenade Enemy"/>
+				<Item name="Smoke Grenade NRE"/>
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
