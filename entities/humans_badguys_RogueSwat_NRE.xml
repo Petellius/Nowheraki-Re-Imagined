@@ -25,14 +25,14 @@
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
 			<Id name="@NRE_entity_rogue_cop" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy english"/>
-			<Traits chanceToBlindFire="0.0" chanceToThrowGrenade="1.0" />
+			<Traits chanceToBlindFire="0.0" chanceToInvestigate="1.0" investigateMaxDistanceMeters="8.0" chanceToThrowGrenade="1.0" />
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="1911 Pistol" />
+				<Item name="NRE M9 Pistol" />
 				<Item name="Flashbang NRE"/>
 			</Equipment>
 		</Human>
@@ -243,7 +243,7 @@
 				<Item name="Balistic_Helmet_RogueSwat" />
 				<Item name="Bodyguard HeavyArmor"/>	
 				<Item name="Shield_RogueSwat" />
-				<Item name="TT 33 Pistol" />
+				<Item name="NRE M9 Pistol" />
 				<Item name="Flashbang NRE"/>
 			</Equipment>
 
