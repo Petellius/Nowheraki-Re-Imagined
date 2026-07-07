@@ -16,7 +16,7 @@
 
 	<!-- Pointman, throws weak flash and runs in with a pistol -->
 	<Entity name="Generic Tango" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -39,7 +39,7 @@
 	</Entity>
 
 	<Entity name="Generic Tango Shottie" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -61,7 +61,7 @@
 	</Entity>
 
 	<Entity name="Fake Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -95,9 +95,16 @@
 
 	<!-- Generic Rogue SWAT -->
 	<Entity name="Generic Tango 2 M4" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
+
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/body_armor_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/chest_carrier_armor_NGF.khm" diffuseTex="data/models/humans/attachments/chest_carrier_backpack_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ammo_pouch_left_NGF.khm" diffuseTex="data/models/humans/attachments/bright_vest_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/walkie_talkie_armor_NGF.khm" diffuseTex="data/models/humans/attachments/bright_vest_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/backpack_armor_NGF.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_vest.dds"/>
+
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -114,7 +121,7 @@
 			<Equipment>
 				<Item name="NRE M4 ACOG Tango" />
 				<Item name="NRE_M150RCO_Enemy" />
-				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Helmet MICH Black NRE" />
 				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 		</Human>
@@ -122,10 +129,10 @@
 
 	<!-- Rogue Police Marksman -->
 	<Entity name="Generic Tango 2 Uzi" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
-		<RenderObject3D model="data/models/humans/attachments/swat_helmet.khm" diffuseTex="data/models/humans/attachments/swat_sapper_helmet.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/swat_cap.dds" attachSlot="Bip001 Head"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -141,7 +148,6 @@
 
 			<Equipment>
 				<Item name="NRE_Army_SVD_NGF"/>
-				<Item name="Balistic_Helmet_RogueSwat" />
 				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 		</Human>
@@ -149,10 +155,9 @@
 
 	<!-- Rogue SWAT Elite -->
 	<Entity name="Generic Tango 3" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
-		<RenderObject3D model="data/models/humans/attachments/swat_helmet.khm" diffuseTex="data/models/humans/attachments/swat_sapper_helmet.dds" attachSlot="Bip001 Head"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -168,7 +173,7 @@
 			<Equipment>
 				<Item name="NRE M4 ACOG Tango" />
 				<Item name="M150RCO" />
-				<Item name="Balistic_Helmet_RogueSwat" />	
+				<Item name="Helmet MICH Green NRE" />	
 				<Item name="Bodyguard HeavyArmor"/>	
 				<Item name="Frag Grenade Enemy Elite"/>			
 			</Equipment>
@@ -178,7 +183,7 @@
 	</Entity>
 
 	<Entity name="Generic Tango Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat,weaponless">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -198,9 +203,16 @@
 	</Entity>
 
 	<Entity name="Generic Tango 2 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat,weaponless">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/beanie_NGF.khm" diffuseTex="data/models/humans/attachments/beanie_NGF.dds" attachSlot="Bip001 Head"/>
+
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/body_armor_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/chest_carrier_armor_NGF.khm" diffuseTex="data/models/humans/attachments/chest_carrier_backpack_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ammo_pouch_left_NGF.khm" diffuseTex="data/models/humans/attachments/bright_vest_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/walkie_talkie_armor_NGF.khm" diffuseTex="data/models/humans/attachments/bright_vest_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/backpack_armor_NGF.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_vest.dds"/>
+
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -214,19 +226,15 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="Balistic_Helmet_RogueSwat" />
 				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Generic Tango 3 Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
-		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
-		<RenderObject3D model="data/models/humans/attachments/swat_helmet.khm" diffuseTex="data/models/humans/attachments/swat_sapper_helmet.dds" attachSlot="Bip001 Head">
-			<Specular shininess="32" intensity="1.3"/>
-		</RenderObject3D>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -240,7 +248,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="Balistic_Helmet_RogueSwat" />
+				<Item name="Helmet SSI NRE" />
 				<Item name="Bodyguard HeavyArmor"/>	
 				<Item name="Shield_RogueSwat" />
 				<Item name="NRE M9 Pistol" />

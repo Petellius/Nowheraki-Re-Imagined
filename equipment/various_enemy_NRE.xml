@@ -100,6 +100,51 @@ SUICIDE BOMB
 		<RenderObject3D model="data/models/humans/attachments/plate_carrier_mtn_NGF.khm" diffuseTex="data/models/humans/attachments/plate_carrier_mtn_NGF.dds"/>		
 	</Armor>
 
+	<Helmet name="Helmet MICH Black NRE" inventoryBinding="Helmet" unlockCost="2" 
+			tooltip=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="40"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/mich_helmet_NGF.khm" diffuseTex="data/models/humans/attachments/mich_helmet_black_NGF.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>		
+	</Helmet>	
+
+	<Helmet name="Helmet MICH Green NRE" inventoryBinding="Helmet" unlockCost="2" 
+			tooltip=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="40"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/mich_helmet_NGF.khm" diffuseTex="data/models/humans/attachments/mich_helmet_green_NGF.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>	
+	</Helmet>		
+
+	<Helmet name="Helmet SSI NRE" inventoryBinding="Helmet" unlockCost="2" 
+			tooltip=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="40"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ssi_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+	</Helmet>		
+
 	<HelmetNVG name="SSI NVG" inventoryBinding="HelmetNVG"
 			tooltip=""
 			description=""
