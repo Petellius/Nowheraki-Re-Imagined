@@ -18,7 +18,10 @@
 	<Entity name="Generic Tango" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
-		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds" />
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/body_armor_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/flashbang_vest_NGF.khm" diffuseTex="data/models/equipment/flashbang.dds"/>	
+
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -33,6 +36,7 @@
 
 			<Equipment>
 				<Item name="NRE M9 Pistol" />
+				<Item name="Bodyguard SoftArmor"/>	
 				<Item name="Flashbang NRE"/>
 			</Equipment>
 		</Human>
@@ -62,8 +66,9 @@
 
 	<Entity name="Fake Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
-
-		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/beanie_NGF.khm" diffuseTex="data/models/humans/attachments/beanie_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds" />
+		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>	
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -78,6 +83,7 @@
 
 			<Equipment>
 				<Item name="NRE_Ins_Type56_Rabble"/> 
+				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
 		</Human>
 	</Entity>		
@@ -96,9 +102,7 @@
 	<!-- Generic Rogue SWAT -->
 	<Entity name="Generic Tango 2 M4" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_RogueSwat">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
-
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
-
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/body_armor_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/chest_carrier_armor_NGF.khm" diffuseTex="data/models/humans/attachments/chest_carrier_backpack_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/ammo_pouch_left_NGF.khm" diffuseTex="data/models/humans/attachments/bright_vest_NGF.dds"/>
@@ -235,6 +239,7 @@
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/enlisted_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<RenderObject3D model="data/models/humans/attachments/flashbang_vest_NGF.khm" diffuseTex="data/models/equipment/flashbang.dds"/>
 		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
