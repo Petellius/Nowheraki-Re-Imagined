@@ -470,7 +470,8 @@
 
 	<Entity name="Veteran Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,Blackhead">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>		
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
 		<RenderObject3D model="data/models/humans/attachments/chest_rig_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_NGF.dds" alphaTest="true"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
 		<Breakable template="HumanGib_default_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -496,10 +497,10 @@
 
 
 	<Entity name="Veteran Insurgent LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,Blackhead">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/chest_rig_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_NGF.dds" alphaTest="true"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>		
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>		
+		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>		
 		<Breakable template="HumanGib_default_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -523,9 +524,13 @@
 
 	<Entity name="Blackhead Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,Blackhead">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/chest_rig_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_NGF.dds" alphaTest="true"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
+		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>		
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/body_armor_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/chest_carrier_armor_NGF.khm" diffuseTex="data/models/humans/attachments/chest_carrier_backpack_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ammo_pouch_left_NGF.khm" diffuseTex="data/models/humans/attachments/bright_vest_NGF.dds"/>
+
 		<Breakable template="HumanGib_default_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -541,20 +546,23 @@
 			<Equipment>
 				<Item name="NRE_Ins_Type56_Veteran"/>
 				<Item name="Kobra"/>
-				
+				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Grunt + Rocket Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,Blackhead">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_03_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/plate_carrier_militia_01_NGF.khm" diffuseTex="data/models/humans/attachments/swat_assaulter_vest.dds" />
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds" />
+		
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
-			<Traits chanceToBlindFire="0.5" stopsToShoot="false" chanceToThrowGrenade="0.10" />
+			<Traits chanceToBlindFire="0.5" stopsToShoot="false" chanceToThrowGrenade="0.5" />
 			<Id name="@entity_human_gruntblackhead" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy arabic"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
@@ -562,16 +570,19 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble"/>
+				<Item name="NRE_Ins_Type56_Veteran"/>
 				<Item name="RPG 26"/>
+				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Veteran Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless,NRE_insurgent,Blackhead">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/militia_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>		
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/chest_rig_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_NGF.dds" alphaTest="true"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -588,14 +599,15 @@
 				<!-- Item name="1911 Pistol"/-->
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>	
 			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>	
 
 	<Entity name="Machinegunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,Blackhead">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/militia_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>		
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+	
 		<RenderObject3D model="data/models/humans/attachments/plate_carrier_militia_01_NGF.khm" diffuseTex="data/models/humans/attachments/swat_assaulter_vest.dds" />
 		<RenderObject3D model="data/models/humans/attachments/cartridge_belt_NGF.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<Breakable template="HumanGib_default_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -828,7 +840,7 @@
 
 	<Entity name="Foreign Advisor" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -853,7 +865,7 @@
 
 	<Entity name="Foreign Advisor Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -879,7 +891,7 @@
 
 	<Entity name="Foreign Advisor Fanatic" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -904,7 +916,7 @@
 
 	<Entity name="FAdvisor Fanatic Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,weaponless,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -931,10 +943,9 @@
 
 	<Entity name="FAdvisor Leader" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/militia_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/cia_scarf_beret.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -961,7 +972,7 @@
 		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
 		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -983,7 +994,7 @@
 	
 	<Entity name="FA Fanatic Stormtroop" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/militia_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/darker_vest_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/chest_c4bundle_NGF.khm" diffuseTex="data/models/humans/attachments/chest_c4bundle_NGF.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -1012,10 +1023,9 @@
 	
 	<Entity name="FA Fanatic Stormtroop G" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,NRE_insurgent,ForeignAdvisor">
 		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/militia_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/shemagh_NGF.khm" diffuseTex="data/models/humans/attachments/shemagh_NRE.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/hairband_militia_NGF.khm" diffuseTex="data/models/humans/attachments/hairband_militia_NGF_Green.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/darker_vest_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/chest_c4bundle_NGF.khm" diffuseTex="data/models/humans/attachments/chest_c4bundle_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
