@@ -1,0 +1,61 @@
+<Entities>
+
+	<Entity name="FragGrenadeNRE" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>	
+
+	<Entity name="FlashbangGrenadeNRE" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/flashbang.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/flashbang.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ffff00" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="SmokeGrenadeNRE" type="Projectile" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/smoke_grenade.khm" skipGOSSAO="true" disableDecals="true" diffuseTex="data/models/equipment/smoke_grenade.dds"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ffffff" sizeX="1.0" sizeY="1.0" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="350" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+
+	<Entity name="IEDBombNRE" type="Timebomb" fogOfWarVisibility="hiddenInitially" tooltip="@entity_ied_tooltip">
+		<PhysicalParams blocksMovement="false"/>
+		<Breakable breakOnDamage="explosive" deleteOnDeath="true"> <!-- we don't delete on death because we want to keep track of them in code. But they will be hidden when dead nonetheless -->
+			<Piece entityName="PS_RpgExplosion"/>
+			<Piece entityName="scorch_mark_large"/>
+			<Piece entityName="sfx_timebomb_kaboom"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/interior/bomb_small.khm" diffuseTex="data/models/environment/interior/bomb_small.dds" />
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="1" sizeY="1" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="7" endFrame="7" animationTimeMS="700" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+
+		<!-- time will vary depending on the trooper's FieldSkills ability -->
+		<Timebomb defuseTimeMsec="2000" kaboomTimeMsec="0"/>
+	</Entity>
+
+	<Entity name="TimebombTrapNRE" type="Timebomb" fogOfWarVisibility="hiddenInitially" tooltip="@entity_ied_tooltip">
+		<PhysicalParams blocksMovement="false"/>
+		<Breakable breakOnDamage="grenade" deleteOnDeath="true"> <!-- we don't delete on death because we want to keep track of them in code. But they will be hidden when dead nonetheless -->
+			<Piece entityName="PS_RpgExplosion"/>
+			<Piece entityName="scorch_mark_large"/>
+			<Piece entityName="sfx_timebomb_kaboom"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/interior/bomb_small.khm" diffuseTex="data/models/environment/interior/bomb_small.dds" />
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="1" sizeY="1" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="650" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+
+		<!-- time will vary depending on the trooper's FieldSkills ability -->
+		<Timebomb defuseTimeMsec="2000" kaboomTimeMsec="20000"/>
+	</Entity>	
+
+
+</Entities>
