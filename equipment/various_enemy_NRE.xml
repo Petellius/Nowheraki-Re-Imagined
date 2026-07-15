@@ -100,6 +100,74 @@ SUICIDE BOMB
 		<RenderObject3D model="data/models/humans/attachments/plate_carrier_mtn_NGF.khm" diffuseTex="data/models/humans/attachments/plate_carrier_mtn_NGF.dds"/>		
 	</Armor>
 
+		<Armor name="NRE Military Commando Armor" inventoryBinding="Armor" unlockCost="0"
+			tooltip="@armor_enemy_heavyarmor_name"
+			img="data/models/equipment/armor_basic_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="-10"/>
+
+		<!--
+		protectionArcDegrees: how wide around the trooper's origin the protection arc goes
+		coveragePercent: which percent of the bullets go through (they deal 1 damage if bullet piercing < protectionLevel or full damage otherwise)
+		piercingProtectionLevel: gets compared to the bullet's piercingLevel (recive 1 damage if > bulletPiercing and goes through CoveragePercent or normal damage otherwise)
+		-->
+		<Params>
+			<ProtectionArc degrees="90" coveragePercent="40" piercingProtectionLevel="50"/>
+			<ProtectionArc degrees="270" coveragePercent="20" piercingProtectionLevel="40"/>
+			<ProtectionArc degrees="360" coveragePercent="40" piercingProtectionLevel="50"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/plate_carrier_noattachments_NGF.khm" diffuseTex="data/models/humans/attachments/darker_vest_NGF.dds"/>		
+	</Armor>
+
+	<Helmet name="Helmet NGF Green" inventoryBinding="Helmet" unlockCost="2" 
+			tooltip=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="40"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_NGF.khm" diffuseTex="data/models/humans/attachments/data/models/humans/attachments/balistic_helmet_NGF.dds.dds" attachSlot="Bip001 Head">
+			<Specular shininess="32" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>	
+	</Helmet>		
+
+	<Helmet name="Helmet NGF Black" inventoryBinding="Helmet" unlockCost="2" 
+			tooltip=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="40"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_mtn_NGF.dds" attachSlot="Bip001 Head">
+			<Specular shininess="32" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>	
+	</Helmet>	
+
+	<Helmet name="Helmet NGF Beige" inventoryBinding="Helmet" unlockCost="2" 
+			tooltip=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="40"/>
+		</Params>
+
+		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_NGF_Beige.dds" attachSlot="Bip001 Head">
+			<Specular shininess="32" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>	
+	</Helmet>			
+
 	<Helmet name="Helmet MICH Black NRE" inventoryBinding="Helmet" unlockCost="2" 
 			tooltip=""
 			img="data/models/humans/attachments/ach_helmet_ui.dds"

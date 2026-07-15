@@ -8,10 +8,8 @@
 	<!-- SUBFACTION: NWK REGULARS -->
 	<!-- Standard military guys with little training. Very role focused but slow, with limited equipment and light armour. -->
 	<!-- Standard Guy -->
-	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,conscript">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
@@ -28,15 +26,14 @@
 			<Equipment>
 				<Item name="NRE_Army_G3A3_NGF"/>
 				<Item name="Frag Grenade Enemy Noob"/>
+				<Item name="NRE Military SoftArmor" />					
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<!-- RPK -->
-	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,conscript">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -50,16 +47,16 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Army_RPK_NGF"/>
+				<Item name="NRE_Army_G3A3_NGF"/>
+				<Item name="Helmet NGF Beige" />
+				<Item name="NRE Military SoftArmor" />					
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<!-- Shotgun -->
 	<Entity name="Bodyguard SMG Noob" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,conscript">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -73,17 +70,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Army_IZh81_Shotgun_NGF"/>
-				<Item name="Frag Grenade Enemy"/>
+				<Item name="NRE_Army_G3A3_NGF"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<!-- Militia Sergeant -->
-	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,Officer">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_army_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/chest_rig_aws_tacpvest_NGF.khm" diffuseTex="data/models/humans/attachments/chest_rig_aws_blk_NGF.dds"/>
+	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -98,6 +92,7 @@
 
 			<Equipment>
 				<Item name="NRE_Army_G3A3_NGF"/>
+				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military SoftArmor" />
 				<Item name="Smoke Grenade NRE" />				
 			</Equipment>
@@ -107,7 +102,8 @@
 	</Entity>
 
 	<Entity name="Bodyguard Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless,NRE_Military">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_02_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_army_NGF.dds" attachSlot="Bip001 Head"/>
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -127,9 +123,7 @@
 	</Entity>
 
 	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>		
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -144,6 +138,7 @@
 
 			<Equipment>
 				<Item name="NRE_Army_G3A4_NGF"/>
+				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military HeavyArmor" />
 				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
@@ -152,10 +147,7 @@
 
 	<!-- Grenadier -->
 	<Entity name="Bodyguard Heavy AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
-		
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -172,16 +164,14 @@
 			<Equipment>
 				<Item name="NRE_Army_G3A4_HK79_NGF"/>
 				<Item name="NRE_Army_G3A4_HK79_Launcher_NGF"/>
+				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Bodyguard Heavy RPK16S" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
-		
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -197,6 +187,7 @@
 
 			<Equipment>
 				<Item name="RPK16 Short LMG"/> 
+				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military HeavyArmor" />
 				<Item name="Frag Grenade Enemy"/>
 			</Equipment>
@@ -207,9 +198,7 @@
 	</Entity>
 
 	<Entity name="Bodyguard Heavy Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,weaponless">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/backpack_radio_NGF.khm" diffuseTex="data/models/humans/attachments/backpack_radio_NGF.dds" attachSlot="prop_back_rifle"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -226,6 +215,7 @@
 
 			<Equipment>
 				<Item name="NRE_Army_G3A4_NGF"/>
+				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military HeavyArmor" />
 				<Item name="Request_60mm_Barrage_NGF"/>
 			</Equipment>
@@ -237,9 +227,7 @@
 		
 	<!-- Regular Breacher -->
 	<Entity name="Bodyguard Heavy Pistol" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -255,6 +243,7 @@
 
 			<Equipment>
 				<Item name="NRE_Army_IZh81_Shotgun_NGF"/>
+				<Item name="Helmet NGF Beige" />
 				<Item name="NRE_Army_AKM_GP34_02_NGF"/>
 				<Item name="NRE Military HeavyArmor" />
 				<!-- Smoke Grenade -->
@@ -272,10 +261,7 @@
 	-->
 
 	<Entity name="Warlord Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
-		
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -291,17 +277,15 @@
 
 			<Equipment>
 				<Item name="NRE_Army_G3A4_NGF"/>
-				<Item name="Frag Grenade Enemy"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />				
+				<Item name="Frag Grenade Enemy Elite"/>	
 			</Equipment>
 		</Human>
 	</Entity>
 	
 	<Entity name="Warlord Militia Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,weaponless">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
-		
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -316,17 +300,15 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />		
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<!-- Military Veterans/Commandos -->
 	<Entity name="Warlord Militia LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
-	
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -342,17 +324,15 @@
 
 			<Equipment>
 				<Item name="NRE_Army_SVD_NGF"/>
-				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />				
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />				
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<!-- Veteran Leader-->
 	<Entity name="Warlord Militia Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Officer">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -369,16 +349,15 @@
 			<Equipment>
 				<Item name="NRE_Army_G3A4_NGF"/>
 				<Item name="Smoke Grenade NRE"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />		
 			</Equipment>
 		</Human>
 	</Entity>
 
 
 	<Entity name="Warlord Militia Machinegunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -394,16 +373,15 @@
 
 			<Equipment>
 				<Item name="NRE_Army_HK21E_NGF"/> 
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />		
 			</Equipment>
 
 		</Human>
 	</Entity>
 
 	<Entity name="Warlord Militia Grenadier" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/mtn_01_NGF.dds"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_covered_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_covered_mtn_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/balistic_helmet_strap_NGF.khm" diffuseTex="data/models/humans/attachments/balistic_helmet_strap_NGF.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -420,17 +398,15 @@
 			<Equipment>
 				<Item name="NRE_Army_G3A4_NGF"/>
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />		
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Bluebandz Assaulter" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,bluebandz">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
-		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
-		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
-
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -445,13 +421,16 @@
 
 			<Equipment>
 				<Item name="MP5 ME Edition"/>
+				<Item name="Frag Grenade Enemy Elite"/>
+				<Item name="Helmet MICH Green NRE" />	
+				<Item name="NRE Military Commando Armor" />					
 			</Equipment>
 		</Human>
 	</Entity>	
 
 
 	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>		
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>		
 				
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -469,15 +448,15 @@
 				<Item name="NRE_Army_G3A4_NGF"/>
 				<Item name="ZF_4x_NGF"/>
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
-				<Item name="HelmetSkullCrusherNWS"/>
-				<Item name="NVGSkullCrusherWMHax"/>					
+				<Item name="Helmet MICH Black NRE" />	
+
+				<Item name="NRE Military Commando Armor" />					
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Warlord Elite Heavy" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -500,13 +479,13 @@
 				<Item name="NRE_Army_G3A4_NGF"/>
 				<Item name="ZF_4x_NGF"/>
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Warlord Elite Heavy Gunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -527,7 +506,7 @@
 				<Item name="NRE_Army_G3A4_NGF"/>
 				<Item name="ZF_4x_NGF"/>
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 
 			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
@@ -536,7 +515,7 @@
 	</Entity>
 
 	<Entity name="Warlord BodyGuard" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -558,13 +537,13 @@
 			<Equipment>
 				<Item name="NRE_Army_MP5_NGF"/> 
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 		</Human>
 	</Entity>	
 
 	<Entity name="Warlord Militia Sergeant Rifleless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -593,7 +572,7 @@
 	</Entity>
 	
 	<Entity name="Warlord Militia Sergeant Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -614,14 +593,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 		</Human>
 	</Entity>	
 
 
 	<Entity name="Warlord Militia NVG LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>			
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -639,7 +618,7 @@
 			<Equipment>
 				<Item name="NRE_Army_SVD_NGF"/>
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 				<Item name="HelmetSkullCrusherNWS"/>
 				<Item name="NVGSkullCrusherWMHax"/>		
 			</Equipment>
@@ -647,7 +626,7 @@
 	</Entity>
 
 	<Entity name="Warlord Militia NVG Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		
 				
@@ -668,7 +647,7 @@
 				<Item name="NRE_Army_G3A4_NGF"/>
 				<Item name="ZF_4x_NGF"/>
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 				<Item name="HelmetSkullCrusherNWS"/>
 				<Item name="NVGSkullCrusherNWS"/>
 			</Equipment>
@@ -676,7 +655,7 @@
 	</Entity>
 	
 	<Entity name="Bodyguard Elite Bren" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -700,13 +679,13 @@
 				<Item name="Nowheraki_Army_G3A4_HK79_Launcher_NGF"/>
 				<Item name="M68CCO"/>				
 				<Item name="Frag Grenade Enemy Elite"/>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 		</Human>
 	</Entity>	
 		
 	<Entity name="Bodyguard Elite MP9" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,elite">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -728,18 +707,17 @@
 
 			<Equipment>
 				<Item name="NRE_Army_MP5_NGF"/> 
-				<Item name="NRE Military HeavyArmor" />
 				<Item name="RedDotT2"/> 
 				<Item name="Russian_GM94_Thermobaric_NGF"/> 
 				<Item name="RedDot_MicroPrimary"/> 		
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 				<Item name="Satchel_Charge_NGF"/>
 			</Equipment>
 		</Human>
 	</Entity>
 
 	<Entity name="Bodyguard Elite Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,weaponless">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/mtn_leader_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
 		
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_mountaineer_NGF.dds" attachSlot="Bip001 Head"/>
 		<RenderObject3D model="data/models/humans/attachments/aviators_NGF.khm" diffuseTex="data/models/humans/attachments/aviators_NGF.dds"/>
@@ -759,7 +737,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE Military HeavyArmor" />
+				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 		</Human>
 	</Entity>	
