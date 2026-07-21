@@ -2,75 +2,70 @@
 
 <DoctrineNodes>
 
-	<Node name="InsurgencyI" nameUI="" description="" texturePrefix="">
-		<AttackTypeModifier target="pistol" minRange="0" maxRange="7"
-			minAimTime="-50"
-			maxAimTime="-100"
+	<Node name="InsurgencyNoob" nameUI="" description="" texturePrefix="">
+		<AttackTypeModifier target="pistol" minRange="0" maxRange="15"
+			minAimTime="-25"
+			maxAimTime="-25"
+			resetTime="-25"
+		/>
+		<AttackTypeModifier target="rifle" minRange="0" maxRange="15"
+			minAimTime="-25" 
+			maxAimTime="-50" 
+			resetTime="-25"
+		/>
+		<AttackTypeModifier target="lmg" minRange="0" maxRange="15"
+			minAimTime="-25" 
+			maxAimTime="-50" 
 			resetTime="-50"
 		/>
-		<AttackTypeModifier target="rifle" minRange="0" maxRange="7"
-			minAimTime="-50" 
-			maxAimTime="-100" 
-			resetTime="-100"
+		<AttackTypeModifier target="dmr" minRange="0" maxRange="100"
+			minAimTime="-25" 
+			maxAimTime="-50" 
+			resetTime="-25"
 		/>
-		<AttackTypeModifier target="lmg" minRange="0" maxRange="7"
-			minAimTime="-50" 
-			maxAimTime="-100" 
-			resetTime="-100"
+		<AttackTypeModifier target="shotgun" minRange="0" maxRange="15"
+			minAimTime="-25"
+			maxAimTime="-50" 
+			resetTime="-25"
 		/>
-		<AttackTypeModifier target="dmr" minRange="0" maxRange="7"
-			minAimTime="-50" 
-			maxAimTime="-100" 
-			resetTime="-100"
-		/>
-		<AttackTypeModifier target="shotgun" minRange="0" maxRange="7"
-			minAimTime="-50"
-			maxAimTime="-100" 
-			resetTime="-50"
-		/>
-		<AttackTypeModifier target="pistol" minRange="7" maxRange="15"
+	</Node>
+
+	<Node name="InsurgencyVet" nameUI="" description="" texturePrefix="">
+		<AttackTypeModifier target="pistol" minRange="0" maxRange="15"
 			minAimTime="-50"
 			maxAimTime="-50"
 			resetTime="-50"
 		/>
-		<AttackTypeModifier target="rifle" minRange="7" maxRange="15"
-			minAimTime="-100"
-			maxAimTime="-200"
+		<AttackTypeModifier target="rifle" minRange="0" maxRange="15"
+			minAimTime="-50" 
+			maxAimTime="-100" 
 			resetTime="-100"
 		/>
-		<AttackTypeModifier target="lmg" minRange="7" maxRange="15"
-			minAimTime="-100"
-			maxAimTime="-200"
+		<AttackTypeModifier target="lmg" minRange="0" maxRange="15"
+			minAimTime="-50" 
+			maxAimTime="-100" 
 			resetTime="-100"
 		/>
-		<AttackTypeModifier target="dmr" minRange="7" maxRange="15"
-			minAimTime="-100"
-			maxAimTime="-200"
+		<AttackTypeModifier target="dmr" minRange="0" maxRange="15"
+			minAimTime="-50" 
+			maxAimTime="-100" 
 			resetTime="-100"
+			critChanceAdd="+5"
 		/>
-		<AttackTypeModifier target="shotgun" minRange="7" maxRange="15"
-			minAimTime="-100"
-			maxAimTime="-100"
-		/>
-		<AttackTypeModifier target="pistol" minRange="15" maxRange="100"
+		<AttackTypeModifier target="shotgun" minRange="0" maxRange="15"
 			minAimTime="-50"
-			maxAimTime="-100"
+			maxAimTime="-100" 
+			resetTime="-50"
 		/>
 		<AttackTypeModifier target="rifle" minRange="15" maxRange="100"
-			minAimTime="-100"
-			maxAimTime="-100"
-		/>
-		<AttackTypeModifier target="lmg" minRange="15" maxRange="100"
 			minAimTime="-100"
 			maxAimTime="-100"
 		/>
 		<AttackTypeModifier target="dmr" minRange="15" maxRange="100"
 			minAimTime="-100"
 			maxAimTime="-100"
-		/>
-		<AttackTypeModifier target="shotgun" minRange="15" maxRange="100"
-			minAimTime="-50"
-			maxAimTime="-100"
+			resetTime="-50"
+			critChanceAdd="+10"
 		/>
 		<EquipmentModifier target="pistol"
 			reloadTime="-250"
@@ -107,7 +102,7 @@
 		/>
 	</Node>
 
-	<Node name="MilitaryI" nameUI="" description="" texturePrefix="">
+	<Node name="MilitaryVet" nameUI="" description="" texturePrefix="">
 		<AttackTypeModifier target="" minRange="0" maxRange="7"
 			minAimTime="-50"
 			maxAimTime="-100"

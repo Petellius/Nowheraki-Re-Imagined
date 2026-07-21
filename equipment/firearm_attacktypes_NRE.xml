@@ -126,8 +126,8 @@
 			maxShots="6"
 			resetTime="210"
 			accuracyAdd="-135"
-			followupShotAccuracyAdd="-5"
-			critChanceAdd="10"
+			followupShotAccuracyAdd="-3"
+			critChanceAdd="5"
 		/>
 	</AttackType>
 
@@ -139,8 +139,8 @@
 			minShots="3"
 			maxShots="5"
 			resetTime="265"
-			accuracyAdd="-135"
-			followupShotAccuracyAdd="-5"
+			accuracyAdd="-130"
+			followupShotAccuracyAdd="-3"
 			critChanceAdd="5"
 		/>
 	</AttackType>
@@ -153,7 +153,7 @@
 			minShots="4"
 			maxShots="6"
 			resetTime="400"
-			accuracyAdd="-130"
+			accuracyAdd="-128"
 			followupShotAccuracyAdd="1"
 			critChanceAdd="0"
 		/>
@@ -181,7 +181,7 @@
 			minShots="2"
 			maxShots="3"
 			resetTime="450"
-			accuracyAdd="-135"
+			accuracyAdd="-125"
 			followupShotAccuracyAdd="8"
 			critChanceAdd="0"
 		/>
@@ -209,7 +209,7 @@
 			minShots="1"
 			maxShots="1"
 			resetTime="550"
-			accuracyAdd="-120"
+			accuracyAdd="-125"
 			followupShotAccuracyAdd="10"
 			critChanceAdd="0"
 		/>
@@ -228,7 +228,7 @@
 			maxShots="6"
 			resetTime="450"
 			accuracyAdd="-75"
-			followupShotAccuracyAdd="-8"
+			followupShotAccuracyAdd="-6"
 			critChanceAdd="15"
 			suppressionScale="0.7"
 
@@ -243,7 +243,7 @@
 			maxShots="4"
 			resetTime="650"
 			accuracyAdd="-75"
-			followupShotAccuracyAdd="-8"
+			followupShotAccuracyAdd="-6"
 			critChanceAdd="8"
 			suppressionScale="0.8"
 		/>

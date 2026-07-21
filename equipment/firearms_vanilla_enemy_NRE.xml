@@ -1,6 +1,6 @@
 <Equipment>
 
-	<Bind eqp="NRE_Ins_Type56_Rabble">
+	<Bind eqp="NRE_Ins_Type56">
 		<to name="SwatMilitia"/>
 	</Bind>
 

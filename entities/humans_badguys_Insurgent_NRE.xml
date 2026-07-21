@@ -28,8 +28,10 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/> <!-- AK47 -->
+				<Item name="NRE_Ins_Type56"/> <!-- AK47 -->
 			</Equipment>
+
+			<Doctrine name="InsurgencyNoob"/>
 		</Human>
 	</Entity>
 
@@ -58,7 +60,7 @@
 				<Item name="Molotov Single" />				
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyNoob"/>
 			<Doctrine name="FastGrenades"/>
 		</Human>
 	</Entity>	
@@ -108,7 +110,7 @@
 			<Equipment>
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 
 		</Human>
 	</Entity>
@@ -135,8 +137,7 @@
 				<!-- Item name="1911 Pistol"/-->
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
-
+			<Doctrine name="InsurgencyNoob"/>
 		</Human>
 	</Entity>	
 
@@ -157,7 +158,7 @@
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 			
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyNoob"/>
 		</Human>
 	</Entity>
 		
@@ -183,7 +184,7 @@
 				<Item name="SVD63"/>
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 			<Doctrine name="SniperVsCover"/>
 		</Human>
 	</Entity>
@@ -213,8 +214,7 @@
 				<Item name="RPK LMG"/>
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyNoob"/>
 
 		</Human>
 	</Entity>	
@@ -245,8 +245,7 @@
 				<Item name="RP46_MG"/> 
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyNoob"/>
 
 		</Human>
 	</Entity>
@@ -274,7 +273,7 @@
 			<Equipment>
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 
 		</Human>
 	</Entity>	
@@ -304,7 +303,7 @@
 				<Item name="PKM_MG"/>
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			<Doctrine name="InsurgencyVet"/>
 
 		</Human>
 	</Entity>	
@@ -328,8 +327,10 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="Type 56"/> <!-- AK47 -->
+				<Item name="NRE_Ins_Type56"/> <!-- AK47 -->
 			</Equipment>
+
+			<Doctrine name="InsurgencyVet"/>
 		</Human>
 	</Entity>	
 
@@ -359,7 +360,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble" />
+				<Item name="NRE_Ins_Type56_Folded" />
 			</Equipment>
 		</Human>
 	</Entity>
@@ -381,7 +382,6 @@
 			<Equipment>
 				<Item name="RPK LMG" />
 			</Equipment>
-			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>	
 
@@ -402,7 +402,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Rabble" />
+				<Item name="NRE_Ins_Type56" />
 				<Item name="Frag Grenade Enemy Noob"/>
 			</Equipment>
 		</Human>
@@ -428,7 +428,6 @@
 				<Item name="FAL Rifle"/> 
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>
 
@@ -451,7 +450,6 @@
 			<Equipment>
 				<Item name="PM63" />
 			</Equipment>
-			<Doctrine name="InsurgencyI"/>
 		</Human>
 	</Entity>
 
@@ -474,8 +472,6 @@
 
 			<Equipment>
 			</Equipment>
-			
-			<Doctrine name="InsurgencyI"/>
 		</Human>
 		
 	</Entity>
@@ -508,12 +504,12 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/> <!-- AK47 -->
+				<Item name="NRE_Ins_Type56"/> <!-- AK47 -->
 				<Item name="Frag Grenade Enemy"/>
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
 			
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 		</Human>
 	</Entity>
 
@@ -541,7 +537,7 @@
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
 			
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 		</Human>
 	</Entity>
 
@@ -567,10 +563,12 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/>
+				<Item name="NRE_Ins_AK74U"/>
 				<Item name="Kobra"/>
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
+
+			<Doctrine name="InsurgencyVet"/>
 		</Human>
 	</Entity>
 
@@ -593,7 +591,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/>
+				<Item name="NRE_Ins_Type56"/>
 				<Item name="RPG 26"/>
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
@@ -621,7 +619,7 @@
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
 
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 		</Human>
 	</Entity>	
 
@@ -649,7 +647,7 @@
 				<Item name="NRE_RPK_74_LMG"/>
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
-			<Doctrine name="InsurgencyI"/>
+			<Doctrine name="InsurgencyVet"/>
 		</Human>
 	</Entity>	
 <!-- ________________________________________________________________________________________________________________________-->
@@ -888,11 +886,13 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/>
+				<Item name="NRE_Ins_Type56"/>
 				<Item name="TT 33 Pistol"/>
 			</Equipment>
 			
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>					
 		</Human>
 	</Entity>
 
@@ -917,9 +917,10 @@
 			<Equipment>
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			<Doctrine name="InsurgencyVet"/>
 			
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>		
 		</Human>
 	</Entity>
 
@@ -943,11 +944,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/>
+				<Item name="NRE_Ins_Type56"/>
 				<Item name="Suicide Bomb"/>
 			</Equipment>
 			
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>		
+
 		</Human>
 	</Entity>
 
@@ -973,9 +977,9 @@
 				<Item name="Suicide Bomb"/>
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
-
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>	
 
 		</Human>
 	</Entity>
@@ -999,12 +1003,14 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56_Veteran"/>
+				<Item name="NRE_Ins_Type56"/>
 				<Item name="PSO1"/>
 				<Item name="Suicide Bomb"/>
 			</Equipment>
 			
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>		
 		</Human>
 	</Entity>
 
@@ -1026,7 +1032,9 @@
 			<Equipment>
 			</Equipment>
 
-			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>	
 		</Human>
 	</Entity>
 	
@@ -1055,7 +1063,9 @@
 				<Item name="Bodyguard HeavyArmor"/>				
 			</Equipment>
 			
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>	
 		</Human>
 	</Entity>
 	
@@ -1084,7 +1094,9 @@
 				<Item name="Bodyguard HeavyArmor"/>	
 			</Equipment>
 			
-			<Doctrine name="Enemy_ForeignAdvisorBuff"/>
+			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="FanaticLeader"/>
+			<Doctrine name="FanaticLeaderOnKill"/>	
 		</Human>
 	</Entity>
 

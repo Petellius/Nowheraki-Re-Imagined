@@ -20,11 +20,11 @@
 	suppressionNearMiss="10"
 	suppressionHitMe="15"
 	suppressionHitFriend="12"
-	suppressionHitFriendRadiusMeters="4"
+	suppressionHitFriendRadiusMeters="2.5"
 	suppressionMax="90"
 
-	suppressedThresholdStart="18"
-	suppressedThresholdStop="12"
+	suppressedThresholdStart="15"
+	suppressedThresholdStop="10"
 	pinnedThresholdStart="88"
 	pinnedThresholdStop="85"
 
