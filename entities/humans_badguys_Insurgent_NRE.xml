@@ -211,7 +211,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="RPK LMG"/>
+				<Item name="NRE_RPK_DRUM_LMG"/>
 			</Equipment>
 
 			<Doctrine name="InsurgencyNoob"/>
@@ -242,7 +242,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="RP46_MG"/> 
+				<Item name="NRE_RP46_MG"/> 
 			</Equipment>
 
 			<Doctrine name="InsurgencyNoob"/>
@@ -300,10 +300,10 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="PKM_MG"/>
+				<Item name="NRE_PKM_MG"/>
 			</Equipment>
 
-			<Doctrine name="InsurgencyVet"/>
+			<Doctrine name="InsurgencyNoob"/>
 
 		</Human>
 	</Entity>	
@@ -380,7 +380,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="RPK LMG" />
+				<Item name="NRE_RPK_DRUM_LMG" />
 			</Equipment>
 		</Human>
 	</Entity>	
@@ -395,14 +395,14 @@
 			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
 			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
-			<Traits chanceToBlindFire="0.4" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" chanceToInvestigate="0.5" roamAround="true"/>
+			<Traits chanceToBlindFire="0.4" usesSuppressionFire="true" stopsToShoot="false" chanceToInvestigate="0.5" chanceToThrowGrenade="1.0" roamAround="true"/>
 			<Mobility>
 				<MoveSpeed min="0.6" defaultMetersPerSec="2.5" max="11"/>
 				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56" />
+				<Item name="NRE_Ins_Type56_Folded" />
 				<Item name="Frag Grenade Enemy Noob"/>
 			</Equipment>
 		</Human>
@@ -563,7 +563,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_AK74U"/>
+				<Item name="NRE_AKM_Insurgent"/>
 				<Item name="Kobra"/>
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>
@@ -591,7 +591,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="NRE_Ins_Type56"/>
+				<Item name="NRE_AKM_Insurgent"/>
 				<Item name="RPG 26"/>
 				<Item name="Bodyguard SoftArmor"/>
 			</Equipment>

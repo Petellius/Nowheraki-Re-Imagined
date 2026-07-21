@@ -239,7 +239,7 @@
 	<Firearm name="NRE_RPK_74_LMG" inventoryBinding="PrimaryWeapon" category="lmg" 
 			tooltip="@firearm_rpk74lmg_name"
 			img="data/models/weapons/rpk_bad_guy_ui.dds"
-			animationSet="rifle"
+			animationSet="rifle_fire_rib_NGF"
 		>
 		<MobilityModifiers moveSpeedModifierPercent="-20" turnSpeedModifierPercent="-5"/>
 		<RenderObject3D model="data/models/weapons/rpk74.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/rpk74.dds"/>
@@ -303,13 +303,13 @@
 	</Firearm>
 
 
-	<Bind eqp="NRE_RPK_LMG">
+	<Bind eqp="NRE_RPK_DRUM_LMG">
 		<to name="545x39FMJ_RPK 74 LMG"/>
 	</Bind>
-	<Firearm name="NRE_RPK_LMG" inventoryBinding="PrimaryWeapon" category="lmg" 
+	<Firearm name="NRE_RPK_DRUM_LMG" inventoryBinding="PrimaryWeapon" category="lmg" 
 			tooltip="@firearm_rpklmg_name"
 			img="data/models/weapons/rpk74_drum_ui.dds"
-			animationSet="rifle"
+			animationSet="rifle_fire_rib_NGF"
 		>
 		<MobilityModifiers moveSpeedModifierPercent="-22" turnSpeedModifierPercent="-5"/>
 		<RenderObject3D model="data/models/weapons/rpk74_drum.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/rpk74_drum.dds"/>
@@ -365,6 +365,147 @@
 			<Reload name="rifle_reld"/>
 			<ReloadEmpty name="rifle_reldempt"/>
 			<Fire name="rpk_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+
+	<!-- HMGs - heavy weapons that are hard to fire on the move -->
+
+	<Bind eqp="NRE_PKM_MG">
+		<to name="762x54RFMJ_PKM"/>
+	</Bind>
+	<Firearm name="NRE_PKM_MG" inventoryBinding="PrimaryWeapon" category="lmg" 
+			tooltip="@firearm_pkmmg_name"
+			img="data/models/weapons/pkm_ui.dds"
+			animationSet="rifle_fire_rib_NGF"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-15" turnSpeedModifierPercent="-9"/>
+		<RenderObject3D model="data/models/weapons/pkm.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/pkm.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="100"
+			closedBolt="0"
+			suppressArea="1"			
+
+			cyclicReload="0"
+			reloadTime="5500"
+			reloadEmptyTime="5500"
+			changeInTime="1500"
+			changeOutTime="1400"
+			readyTime="850"
+			guardTime="450"
+
+			accuracyStart="90"
+			accuracyEnd="55"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+
+			suppressionScale="1.4"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x54_name"
+			operationInfoText="@firearm_operation_fullauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m240l_mag"
+			ai_rangeMin="3.0"
+			ai_rangeOptimal="25.0"
+			ai_rangeMax="70.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="RPKStrafe" inCoverOverride="RPKStrafeMounted" rangeMeters="10"/>
+			<AttackType name="RPKStrafeMed" inCoverOverride="RPKStrafeMounted" rangeMeters="20"/>
+			<AttackType name="RPKStrafeMed" inCoverOverride="RPKStrafeMedMounted" rangeMeters="30"/>
+			<AttackType name="RPKStrafeLong" inCoverOverride="RPKStrafeMedMounted" rangeMeters="36"/>
+			<AttackType name="RPKStrafeLong" inCoverOverride="RPKStrafeLongMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_LMG_01" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_02" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_03" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="rp46_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>	
+
+	<Bind eqp="NRE_RP46_MG">
+		<to name="762x54RFMJ_RP46MG"/>
+	</Bind>
+	<Firearm name="NRE_RP46_MG" inventoryBinding="PrimaryWeapon" category="lmg" 
+			tooltip="@firearm_rp46mg_name"
+			img="data/models/weapons/rp46_mg_ui.dds"
+			animationSet="rifle_fire_rib_NGF"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-30" turnSpeedModifierPercent="-10"/>
+		<RenderObject3D model="data/models/weapons/rp46_mg.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/rp46_mg.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="200"
+			closedBolt="0"
+			suppressArea="1"			
+
+			cyclicReload="0"
+			reloadTime="6000"
+			reloadEmptyTime="6000"
+			changeInTime="1800"
+			changeOutTime="1500"
+			readyTime="1000"
+			guardTime="700"
+
+			accuracyStart="70"
+			accuracyEnd="50"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+
+			suppressionScale="1.35"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x54_name"
+			operationInfoText="@firearm_operation_fullauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m240l_mag"
+			ai_rangeMin="3.0"
+			ai_rangeOptimal="25.0"
+			ai_rangeMax="70.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypes>
+			<AttackType name="RPKStrafe" inCoverOverride="RPKStrafeMounted" rangeMeters="10"/>
+			<AttackType name="RPKStrafeMed" inCoverOverride="RPKStrafeMedMounted" rangeMeters="30"/>
+			<AttackType name="RPKStrafeLong" inCoverOverride="RPKStrafeLongMounted" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_LMG">
+			<Flare particles="FX_MUZZLE_FLASH_LMG_01" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_02" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_03" />
+			<Flare particles="FX_MUZZLE_FLASH_LMG_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="rp46_fire"/>
 			<ShellDrop name="rifle_shell_drop"/>
 			<Empty name="gen_empty"/>
 		</Sounds>
