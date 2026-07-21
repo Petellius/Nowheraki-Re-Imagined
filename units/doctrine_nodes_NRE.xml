@@ -227,7 +227,7 @@
 	</Node>		
 
 	<Node name="FanaticLeader">
-		<GiveBuff nodeName="FanaticalInspiration" target="friends_in_radius" radius="15.0" durationMs="2500" />
+		<GiveBuff nodeName="FanaticalInspiration" target="friends_in_radius" radius="8.0" durationMs="2500" />
 		<GiveBuff nodeName="FanaticLeader_Text" target="self" durationMs="2500" />
 	</Node>
 	
@@ -243,7 +243,7 @@
 	</Node>	
 
 	<Node name="FanaticLeaderOnKill">
-		<GiveBuff nodeName="FanaticalKill" when="kill" target="friends_in_radius" radius="15.0" durationMs="6000" />
+		<GiveBuff nodeName="FanaticalKill" when="kill" target="friends_in_radius" radius="5.0" durationMs="6000" />
 	</Node>
 	
 	<Node name="FanaticalKill" nameUI="" description="@NRE_buff_fanatic">
@@ -257,7 +257,7 @@
 	</Node>		
 
 	<Node name="MilitaryOfficer">
-		<GiveBuff nodeName="NearbyOfficerBuff" target="friends_in_radius" radius="25.0" durationMs="2500" />
+		<GiveBuff nodeName="NearbyOfficerBuff" target="friends_in_radius" radius="12.0" durationMs="2500" />
 		<GiveBuff nodeName="MilitaryOfficer_Text" target="self" durationMs="2500" />
 	</Node>
 	
