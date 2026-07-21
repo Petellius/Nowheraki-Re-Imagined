@@ -2,6 +2,83 @@
 
 	<!-- NRE Military Weapons -->
 	<!-- Tier 1 -->
+	<Bind eqp="NRE_AKM_Military">
+		<to name="762x39FMJ_Type 56"/>
+	</Bind>
+	<Firearm name="NRE_AKM_Military" inventoryBinding="PrimaryWeapon" category="rifle" 
+			tooltip="@firearm_akm_name"
+			img="data/models/weapons/akm_ui.dds"
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-8" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/akm.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/akm.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="2500"
+			reloadEmptyTime="3000"
+			changeInTime="400"
+			changeOutTime="0"
+			readyTime="400"
+			guardTime="100"
+
+			accuracyStart="135"
+			accuracyEnd="90"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_762x39_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="type56_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="25.0"
+			ai_rangeMax="50.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AttackTypes>
+			<AttackType name="Militia_Rifle_Heavy_1" rangeMeters="5"/>
+			<AttackType name="Militia_Rifle_Heavy_2" rangeMeters="12"/>
+			<AttackType name="Militia_Rifle_Heavy_3" rangeMeters="22"/>
+			<AttackType name="Militia_Rifle_Heavy_4" rangeMeters="50"/>
+			<AttackType name="Militia_Rifle_Heavy_5" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<AttackTypesSuppressiveFire>
+			<AttackType name="AreaSuppression_Militia_Rifle_Auto" rangeMeters="12"/>
+			<AttackType name="AreaSuppression_Militia_Rifle_Long" rangeMeters="9999"/> 
+		</AttackTypesSuppressiveFire>		
+
+		<AttackTypesBlindfire>
+			<AttackType name="NRE_BlindFire_Auto_Militia" rangeMeters="12"/>
+			<AttackType name="NRE_BlindFire_Long_Militia" rangeMeters="9999"/>
+		</AttackTypesBlindfire>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> 
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="akm_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>	
+
 	<Bind eqp="NRE_Army_G3A3_NGF">
 		<to name="762x51FMJ_G3_NGF"/>
 		<to name="IronSights"/>
@@ -180,7 +257,7 @@
 			ejectingShellEntity="BulletCasingLarge"
 			magazineEntity="type56_mag"
 			ai_rangeMin="3.0"
-			ai_rangeOptimal="3.0"
+			ai_rangeOptimal="15.0"
 			ai_rangeMax="400.0"
 			ai_stopWhenShooting="true"
 		/>
@@ -860,6 +937,187 @@
 			<Empty name="gen_empty"/>
 		</Sounds>
 	</Firearm>	
+
+	<Bind eqp="NRE_AKM_GP34_GL">
+		<to name="762x39FMJ_Type 56"/>
+		<to name="IronSightsAK"/>
+	</Bind>
+	<Firearm name="NRE_AKM_GP34_GL" inventoryBinding="PrimaryWeapon" category="rifle" 
+			tooltip="@NGF_firearm_akm_name"
+			img="data/models/weapons/akm_gp34_ui.dds"
+			animationSet="rifle"
+		>
+		
+		<MobilityModifiers moveSpeedModifierPercent="-10" turnSpeedModifierPercent="-5"/>
+		<RenderObject3D model="data/models/weapons/akm_gp34_NGF.khm" skipGOSSAO="true" diffuseTex="data/models/weapons/akm_gp34_NGF.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="3500"
+			reloadEmptyTime="4500"
+			changeInTime="400"
+			changeOutTime="0"
+			readyTime="500"
+			guardTime="250"
+
+			accuracyStart="120"
+			accuracyEnd="50"
+			accuracyStartDist="7"
+			accuracyEndDist="40"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="type56_mag"
+			ai_rangeMin="10.0"
+			ai_rangeOptimal="3.0"
+			ai_rangeMax="200.0"
+		/>
+
+		<AttackTypes>
+			<AttackType name="burst_Proximity_NGF" rangeMeters="5"/>
+			<AttackType name="burst_Close_NGF" rangeMeters="10"/>
+			<AttackType name="burst_Med_NGF" rangeMeters="18"/>
+			<AttackType name="aimed_Long_NGF" rangeMeters="27"/>
+			<AttackType name="aimed_LongX_NGF" rangeMeters="37"/>
+			<AttackType name="aimed_LongXX_NGF" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Comp_Rifle_to_Green762_NGF">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="akm_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>	
+
+	<Bind eqp="NRE_AKM_GP34_GL_02">
+		<to name="338_SniperRifle"/>
+
+		<to name="IronSights"/>
+	</Bind>
+	<Firearm name="NRE_AKM_GP34_GL_02" inventoryBinding="SecondaryWeapon"
+			tooltip="@NGF_firearm_akm_gp34_launcher_name"
+			img="data/models/weapons/akm_gp34_ui.dds"
+			animationSet="grenade_launcher_NGF"
+			soundUseVoice="VOX_GEAR_FRAG"
+		>
+
+		<RenderObject3D model="data/models/weapons/akm_gp34_launcher_NGF.khm" attachSlot="prop_back_rifle"  skipGOSSAO="true" diffuseTex="data/models/weapons/akm_gp34_NGF.dds"/>
+
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ModifiableParams
+			projectilesPerMagazine="1"
+			cyclicReload="1"
+
+			reloadTime="1600"
+			reloadEmptyTime="1600"
+			changeInTime="1600"
+			changeOutTime="0"
+			readyTime="500"
+			guardTime="500"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_40mm_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ai_rangeMin="10.0"
+			ai_rangeOptimal="60.0"
+			ai_rangeMax="400.0"
+			ai_stopWhenShooting="true"
+		/>
+
+		<AttackTypesProjectile>
+			<AttackType name="RPG_Aimed" rangeMeters="9999"/>
+		</AttackTypesProjectile>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Projectile
+			bodyTemplate="GP34GrenadeBody_NGF"
+			trailParticles=""
+			lightTemplate=""
+
+			soundExplosion="grenade_launcher_expl"
+			soundOnSpawn="m203_fire"
+			soundFollow=""
+
+			minVelocity="25000.0"
+			maxVelocity="40000.0"
+			acceleration="0.0"
+			mass="0.0"
+			friendlyFire="true"
+			triggerOnImpact="true"
+
+			roundsPerSecond="2.0"
+			accuracyPercent="35"
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="2"
+			audibleDetonationSoundRadius="20"
+			>
+
+			<FX
+				particles="FragGrenade"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_large"
+				deleteAfterMS3="35000"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.95">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+
+			<EffectRange radiusMeters="2.4">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1500" outerRangeTimeMSec="1500"/>
+				<DamageEffect chancePercent="100" damage="999" damageType="1"/>
+				<ScatterEffect chancePercent="100" armorPenetration="30"/>
+				<SuppressEffect amount="30"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1000" outerRangeTimeMSec="300"/>
+				<ScatterEffect chancePercent="100"/>
+			</EffectRange>
+			
+		</Projectile>
+
+		<Sounds> <!-- max 4 variants for each action -->
+			<Equip name="rifle_eqp"/>
+			<Reload name="mk14_reld"/>
+			<ReloadEmpty name="mk14_reld"/>
+			<!-- <Fire name="type56_fire"/> -->
+			<!-- <ShellDrop name="rifle_shell_drop"/> -->
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>		
 
 	<!-- Sniper -->
 	<Bind eqp="NRE_Army_SVD_NGF">
