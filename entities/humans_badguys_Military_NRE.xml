@@ -9,7 +9,7 @@
 	<!-- Standard military guys with little training. Very role focused but slow, with limited equipment and light armour. -->
 	<!-- Standard Guy -->
 	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
@@ -33,7 +33,7 @@
 
 	<!-- RPK -->
 	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -56,7 +56,7 @@
 
 	<!-- Shotgun -->
 	<Entity name="Bodyguard SMG Noob" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,conscript">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -77,7 +77,7 @@
 
 	<!-- Militia Sergeant -->
 	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -102,7 +102,7 @@
 	</Entity>
 
 	<Entity name="Bodyguard Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless,NRE_Military">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/beret_army_NGF.dds" attachSlot="Bip001 Head"/>
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
@@ -123,7 +123,7 @@
 	</Entity>
 
 	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
@@ -147,7 +147,7 @@
 
 	<!-- Grenadier -->
 	<Entity name="Bodyguard Heavy AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -171,7 +171,7 @@
 	</Entity>
 
 	<Entity name="Bodyguard Heavy RPK16S" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
@@ -198,7 +198,7 @@
 	</Entity>
 
 	<Entity name="Bodyguard Heavy Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,weaponless">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/backpack_radio_NGF.khm" diffuseTex="data/models/humans/attachments/backpack_radio_NGF.dds" attachSlot="prop_back_rifle"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
@@ -227,7 +227,7 @@
 		
 	<!-- Regular Breacher -->
 	<Entity name="Bodyguard Heavy Pistol" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored">
-		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>
+		<RenderObject3D model="data/models/humans/nsf_NGF.khm" diffuseTex="data/models/humans/fnf_soldier_NGF.dds"/>
 		<RenderObject3D model="data/models/humans/attachments/poncho_pc_NGF.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds"/>
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
