@@ -85,7 +85,7 @@
 		<Troop entity="Machinegunner 762"			danger="12" weightChance="10" />
 		<Troop entity="Grunt Insurgent Weaponless"	danger="8" weightChance="4"   />
 		<Troop entity="Rocket Weaponless"			danger="10" weightChance="4"  />
-		<Troop entity="Foreign Advisor"				danger="15"  weightChange="4" />
+		<Troop entity="Foreign Advisor"				danger="15"  weightChance="4" />
 
 		<Troop entity="Executioner"					danger="20"	weightChance="4"  />
 	</Group>
