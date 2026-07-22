@@ -1,8 +1,15 @@
 <Equipment>
 
-	<Bind eqp="NRE_Ins_Type56">
+	<!-- Testing Weapons -->
+	<!-- Insurgent -->
+	<Bind eqp="NRE_Ins_Type56_Folded">
 		<to name="SwatMilitia"/>
 	</Bind>
+
+	<!-- Army -->
+	<Bind eqp="NRE_AKM_Military">
+		<to name="SwatMilitia"/>
+	</Bind>	
 
 	<Bind eqp="NRE_Army_G3A3_NGF">
 		<to name="SwatMilitia"/>
@@ -12,6 +19,7 @@
 		<to name="SwatMilitia"/>
 	</Bind>	
 
+	<!-- Swat -->
 	<Bind eqp="NRE M4 ACOG Tango">
 		<to name="SwatMilitia"/>
 	</Bind>				
