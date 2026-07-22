@@ -199,7 +199,7 @@
 			</Mobility>
 
 			<Equipment>
-				<Item name="RPK16 Short LMG"/> 
+				<Item name="NRE_Army_RPD_Assault_NGF"/> 
 				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military HeavyArmor" />
 				<Item name="Frag Grenade Enemy"/>
