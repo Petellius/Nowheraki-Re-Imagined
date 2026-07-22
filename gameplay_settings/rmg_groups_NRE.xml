@@ -184,11 +184,23 @@
 
 	<!-- Mid-Tier Military -->
 	<Group name="Warlord Militia" localizedName="@group_commandos">
-		<Troop entity="Warlord Militia"					danger="12"	weightChance="30" />
+		<Troop entity="Warlord Militia"					danger="13"	weightChance="30" />
 		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
+		<Troop entity="Warlord Militia Weaponless"		danger="12"	weightChance="5" />
 		<Troop entity="Warlord Militia Sergeant"		danger="18"	weightChance="10" />
 		<Troop entity="Warlord Militia Machinegunner"	danger="15"	weightChance="20" /> 
-		<Troop entity="Warlord Militia Grenadier"		danger="15"	weightChance="20" />
+		<Troop entity="Warlord Militia Grenadier"		danger="13"	weightChance="20" />
+		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
+		<Troop entity="Bluebandz Assaulter"				danger="18"	weightChance="20" />
+	</Group>	
+
+	<Group name="Elite Commandos" localizedName="@group_commandos">
+		<Troop entity="Warlord Elite"					danger="15"	weightChance="30" />
+		<Troop entity="Warlord Elite Heavy"				danger="18"	weightChance="20" onlyOutside="true" />
+		<Troop entity="Warlord Elite Heavy Gunner"		danger="12"	weightChance="20" />
+		<Troop entity="Warlord BodyGuard"				danger="18"	weightChance="10" />
+		<Troop entity="Warlord Militia NVG LongRange"	danger="18"	weightChance="10" /> 
+		<Troop entity="Warlord Militia NVG Sergeant"	danger="20"	weightChance="5"  />
 	</Group>	
 
 	<!-- Rogue SWAT Insurgents -->
@@ -226,7 +238,7 @@
 		<Troop entity="Bodyguard SMG Noob"			danger="8" weightChance="15" />	
 		<Troop entity="Bodyguard AKSU"				danger="12" weightChance="10" />
 		<Troop entity="Bodyguard Weaponless"		danger="8" weightChance="10" />
-		<Troop entity="Bodyguard AKSU Armored"		danger="15" weightChance="8" onlyOutside="true" /> <!-- RPG -->
+		<Troop entity="Bodyguard AKSU Armored"		danger="13" weightChance="8" onlyOutside="true" /> <!-- RPG -->
 		<Troop entity="Bodyguard Heavy AKSU"		danger="15" weightChance="10" onlyOutside="true" /> <!-- GL -->
 		<Troop entity="Bodyguard Heavy RPK16S"		danger="15" weightChance="10" /> 
 		<Troop entity="Bodyguard Heavy Weaponless"	danger="18" weightChance="5" onlyOutside="true" /> <!-- Radio -->
@@ -236,7 +248,7 @@
 	<Group name="NGF Veterans" localizedName="@group_military_nre">
 		<Troop entity="Bodyguard PM"				danger="20"	weightChance="5" />
 		<Troop entity="Bodyguard AKSU"				danger="12" weightChance="10" />
-		<Troop entity="Bodyguard AKSU Armored"		danger="15" weightChance="8" onlyOutside="true" /> <!-- RPG -->
+		<Troop entity="Bodyguard AKSU Armored"		danger="13" weightChance="8" onlyOutside="true" /> <!-- RPG -->
 		<Troop entity="Bodyguard Heavy AKSU"		danger="15" weightChance="10" onlyOutside="true" /> <!-- GL -->
 		<Troop entity="Bodyguard Heavy RPK16S"		danger="15" weightChance="10" /> 
 		<Troop entity="Bodyguard Heavy Weaponless"	danger="18" weightChance="5" onlyOutside="true" /> <!-- Radio -->

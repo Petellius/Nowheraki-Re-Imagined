@@ -270,7 +270,7 @@
 
 	<!-- 
 	###################
-	SUBFACTION: COMMANDOS 
+	SUBFACTION: VETERANS 
 	###################
 	-->
 
@@ -461,6 +461,14 @@
 		</Human>
 	</Entity>	
 
+<!-- _________________________________________________________________________________________________________________________________-->
+
+
+	<!-- 
+	###################
+	SUBFACTION: COMMANDOS 
+	###################
+	-->
 
 	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,NRE_Military,armored,Commando">
 		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/camo_01_NGF.dds"/>		
@@ -470,7 +478,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
-			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Traits chanceToAmbush="0.7" chanceToThrowGrenade="0.5" usesSuppressionFire="true"/>
 			<Id name="@NRE_entity_military_elite" portrait="data/textures/portraits/enemy_warlord_elite_01.dds" gender="0" voicePack="enemy arabic"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2" max="10"/>
@@ -480,6 +488,7 @@
 			<Equipment>
 				<Item name="Russian_AK203_NGF"/> 
 				<Item name="RedDotT2"/> 
+				<Item name="Russian_PM_NGF"/> 
 				<Item name="NRE MK14 GL WM"/>
 				<Item name="Helmet MICH Black NRE" />
 				<Item name="SSI NVG"/>	
@@ -500,7 +509,7 @@
 		<Human type="BadGuy">
 			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
-			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
 			<Id name="@NRE_entity_military_elite" portrait="data/textures/portraits/enemy_warlord_elite_02.dds" gender="0" voicePack="enemy arabic"/>
 			<Mobility>
 				<MoveSpeed min="0.7" defaultMetersPerSec="2" max="10"/>
@@ -510,6 +519,7 @@
 			<Equipment>
 				<Item name="RPG7_TBG7_NGF"/>
 				<Item name="Helmet MICH Black NRE" />
+				<Item name="Russian_PM_NGF"/> 
 				<Item name="SSI NVG"/>
 				<Item name="NRE Military Commando Armor" />
 			</Equipment>
@@ -536,6 +546,7 @@
 			<Equipment>
 				<Item name="RPK16 Short LMG"/>
 				<Item name="Helmet MICH Black NRE" />
+				<Item name="Russian_PM_NGF"/> 
 				<Item name="SSI NVG"/>
 				<Item name="NRE Military Commando Armor" />
 			</Equipment>
@@ -560,11 +571,13 @@
 
 			<Equipment>
 				<Item name="NRE_Army_MP5_NGF"/> 
+				<Item name="Russian_PM_NGF"/> 
 				<Item name="Frag Grenade Enemy Elite"/>
 				<Item name="NRE Military Commando Armor" />
 			</Equipment>
 
 			<Doctrine name="MilitaryElite"/>
+			<Doctrine name="FastGrenades"/>
 		</Human>
 	</Entity>	
 
@@ -671,6 +684,7 @@
 			<Equipment>
 				<Item name="Russian_OTS_14_1_NGF"/>
 				<Item name="NRE Military Commando Armor" />
+				<Item name="Russian_PM_NGF"/> 
 				<Item name="Flashbang NRE" />
 				<Item name="Helmet MICH Black NRE" />
 				<Item name="SSI NVG"/>
