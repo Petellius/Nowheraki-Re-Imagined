@@ -9,6 +9,7 @@
 @NRE_entity_military_grenadier=Regular (Grenadier)
 @NRE_entity_military_lmg=Regular MachineGunner
 @NRE_entity_military_radio=Radioman
+@NRE_entity_military_veteran=Veteran
 @NRE_entity_military_vet_breacher=Veteran Breacher
 @NRE_entity_military_vet_grenadier=Veteran Grenadier
 @NRE_entity_military_vet_long=Veteran Marksman

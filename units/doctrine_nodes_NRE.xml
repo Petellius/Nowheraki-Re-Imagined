@@ -294,6 +294,107 @@
 		/>
 	</Node>	
 
+	<Node name="MilitaryElite" nameUI="" description="" texturePrefix="">
+		<Enable name="PistolTransition"/>
+		<Enable name="SpeedyRifles"/>
+
+		<AttackTypeModifier target="" minRange="0" maxRange="7"
+			minAimTime="-50"
+			maxAimTime="-100"
+			resetTime="-100"
+		/>
+		<AttackTypeModifier target="pistol" minRange="0" maxRange="7"
+			minAimTime="-50" 
+			maxAimTime="-100" 
+			resetTime="-100"
+		/>
+		<AttackTypeModifier target="shotgun" minRange="0" maxRange="7"
+			minAimTime="-50"
+			maxAimTime="-100" 
+			resetTime="-50"
+		/>
+		<AttackTypeModifier target="" minRange="7" maxRange="15"
+			minAimTime="-100"
+			maxAimTime="-200"
+			resetTime="-100"
+		/>		
+		<AttackTypeModifier target="pistol" minRange="7" maxRange="15"
+			minAimTime="-50"
+			maxAimTime="-50"
+			resetTime="-50"
+		/>
+		<AttackTypeModifier target="dmr" minRange="7" maxRange="15"
+			minAimTime="-100"
+			maxAimTime="-200"
+			resetTime="-100"
+		/>
+		<AttackTypeModifier target="shotgun" minRange="7" maxRange="15"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="pistol" minRange="15" maxRange="100"
+			minAimTime="-50"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="rifle" minRange="15" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="lmg" minRange="15" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<AttackTypeModifier target="lmg" minRange="15" maxRange="100" onlyFromCover="true"
+			minAimTime="-100"
+			maxAimTime="-100"
+			resetTime="-100"
+			accuracyAdd="15"
+
+			roundsPerSecondAdd="+1"
+			minShots="+1"
+			maxShots="+1" 
+		/>		
+		<AttackTypeModifier target="dmr" minRange="15" maxRange="100"
+			minAimTime="-100"
+			maxAimTime="-100"
+		/>
+		<EquipmentModifier target="pistol"
+			reloadTime="-250"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="rifle"
+			reloadTime="-300"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="lmg"
+			reloadTime="-300"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="dmr"
+			reloadTime="-300"
+			reloadEmptyTime="-450"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+		<EquipmentModifier target="shotgun"
+			changeInTime="-350"
+			changeOutTime="-200"
+			readyTime="-50"
+		/>
+	</Node>	
+
+
+
 	<Node name="FastGrenades" nameUI="" description="" texturePrefix="">
 		<EquipmentModifier target="Grenade"
 			throwTime="-300"

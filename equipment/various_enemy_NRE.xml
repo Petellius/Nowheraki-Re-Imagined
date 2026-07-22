@@ -464,7 +464,7 @@ SUICIDE BOMB
 		</Projectile>
 	</Grenade>	
 
-		<Grenade name="Flashbang NRE" inventoryBinding="UtilityPouch"
+	<Grenade name="Flashbang NRE" inventoryBinding="UtilityPouch"
 			quantity="2"
 
 			tooltip="@grenade_flashbang_name"
@@ -575,6 +575,78 @@ SUICIDE BOMB
 			</EffectRange>
 		</Projectile>
 	</Grenade>		
+
+
+	<Grenade name="Satchel_Charge_NRE" inventoryBinding="UtilityPouch"
+			quantity="1"
+
+			tooltip="@grenade_fragsingle_name"
+			description="@grenade_frag_desc"
+			img="data/models/weapons/satchel_charge_ui_NGF.dds"
+			movie="data/movies/frag.ogv"
+
+			animationSet="grenade"
+			soundUse="molotov_use"
+			soundUseVoice=""
+		>
+		<RenderObject3D model="data/models/environment/interior/bag_01.khm" diffuseTex="data/models/environment/interior/bags.dds"/>
+		<ConcealmentModifier add="-0.5"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1600"
+			throwTimeCorner="1800"
+		/>
+
+		<Projectile
+			bodyTemplate="SatchelCharge_NGF"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			soundExplosion="mortar_hit_NGF"
+			soundHitFloor="rifle_neqp"
+
+			friendlyFire="true"
+			triggerOnImpact="true"
+			triggerTimeAfterTargetHitMsec="0"
+
+			accuracyPercent="10"
+
+			physicsDetonationForce="100"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="100">
+
+			<!-- spawn these when exploding -->
+			<FX
+				particles="60mm_explosion_NGF"
+				entity1="ExplosionLight"
+				entity2="scorch_mark_large"
+				entity3="FX_dust_small"
+				randRotation1="true">
+			</FX>
+
+			<EffectRange radiusMeters="2.0">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="7500" outerRangeTimeMSec="7500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="2"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="6"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+			<EffectRange radiusMeters="4.2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="4500" outerRangeTimeMSec="4500"/>
+				<DamageEffect chancePercent="100" damage="100" damageType="1"  armorPenetration="0"/>
+				<ScatterEffect chancePercent="100" armorPenetration="6"/>
+				<SuppressEffect amount="20"/>
+				<SmokeEffect durationMSec="1030" />
+			</EffectRange>
+			<EffectRange radiusMeters="7">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="1600" outerRangeTimeMSec="1000"/>
+				<ScatterEffect chancePercent="100" armorPenetration="3"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>	
 
 	<Helmet name="Balistic_Helmet_RogueSwat" inventoryBinding="Helmet" unlockCost="0"
 			tooltip=""
