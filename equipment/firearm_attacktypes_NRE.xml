@@ -18,12 +18,12 @@
 	-->
 	<AttackType name="NRE_Military_Rifle_1"> <!-- + 20 aim and +100 reset compared to elite -->
 		<ModifiableParams
-			minAimTime="310"
-			maxAimTime="340"
+			minAimTime="410"
+			maxAimTime="440"
 			roundsPerSecondOverride="5.5"
 			minShots="6"
 			maxShots="6"
-			resetTime="210"
+			resetTime="260"
 			accuracyAdd="-135"
 			followupShotAccuracyAdd="-3"
 			critChanceAdd="5"
@@ -32,12 +32,12 @@
 
 	<AttackType name="NRE_Military_Rifle_2">
 		<ModifiableParams
-			minAimTime="350"
-			maxAimTime="450"
+			minAimTime="450"
+			maxAimTime="550"
 			roundsPerSecondOverride="5"
 			minShots="3"
 			maxShots="5"
-			resetTime="265"
+			resetTime="315"
 			accuracyAdd="-130"
 			followupShotAccuracyAdd="-3"
 			critChanceAdd="5"
@@ -46,12 +46,12 @@
 
 	<AttackType name="NRE_Military_Rifle_3"> <!-- + 100 aim compared to elite -->
 		<ModifiableParams
-			minAimTime="500"
-			maxAimTime="590"
+			minAimTime="600"
+			maxAimTime="690"
 			roundsPerSecondOverride="3.7"
 			minShots="4"
 			maxShots="6"
-			resetTime="400"
+			resetTime="450"
 			accuracyAdd="-128"
 			followupShotAccuracyAdd="1"
 			critChanceAdd="0"
@@ -60,12 +60,12 @@
 
 	<AttackType name="NRE_Military_Rifle_3_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
-			minAimTime="550"
-			maxAimTime="640"
+			minAimTime="650"
+			maxAimTime="740"
 			roundsPerSecondOverride="3.3"
 			minShots="2"
 			maxShots="2"
-			resetTime="300"
+			resetTime="350"
 			accuracyAdd="-100"
 			followupShotAccuracyAdd="17"
 			critChanceAdd="0"
@@ -74,12 +74,12 @@
 
 	<AttackType name="NRE_Military_Rifle_4">
 		<ModifiableParams
-			minAimTime="570"
-			maxAimTime="670"
+			minAimTime="670"
+			maxAimTime="770"
 			roundsPerSecondOverride="2.5"
 			minShots="2"
 			maxShots="3"
-			resetTime="450"
+			resetTime="500"
 			accuracyAdd="-125"
 			followupShotAccuracyAdd="8"
 			critChanceAdd="0"
@@ -88,12 +88,12 @@
 
 	<AttackType name="NRE_Military_Rifle_4_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
-			minAimTime="620"
-			maxAimTime="720"
+			minAimTime="720"
+			maxAimTime="820"
 			roundsPerSecondOverride="2.2"
 			minShots="1"
 			maxShots="2"
-			resetTime="350"
+			resetTime="400"
 			accuracyAdd="-100"
 			followupShotAccuracyAdd="25"
 			critChanceAdd="0"
@@ -121,11 +121,11 @@
 
 	<AttackType name="Militia_Rifle_Heavy_1">  <!-- + 50 aim and +200 reset compared to elite -->
 		<ModifiableParams
-			minAimTime="280"
-			maxAimTime="310"
+			minAimTime="380"
+			maxAimTime="410"
 			minShots="4"
 			maxShots="6"
-			resetTime="450"
+			resetTime="500"
 			accuracyAdd="-75"
 			followupShotAccuracyAdd="-6"
 			critChanceAdd="15"
@@ -136,8 +136,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_2">
 		<ModifiableParams
-			minAimTime="320"
-			maxAimTime="380"
+			minAimTime="420"
+			maxAimTime="580"
 			minShots="3"
 			maxShots="4"
 			resetTime="650"
@@ -150,8 +150,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_3"> <!-- +100 compared to elite -->
 		<ModifiableParams
-			minAimTime="500"
-			maxAimTime="590"
+			minAimTime="600"
+			maxAimTime="720"
 			minShots="2"
 			maxShots="3"
 			resetTime="900"
@@ -163,12 +163,12 @@
 
 	<AttackType name="Militia_Rifle_Heavy_3_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
-			minAimTime="550"
-			maxAimTime="640"
+			minAimTime="650"
+			maxAimTime="770"
 			roundsPerSecondOverride="3.1"
 			minShots="2"
 			maxShots="3"
-			resetTime="400"
+			resetTime="500"
 			accuracyAdd="-55"
 			followupShotAccuracyAdd="2"
 			critChanceAdd="0"
@@ -177,8 +177,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_4">
 		<ModifiableParams
-			minAimTime="570"
-			maxAimTime="670"
+			minAimTime="750"
+			maxAimTime="850"
 			roundsPerSecondOverride="2.3"
 			minShots="1"
 			maxShots="2"
@@ -191,8 +191,8 @@
 
 	<AttackType name="Militia_Rifle_Heavy_4_Mounted"> <!-- Mounted +50 aim -100 reset +15 aim -->
 		<ModifiableParams
-			minAimTime="620"
-			maxAimTime="720"
+			minAimTime="800"
+			maxAimTime="900"
 			roundsPerSecondOverride="2.1"
 			minShots="1"
 			maxShots="2"
@@ -205,7 +205,7 @@
 
 	<AttackType name="Militia_Rifle_Heavy_5">
 		<ModifiableParams
-			minAimTime="750"
+			minAimTime="900"
 			maxAimTime="1300"
 			roundsPerSecondOverride="2.1"
 			minShots="1"
