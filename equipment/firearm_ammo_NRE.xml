@@ -1,0 +1,16 @@
+<Equipment>
+
+	<Ammo name="762x39FMJ_Type 56 NRE">
+
+		<Params roundsPerSecond="10"
+				audibleSoundRadius="50"
+				physicsImpactForce="2.0"
+				>
+			<Damage start="22" end="13" startDist="0" endDist="100"/>
+			<CriticalChancePercent start="10" end="1" startDist="0" endDist="100"/>
+			<ArmorPenetration start="50" end="50" startDist="0" endDist="100"/>
+		</Params>
+	</Ammo>
+	
+
+</Equipment>
