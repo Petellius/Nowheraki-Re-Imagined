@@ -33,7 +33,7 @@
 	suppressedAimTimePercent="5"
 	suppressedAccuracyPercent="-35"
 
-	coverBlockPercent = "80"
+	coverBlockPercent = "85"
 	fullCoverBlockPercent = "95"
 
 	flinchDamageThreshold	="18.0"
