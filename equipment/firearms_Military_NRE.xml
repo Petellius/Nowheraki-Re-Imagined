@@ -1007,19 +1007,19 @@
 		</Sounds>
 	</Firearm>	
 
-	<Bind eqp="NRE_AKM_GP34_GL_02">
+	<Bind eqp="NRE_AKM_GP34_GL_Launcher">
 		<to name="338_SniperRifle"/>
 
 		<to name="IronSights"/>
 	</Bind>
-	<Firearm name="NRE_AKM_GP34_GL_02" inventoryBinding="SecondaryWeapon"
+	<Firearm name="NRE_AKM_GP34_GL_Launcher" inventoryBinding="SecondaryWeapon"
 			tooltip="@NGF_firearm_akm_gp34_launcher_name"
-			img="data/models/weapons/akm_gp34_ui.dds"
+			img="data/models/weapons/gp34_NGF_ui.dds"
 			animationSet="grenade_launcher_NGF"
 			soundUseVoice="VOX_GEAR_FRAG"
 		>
 
-		<RenderObject3D model="data/models/weapons/akm_gp34_launcher_NGF.khm" attachSlot="prop_back_rifle"  skipGOSSAO="true" diffuseTex="data/models/weapons/akm_gp34_NGF.dds"/>
+		<RenderObject3D model="data/models/weapons/akm_gp34_launcher_NGF.khm" skipGOSSAO="true" diffuseTex="data/models/weapons/akm_gp34_NGF.dds"/>
 
 		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
 		<ModifiableParams
@@ -1117,7 +1117,7 @@
 			<!-- <ShellDrop name="rifle_shell_drop"/> -->
 			<Empty name="gen_empty"/>
 		</Sounds>
-	</Firearm>		
+	</Firearm>	
 
 	<!-- Sniper -->
 	<Bind eqp="NRE_Army_SVD_NGF">

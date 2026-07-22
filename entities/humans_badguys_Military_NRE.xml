@@ -173,7 +173,7 @@
 
 			<Equipment>
 				<Item name="NRE_AKM_GP34_GL"/>
-				<Item name="NRE_AKM_GP34_GL_02"/>
+				<Item name="NRE_AKM_GP34_GL_Launcher"/>
 				<Item name="Helmet NGF Beige" />
 				<Item name="NRE Military HeavyArmor" />
 			</Equipment>
