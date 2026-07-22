@@ -33,7 +33,7 @@
 @group_blackheads=Blackhead Fanatics
 @group_warmilitia=Remnants of Nowheraki Ground Forces
 @group_military_nre=Nowheraki Ground Forces
-@group_veterans=Nowheraki Commandos
+@group_commandos=Neighbouristan Commandos
 
 #
 # Abilities

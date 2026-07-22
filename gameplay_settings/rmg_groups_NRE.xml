@@ -183,7 +183,7 @@
 	</Group>
 
 	<!-- Mid-Tier Military -->
-	<Group name="Warlord Militia" localizedName="@group_military_nre">
+	<Group name="Warlord Militia" localizedName="@group_commandos">
 		<Troop entity="Warlord Militia"					danger="12"	weightChance="30" />
 		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
 		<Troop entity="Warlord Militia Sergeant"		danger="18"	weightChance="10" />
