@@ -222,15 +222,15 @@
 
 	<Group name="NGF" localizedName="@group_military_nre">
 		<Troop entity="Bodyguard PM"				danger="20"	weightChance="5" />
-		<Troop entity="Bodyguard SMG"  				danger="10" weightChance="10" />
-		<Troop entity="Bodyguard SMG Noob"			danger="8" weightChance="10" />	
+		<Troop entity="Bodyguard SMG"  				danger="10" weightChance="15" />
+		<Troop entity="Bodyguard SMG Noob"			danger="8" weightChance="15" />	
 		<Troop entity="Bodyguard AKSU"				danger="12" weightChance="10" />
 		<Troop entity="Bodyguard Weaponless"		danger="8" weightChance="10" />
-		<Troop entity="Bodyguard AKSU Armored"		danger="15" weightChance="10" /> <!-- RPG -->
-		<Troop entity="Bodyguard Heavy AKSU"		danger="15" weightChance="10" /> <!-- GL -->
+		<Troop entity="Bodyguard AKSU Armored"		danger="15" weightChance="8" onlyOutside="true" /> <!-- RPG -->
+		<Troop entity="Bodyguard Heavy AKSU"		danger="15" weightChance="10" onlyOutside="true" /> <!-- GL -->
 		<Troop entity="Bodyguard Heavy RPK16S"		danger="15" weightChance="10" /> 
-		<Troop entity="Bodyguard Heavy Weaponless"	danger="18" weightChance="10" /> <!-- Radio -->
-		<Troop entity="Bodyguard Heavy Pistol"		danger="18" weightChance="10" /> <!-- Sniper -->
+		<Troop entity="Bodyguard Heavy Weaponless"	danger="18" weightChance="5" onlyOutside="true" /> <!-- Radio -->
+		<Troop entity="Bodyguard Heavy Pistol"		danger="18" weightChance="8" onlyOutside="true" /> <!-- Sniper -->
 	</Group>	
 
 	<Group name="NGF Conscripts" localizedName="@group_military_nre">
