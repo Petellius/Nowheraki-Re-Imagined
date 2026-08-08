@@ -6,7 +6,7 @@
 		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_RELAXED" />
 		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_RELAXED" alwaysSwitch="true"/>
 		<Bind evt="HEAR_SUSPICIOUS" 		prio="2" activity="INVESTIGATE" />
-		<Bind evt="HEAR_COMBAT" 			prio="3" becomeAlerted="1" activity="INVESTIGATE" />
+		<Bind evt="HEAR_COMBAT" 			prio="3" becomeAlerted="1" activity="SWITCH_TO_COMBAT" />
 		<Bind evt="SEE_FRIENDLY_COMBAT"	prio="4" becomeAlerted="1" activity="INVESTIGATE" />
 		<Bind evt="HEAR_SNIPER_SHOT" 		prio="5" activity="SWITCH_TO_COMBAT" />
 		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="SWITCH_TO_COMBAT" />
@@ -60,7 +60,8 @@
 		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_COMBAT" />
 		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
 		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="4" activity="INVESTIGATE" />
-		<Bind evt="CMD_RUN_TO" 			prio="5" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="HEAR_COMBAT" 		prio="5" becomeAlerted="1" activity="SWITCH_TO_COMBAT" />		
+		<Bind evt="CMD_RUN_TO" 			prio="6" activity="IDLE_COMBAT" alwaysSwitch="true" />
 		<Bind evt="CMD_SUPPRESS_FIRE" 	prio="7" activity="ENGAGE_ENEMY" alwaysSwitch="true" /> <!-- keep priority low so more important reaction events cancel shooting -->
 		<Bind evt="SEE_DOOR_OPEN" 			prio="7" activity="INVESTIGATE" />
 		<Bind evt="HEAR_SNIPER_SHOT" 		prio="8" activity="AVOID_SNIPER" />

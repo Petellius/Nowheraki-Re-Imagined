@@ -1026,12 +1026,12 @@
 			projectilesPerMagazine="1"
 			cyclicReload="1"
 
-			reloadTime="1600"
-			reloadEmptyTime="1600"
-			changeInTime="1600"
+			reloadTime="1200"
+			reloadEmptyTime="1200"
+			changeInTime="1200"
 			changeOutTime="0"
-			readyTime="500"
-			guardTime="500"
+			readyTime="0"
+			guardTime="0"
 		/>
 
 		<Params

@@ -407,6 +407,7 @@
 	<Node name="SniperVsCover" nameUI="" description="" texturePrefix="">
 		<AttackTypeModifier target="" minRange="7" maxRange="100"
 			coverReductionMin="15" coverReductionMax="50"
+			critChanceAdd="20"
 		/>	
 	</Node>	
 
