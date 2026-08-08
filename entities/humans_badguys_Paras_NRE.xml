@@ -17,7 +17,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<FOV degrees="160" distanceMeters="999" eyeRadiusMeters="1.5"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
 			<Id name="@entity_human_ssiasssaulter" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
@@ -81,7 +81,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<FOV degrees="160" distanceMeters="999" eyeRadiusMeters="1.5"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
 			<Id name="@entity_human_ssiasssaulter" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
@@ -113,7 +113,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<FOV degrees="160" distanceMeters="999" eyeRadiusMeters="1.5"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
 			<Id name="@entity_human_ssimarksman" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
@@ -148,7 +148,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<FOV degrees="160" distanceMeters="999" eyeRadiusMeters="1.5"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
 			<Id name="@entity_human_ssipointman" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>

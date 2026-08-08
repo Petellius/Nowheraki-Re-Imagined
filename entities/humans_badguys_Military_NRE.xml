@@ -14,7 +14,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@NRE_entity_military_militia_leader" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToAmbush="1.0" chanceToThrowGrenade="1.0" stopsToShoot="false" roamAround="true"/>
@@ -41,7 +41,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@NRE_entity_military_militia" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToAmbush="1.0" chanceToBlindFire="0.5" chanceToThrowGrenade="0.4" usesSuppressionFire="true" stopsToShoot="false" />
@@ -65,7 +65,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
 			<Id name="@NRE_entity_military_militia" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="1.0" chanceToInvestigate="0.5" usesSuppressionFire="true" stopsToShoot="false" />
@@ -87,7 +87,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@NRE_entity_military" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToAmbush="1.0" chanceToBlindFire="0.0" chanceToThrowGrenade="1.0" usesSuppressionFire="true" stopsToShoot="false" />
@@ -113,7 +113,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>		
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat"  suppressionRecovery="10.0"/>
 			<Id name="@NRE_entity_military_militia" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.0" chanceToAmbush="1.0" usesSuppressionFire="true" stopsToShoot="false" roamAround="true"/>
@@ -136,7 +136,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@NRE_entity_military" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.4" usesSuppressionFire="true"  stopsToShoot="false" />
@@ -162,7 +162,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
 			<Id name="@NRE_entity_military" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.0" usesSuppressionFire="true" stopsToShoot="false" chanceToThrowGrenade="1.0"/>
@@ -189,7 +189,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@NRE_entity_military" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToAmbush="1.0" chanceToBlindFire="0.0" usesSuppressionFire="true" chanceToThrowGrenade="0.2" chanceToInvestigate="0.0"/>
@@ -217,7 +217,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@NRE_entity_military" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.0" usesSuppressionFire="false" chanceToThrowGrenade="1.0"/>
@@ -246,7 +246,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Id name="@NRE_entity_military" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToAmbush="1.0" stopsToShoot="true" />
@@ -280,7 +280,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
 			<Traits chanceToBlindFire="0.4" chanceToThrowGrenade="0.4" usesSuppressionFire="true" stopsToShoot="false" />
 			<Id name="@NRE_entity_military_veteran" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
@@ -309,7 +309,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
 			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
 			<Id name="@NRE_entity_military_veteran" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
@@ -333,7 +333,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
 			<Traits chanceToAmbush="0.7"/>
 			<Id name="@NRE_entity_military_vet_long" portrait="data/textures/portraits/enemy_warlord_irregular_02.dds" gender="0" voicePack="enemy arabic"/>
@@ -359,7 +359,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Traits chanceToBlindFire="0.0" chanceToThrowGrenade="1.0" usesSuppressionFire="true" stopsToShoot="false" />
 			<Id name="@NRE_entity_military_vet_leader" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
@@ -388,7 +388,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Traits chanceToBlindFire="0.3" usesSuppressionFire="true" stopsToShoot="false" />
 			<Id name="@NRE_entity_military_vet_lmg" portrait="data/textures/portraits/enemy_warlord_irregular_03.dds" gender="0" voicePack="enemy arabic"/>
@@ -413,7 +413,7 @@
 		<Breakable template="HumanGib_mtn_helmet_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
 			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" chanceToThrowGrenade="1.0"/>
 			<Id name="@NRE_entity_military_vet_grenadier" portrait="data/textures/portraits/enemy_warlord_irregular_04.dds" gender="0" voicePack="enemy arabic"/>
@@ -440,7 +440,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
 			<Traits chanceToAmbush="0.7" chanceToThrowGrenade="1.0"/>
 			<Id name="@NRE_entity_military_elite" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
@@ -476,7 +476,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
 			<Traits chanceToAmbush="0.7" chanceToThrowGrenade="0.5" usesSuppressionFire="true"/>
 			<Id name="@NRE_entity_military_elite" portrait="data/textures/portraits/enemy_warlord_elite_01.dds" gender="0" voicePack="enemy arabic"/>
@@ -507,7 +507,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
 			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
 			<Id name="@NRE_entity_military_elite" portrait="data/textures/portraits/enemy_warlord_elite_02.dds" gender="0" voicePack="enemy arabic"/>
@@ -534,7 +534,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
 			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
 			<Id name="@NRE_entity_military_elite" portrait="data/textures/portraits/enemy_warlord_elite_03.dds" gender="0" voicePack="enemy arabic"/>
@@ -591,7 +591,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
 			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
@@ -620,7 +620,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
 			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
@@ -645,7 +645,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
 			<Traits chanceToAmbush="1.0" />
 			<Id name="@entity_human_warlordmilitia" portrait="data/textures/portraits/enemy_warlord_irregular_02.dds" gender="0" voicePack="enemy arabic"/>
@@ -673,7 +673,7 @@
 		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
 			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
 			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
@@ -702,7 +702,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.0" stopsToShoot="false" />
@@ -725,7 +725,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.0" stopsToShoot="false" />
@@ -748,7 +748,7 @@
 		<Breakable template="HumanGib_berett_mtn_NGF" breakOnDamage="explosive" deleteOnDeath="false"/>
 		<PhysicalParams health="100" />
 		<Human type="BadGuy">
-			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.0"/>
 			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
 			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
 			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />

@@ -1,6 +1,6 @@
 
 <Behaviors>
-	<!-- If you add new events here, make sure to update Concealed Guy below -->
+	<!-- NRE Specific AI Behaviours -->
 
 	<!-- Militia Troops - Flee more often and notice enemies less quickly -->
 	<Behavior name="Militia" inherit="Normal Guy">
