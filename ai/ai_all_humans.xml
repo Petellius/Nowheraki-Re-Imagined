@@ -1,0 +1,827 @@
+
+<Behaviors>
+	<!-- If you add new events here, make sure to update Concealed Guy below -->
+	<Behavior name="Normal Guy">
+		<Bind evt="IDLE_TICK" 				prio="0"  activity="IDLE_RELAXED" />
+		<Bind evt="CMD_PATROL" 				prio="1"  activity="IDLE_RELAXED" alwaysSwitch="true"/>
+		<!-- HEAR_SUSPICIOUS: Quiet sounds (footsteps, door kicks, suppressed gunshots, etc.)
+			No becomeAlerted — investigate stealthily without increasing alertness.
+			The enemy moves to investigate naturally without becoming tense. -->
+		<Bind evt="HEAR_SUSPICIOUS" 		prio="2"  activity="INVESTIGATE" />
+		<!-- HEAR_COMBAT: Loud sounds (gunshots, explosions, etc.)
+			becomeAlerted="1" — immediately increase alertness, then move quickly to search.
+			Higher priority than HEAR_SUSPICIOUS so gunshots are processed before footsteps. -->
+		<Bind evt="HEAR_COMBAT" 			prio="4"  becomeAlerted="1" activity="INVESTIGATE" alwaysSwitch="true" />
+		<Bind evt="SEE_FRIENDLY_COMBAT"		prio="4"  becomeAlerted="1" activity="INVESTIGATE" />
+		<Bind evt="HEAR_SNIPER_SHOT" 		prio="5"  activity="SWITCH_TO_COMBAT" />
+		<!-- [Modified] Added alwaysSwitch: when witnessing an ally's corpse, immediately stop the current activity and switch to combat. -->
+		<Bind evt="SEE_DEAD_FRIENDLY" 		prio="5"  activity="SWITCH_TO_COMBAT" alwaysSwitch="true" />
+		<Bind evt="SEE_DOOR_OPEN" 			prio="5"  activity="INVESTIGATE" />
+		<Bind evt="CMD_RUN_TO" 				prio="5"  activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<!-- [Modified] INVESTIGATE → SWITCH_TO_COMBAT: immediately switch to combat when hit (skip investigation). -->
+		<Bind evt="SELF_TOOK_DAMAGE" 		prio="6"  becomeAlerted="1" activity="SWITCH_TO_COMBAT" alwaysSwitch="true" />
+		<!-- [Modified] Added alwaysSwitch: immediately switch to combat upon spotting an enemy, with no delay. -->
+		<Bind evt="SEE_ENEMY" 				prio="10" activity="SWITCH_TO_COMBAT" alwaysSwitch="true" />
+		<Bind evt="CMD_SUPPRESS_FIRE" 		prio="11" activity="SWITCH_TO_COMBAT" alwaysSwitch="true" />
+		<!-- [Modified] prio 12 → 2:
+			Lowered the priority so that when a flashbang explodes,
+			HEAR_COMBAT (prio=3, search movement) is processed before
+			AVOID_RADIUS (evasion). The unit immediately begins moving
+			to investigate after hearing the explosion. -->
+		<Bind evt="IN_BLAST_RADIUS" 		prio="2"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_ALARM" 				prio="13" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"				prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="Concealed Guy" >
+		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_SNEAK" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_SNEAK" alwaysSwitch="true" />
+		<!--  <Bind evt="HEAR_SUSPICIOUS" /> Concealed guys don't investigate suspicious events -->
+		<Bind evt="SEE_FRIENDLY_COMBAT"	prio="3" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<Bind evt="HEAR_COMBAT" 			prio="4" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<Bind evt="CMD_RUN_TO" 			prio="4" activity="IDLE_SNEAK" alwaysSwitch="true" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="5" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<!-- <Bind evt="SEE_ENEMY" /> Ignore seen enemies, since we're trying to ambush them, in a sneaky fashion -->
+		<Bind evt="IN_BLAST_RADIUS"		prio="12" becomeAlerted="1" activity="AVOID_RADIUS" />
+		<!-- <Bind evt="HEAR_ALARM" 			prio="13" activity="SWITCH_TO_COMBAT" /> --> 
+		<Bind evt="SET_ON_FIRE"			prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="Normal Combat" inherit="Normal Guy">
+		<Bind evt="IDLE_TICK" 				prio="0"  activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL" 				prio="1"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<!-- [Modified] ENGAGE_ENEMY → IDLE_COMBAT:
+			Fixed the issue where the AI would fire wildly toward the suspicionArea around the corpse.
+			When using a suppressor, the entry team may have already moved on, making that direction inaccurate.
+			After raising alertness, only engage when the enemy is directly spotted (SEE_ENEMY). -->
+		<Bind evt="SEE_DEAD_FRIENDLY" 		prio="9"  becomeAlerted="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="CMD_RUN_TO" 				prio="5"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<!-- [Modified] ENGAGE_ENEMY → IDLE_COMBAT:
+			CMD_SUPPRESS_FIRE is automatically sent by the engine without position information.
+			If treated as ENGAGE_ENEMY, the AI may fire in the wrong direction even when it does not know the entry team's location.
+			Ignore it with IDLE_COMBAT and only initiate combat from events that provide actual position information
+			(SEE_ENEMY, HEAR_COMBAT, SEE_DEAD_FRIENDLY). -->
+		<Bind evt="CMD_SUPPRESS_FIRE" 		prio="7"  activity="IDLE_COMBAT" />
+		<Bind evt="SEE_DOOR_OPEN" 			prio="7"  activity="INVESTIGATE" />
+		<Bind evt="HEAR_SNIPER_SHOT" 		prio="8"  activity="AVOID_SNIPER" />
+		<Bind evt="SEE_ENEMY" 				prio="10" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<!-- [Modified] ENGAGE_ENEMY → IDLE_COMBAT:
+			Direction estimation is inaccurate when hit by a suppressed shot, causing the AI to fire in the wrong direction.
+			After detecting the hit, raise alertness and only engage when the enemy is directly spotted. -->
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="9"  becomeAlerted="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<!-- [Modified] prio 12 → 2:
+			Lowered the priority so that after a flashbang detonates, HEAR_COMBAT (prio=3)
+			search movement is processed before evasive action. -->
+		<Bind evt="IN_BLAST_RADIUS" 		prio="2"  activity="AVOID_RADIUS" />
+		<!-- Stop firing if an ally is blocking the line of fire -->
+		<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+	</Behavior>
+	
+	<Behavior name="Suicide Combat" inherit="Normal Guy">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="SEE_DOOR_OPEN" 			prio="8" activity="INVESTIGATE" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="12" activity="AVOID_RADIUS" />
+		<Bind evt="SEE_ENEMY" 				prio="30" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	</Behavior>
+	
+	<Behavior name="Executioner"> <!-- combat behavior, name is important, causes the countdown timer to appear -->
+		<Bind evt="IDLE_TICK" 			prio="0" activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="HEAR_SNIPER_SHOT" 	prio="4" activity="INVESTIGATE" />
+		<Bind evt="SEE_FRIENDLY_COMBAT" prio="4" activity="INVESTIGATE" />
+		<Bind evt="HEAR_SUSPICIOUS" 	prio="5" activity="INVESTIGATE" /> <!-- react when friendly dies nearby -->
+		<Bind evt="SEE_DOOR_OPEN" 		prio="5" activity="INVESTIGATE" />
+		<Bind evt="SEE_FRIENDLY_EXECUTING"	prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="SEE_ENEMY" 			prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="HEAR_ALARM" 			prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="CMD_RUN_TO" 			prio="6" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="IN_BLAST_RADIUS" 	prio="12" activity="AVOID_RADIUS" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<!-- Enemy VIP -->
+	<Behavior name="HVT">
+		<Bind evt="IDLE_TICK" 			prio="0" activity="IDLE_RELAXED" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="HEAR_SUSPICIOUS" 	prio="3" activity="INVESTIGATE"/>
+		<Bind evt="HEAR_COMBAT" 		prio="4" becomeAlerted="1" activity="INVESTIGATE" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DOOR_OPEN" 		prio="6" activity="INVESTIGATE" />
+		<Bind evt="CMD_RUN_TO" 			prio="6" activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<!-- <Bind evt="HEAR_SNIPER_SHOT" 	prio="6" becomeAlerted="1" activity="???" /> -->
+		<Bind evt="SEE_ENEMY" 			prio="10" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="CMD_EVACUATE" 		prio="11" becomeAlerted="1" activity="AICMD_EVACUATE" />
+		<Bind evt="IN_BLAST_RADIUS" 	prio="15" becomeAlerted="1" activity="AVOID_RADIUS" />
+		<Bind evt="SELF_TOOK_DAMAGE" 	prio="17" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_THREAT" 		prio="18" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"			prio="20" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="HVT Combat" inherit="HVT">
+		<Bind evt="IDLE_TICK" 			prio="0" activity="FLEE_VIP" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="FLEE_VIP" />
+		<Bind evt="SEE_DOOR_OPEN" 		prio="6" activity="FLEE_VIP" />
+		<!-- <Bind evt="HEAR_SNIPER_SHOT" 	prio="6" becomeAlerted="1" activity="???" /> -->
+		<Bind evt="SEE_ENEMY" 			prio="10" activity="FLEE_VIP" />
+		<Bind evt="SELF_TOOK_DAMAGE" 	prio="17" activity="FLEE_VIP" />
+		<Bind evt="HEAR_THREAT" 		prio="18" activity="FLEE_VIP" />
+	</Behavior>
+	
+	<Behavior name="Civilian">
+		<Bind evt="IDLE_TICK" 				prio="0"  activity="IDLE_RELAXED" />
+		<Bind evt="CMD_PATROL" 			prio="1"  activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="CMD_RUN_TO" 			prio="1"  activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="CMD_EVACUATE" 			prio="3"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_COMBAT" 			prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_ENEMY" 				prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DEAD_BODY" 			prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_SNIPER_SHOT"		prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="5"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="IN_BLAST_RADIUS"		prio="12" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="TAKE_SCATTER_DAMAGE"	prio="13" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="SWITCH_TO_COMBAT" />
+	</Behavior>
+	
+	<Behavior name="Civilian Combat">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="FLEE" />
+		<Bind evt="HEAR_COMBAT" 			prio="4" activity="FLEE" />
+		<Bind evt="SEE_ENEMY" 				prio="5" activity="FLEE" />
+		<Bind evt="SEE_DEAD_BODY"			prio="5" activity="FLEE" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="6" activity="FLEE" />
+		<Bind evt="HEAR_SNIPER_SHOT"		prio="6" activity="FLEE" />
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="7" activity="AICMD_EVACUATE" />
+		<Bind evt="CMD_EVACUATE" 			prio="7" activity="AICMD_EVACUATE" />
+		<Bind evt="IN_BLAST_RADIUS"		prio="12" activity="AVOID_RADIUS" />
+		<Bind evt="TAKE_SCATTER_DAMAGE"	prio="13" activity="AICMD_EVACUATE" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="Hostage">
+		<Bind evt="IDLE_TICK" 				prio="0" becomeAlerted="1" activity="IDLE_HOSTAGE" />
+	</Behavior>
+	
+	<Behavior name="Fake Hostage" inherit="Normal Combat">
+		<Bind evt="IDLE_TICK" 				prio="0" becomeAlerted="1" activity="IDLE_HOSTAGE" />
+	</Behavior>
+	
+	
+	<Behavior name="BeingControlled">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="AICMD_HOLD" />
+		<Bind evt="CMD_STOP" 				prio="1" activity="AICMD_HOLD" />
+		<Bind evt="CMD_FOLLOW" 			prio="1" activity="AICMD_FOLLOW" alwaysSwitch="true" />
+		<Bind evt="CMD_EVACUATE" 			prio="1" activity="AICMD_EVACUATE" />
+		<Bind evt="BLOCKING_ALLY_LOS"		prio="3" activity="AICMD_DUCK" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="4" activity="AVOID_RADIUS" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
+	</Behavior>
+
+<!-- ============================================================
+     BREACH RESPONSE SYSTEM
+     A set of Behaviors designed to put the entry team at a severe disadvantage
+     once they make noise (door breach/gunshots), giving the enemies time to
+     prepare before the entry team pushes in.
+
+     Usage:
+       1. Place the "Breach Detector" Prefab in front of the door on the map.
+       2. Set the internal enemy units' Behavior to either
+          "Breach Ambush Guy" or "Breach Scout".
+       3. Delays/grenade throws are handled by the
+          "Breach Response System" Prefab in prefabs.xml.
+     ============================================================ -->
+
+<!-- Step 1: Immediately after detecting noise → moving to cover
+     When HEAR_COMBAT/HEAR_SUSPICIOUS occurs, immediately switch to combat mode
+     and move to a covered position via the CMD_RUN_TO command
+     (sent by the Prefab Trigger chain).
+
+     CMD_SUPPRESS_FIRE: Remains disabled while moving.
+       The AI has not reached its covered position yet, so allies may have
+       overlapping lines of fire.
+       Once movement is complete and it switches to "Breach Ambush Ready",
+       suppressive fire resumes.
+
+     SEE_DEAD_FRIENDLY → ENGAGE_ENEMY (prio=10):
+       Overrides the Normal Guy inherited SWITCH_TO_COMBAT (prio=5).
+       If the AI spots a dead scout, it immediately engages the enemy even
+       while still moving.
+       (SWITCH_TO_COMBAT has no effect if the AI is already in combat mode.) -->
+	<Behavior name="Breach Ambush Guy" inherit="Normal Guy">
+		<Bind evt="IDLE_TICK"				prio="0"  activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL"				prio="1"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<!-- Immediately switch to combat mode upon detecting noise (skip INVESTIGATE and go straight to combat) -->
+		<Bind evt="HEAR_SUSPICIOUS"			prio="3"  becomeAlerted="1" activity="IDLE_COMBAT" />
+		<Bind evt="HEAR_COMBAT"				prio="4"  becomeAlerted="1" activity="IDLE_COMBAT" />
+		<Bind evt="SEE_FRIENDLY_COMBAT"		prio="4"  becomeAlerted="1" activity="IDLE_COMBAT" />
+		<!-- CMD_SUPPRESS_FIRE disabled while moving — prevents overlapping lines of fire -->
+		<Bind evt="CMD_SUPPRESS_FIRE"		prio="4"  activity="IDLE_COMBAT" />
+		<!-- Immediately move when the Prefab Trigger chain sends CMD_RUN_TO to the covered position -->
+		<Bind evt="CMD_RUN_TO"				prio="6"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="SEE_DOOR_OPEN"			prio="6"  activity="IDLE_COMBAT" />
+		<Bind evt="HEAR_SNIPER_SHOT"		prio="7"  activity="AVOID_SNIPER" />
+		<Bind evt="HEAR_ALARM"				prio="5"  activity="IDLE_COMBAT" />
+		<!-- Spotting a scout's corpse → immediately engage (inherited SWITCH_TO_COMBAT has no effect when already in combat) -->
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="10" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<Bind evt="SEE_ENEMY"				prio="12" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<Bind evt="IN_BLAST_RADIUS"			prio="13" activity="AVOID_RADIUS" />
+		<Bind evt="SET_ON_FIRE"				prio="15" becomeAlerted="1" activity="AVOID_FIRE" />
+		<!-- Stop firing if an ally is blocking the line of fire -->
+		<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+	</Behavior>
+
+	<!-- Step 2: Ready state (switches to this Behavior after 8 seconds in the Trigger chain)
+		Movement to the covered position is complete. Only begin suppressive fire
+		when the entry team's location is "known."
+
+		CMD_SUPPRESS_FIRE is automatically sent by the engine to AI in combat mode
+		regardless of position, so using it as a trigger would cause blind suppressive
+		fire → continue to ignore it with IDLE_COMBAT.
+
+		Events that provide a rough indication of the entry team's location:
+		HEAR_COMBAT          — hear gunshots, direction can be determined → immediately suppress
+		SEE_FRIENDLY_COMBAT  — witness an ally engaging the enemy → suppress in that direction
+		SEE_DEAD_FRIENDLY    — spot an ally's corpse, infer the entry direction → suppress
+		SEE_ENEMY            — directly spot the enemy → highest-priority direct engagement
+
+		HEAR_SUSPICIOUS has uncertain location information → remain in IDLE_COMBAT (no blind fire).
+		HEAR_ALARM provides no directional information → remain in IDLE_COMBAT. -->
+	<Behavior name="Breach Ambush Ready" inherit="Breach Ambush Guy">
+		<!-- Ready: do not react to ambiguous noises or an opened door -->
+		<Bind evt="SEE_DOOR_OPEN"			prio="1" activity="IDLE_COMBAT" />
+		<Bind evt="HEAR_SUSPICIOUS"			prio="1" activity="IDLE_COMBAT" />
+		<Bind evt="HEAR_ALARM"				prio="2" activity="IDLE_COMBAT" />
+		<!-- Ignore CMD_SUPPRESS_FIRE — prevents blind suppressive fire without position information -->
+		<Bind evt="CMD_SUPPRESS_FIRE"		prio="3" activity="IDLE_COMBAT" />
+		<!-- Position information events → begin suppressive fire -->
+		<Bind evt="HEAR_COMBAT"				prio="11" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<Bind evt="SEE_FRIENDLY_COMBAT"		prio="11" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="11" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<!-- Direct sighting → highest-priority engagement -->
+		<Bind evt="SEE_ENEMY"				prio="20" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<!-- Stop firing if an ally is blocking the line of fire -->
+		<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+	</Behavior>
+
+	<!-- Scout-specific (only one unit per map should use this Behavior):
+		After detecting noise, receives the CMD_RUN_TO command from the Trigger chain
+		and advances toward the doorway to scout ahead. If an enemy is spotted,
+		immediately engage and relay the engagement to waiting allies via
+		SEE_FRIENDLY_COMBAT.
+
+		★ NOTE: This Behavior must be assigned to only one unit.
+		Having multiple units scout simultaneously looks unnatural from the
+		entry team's perspective and can result in excessive friendly casualties
+		if the scout fails.
+
+		[Modified] CMD_SUPPRESS_FIRE → IDLE_COMBAT:
+		Ignore suppressive-fire commands during the scouting mission and remain focused on scouting.
+		[Modified] SEE_DEAD_FRIENDLY prio 9→6:
+		Immediately engage upon confirming an ally's death (the previous prio=9
+		was higher than INVESTIGATE prio=8, so there was no conflict, but lowering
+		it makes the behavior flow more intuitive). -->
+		
+	<Behavior name="Breach Scout" inherit="Breach Ambush Guy">
+		<!-- During scouting, actively investigate opened doors/noises to locate the enemy -->
+		<Bind evt="SEE_DOOR_OPEN"			prio="8"  activity="INVESTIGATE" />
+		<Bind evt="HEAR_SUSPICIOUS"			prio="8"  activity="INVESTIGATE" />
+		<!-- Ignore suppressive-fire commands while scouting — scouting takes priority -->
+		<Bind evt="CMD_SUPPRESS_FIRE"		prio="3"  activity="IDLE_COMBAT" />
+		<!-- Confirm ally's death → immediately engage (relayed to allies via SEE_FRIENDLY_COMBAT) -->
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="6"  activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<!-- Enemy spotted → immediately engage (SEE_FRIENDLY_COMBAT is relayed to allies) -->
+		<Bind evt="SEE_ENEMY"				prio="15" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+		<!-- Stop firing if an ally is blocking the line of fire -->
+		<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+	</Behavior>
+
+<!-- ============================================================
+     ROOM DEFENDER SYSTEM
+     Behavior set for enemies positioned alone (or in small numbers)
+     inside an isolated room.
+
+     Core asymmetric setup:
+       - From the enemy's perspective: anyone entering the room is hostile
+         → open the door and immediately engage.
+         No need to identify friendlies/civilians; reaction is instant.
+       - From the entry team's perspective: they do not know whether the
+         people behind the door are civilians or enemies → cannot fire
+         before confirming.
+         They are at a structural disadvantage without a flashbang,
+         pieing the corner, or using the doorframe for cover.
+
+     Two variants:
+       Room Defender        — waits aiming directly at the door (visible)
+       Room Defender Covert — waits concealed/in cover, ambushes when the door opens (hidden)
+
+     Usage tips:
+       - Placing one among civilian NPCs prevents the entry team from
+         firing without confirming the target.
+       - Multiple defenders can be placed in rooms with multiple doors
+         (one defender per door).
+       - Can be used independently of the Breach Response System.
+     ============================================================ -->
+
+<!-- Door-facing defender:
+     Continuously aims toward the door in an IDLE_COMBAT stance.
+     SEE_DOOR_OPEN → immediately ENGAGE_ENEMY: begins firing as soon as the door opens.
+       (Completely overrides Normal Guy's SEE_DOOR_OPEN → INVESTIGATE behavior.)
+     HEAR_SUSPICIOUS/HEAR_COMBAT → maintain aim: does not leave position even when hearing noise.
+       Leaving an isolated room would itself put the defender at a disadvantage.
+     SEE_ENEMY → immediately engage since the defender is already facing the door.
+
+     ★ Entry team countermeasures: throw a flashbang first / pie the corner /
+                              enter while using the doorframe for cover. -->
+<Behavior name="Room Defender" inherit="Normal Guy">
+	<!-- Always maintain a combat-ready stance -->
+	<Bind evt="IDLE_TICK"				prio="0"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_PATROL"				prio="1"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<!-- Do not leave position in response to noise — keep eyes on the door -->
+	<Bind evt="HEAR_SUSPICIOUS"			prio="4"  activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_COMBAT"				prio="5"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"		prio="5"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_SNIPER_SHOT"		prio="5"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_RUN_TO"				prio="5"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<Bind evt="CMD_SUPPRESS_FIRE"		prio="5"  activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_ALARM"				prio="5"  activity="IDLE_COMBAT" />
+	<!-- Core behavior: door opens → immediately fire (no confirmation) -->
+	<Bind evt="SEE_DOOR_OPEN"			prio="9"  becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Directly spot an enemy → highest-priority engagement -->
+	<Bind evt="SEE_ENEMY"				prio="12" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="13" activity="AVOID_RADIUS" />
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="6"  becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="SET_ON_FIRE"				prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	<!-- Stop firing if an ally is blocking the line of fire -->
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- Concealed defender (based on Concealed Guy):
+     Waits hidden behind furniture or in a corner in an IDLE_SNEAK stance.
+     From outside, it is impossible to tell whether the occupant is an enemy
+     or civilian → ambushes the entry team when they attempt to confirm.
+     SEE_DOOR_OPEN → immediately SWITCH_TO_DEFAULT, then ENGAGE_ENEMY:
+       when the door opens, break concealment and begin an ambush.
+     Remains concealed until SEE_ENEMY — the moment the entry team enters
+     to clear the room is when they are most vulnerable, making it the ideal
+     moment for the ambush.
+
+     ★ Entry team countermeasure: flashbang/smoke is essential before entry.
+                              Entering without confirmation exposes the team
+                              to the concealed enemy's flank. -->
+<Behavior name="Room Defender Covert" inherit="Concealed Guy">
+	<!-- Maintain concealment — wait until they enter -->
+	<Bind evt="HEAR_SUSPICIOUS"			prio="2"  activity="IDLE_SNEAK" />
+	<Bind evt="HEAR_COMBAT"				prio="3"  becomeAlerted="1" activity="IDLE_SNEAK" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"		prio="3"  becomeAlerted="1" activity="IDLE_SNEAK" />
+	<Bind evt="HEAR_SNIPER_SHOT"		prio="4"  activity="IDLE_SNEAK" />
+	<!-- Door opens → break concealment → ambush -->
+	<Bind evt="SEE_DOOR_OPEN"			prio="9"  becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+	<!-- Directly spot an enemy → highest-priority ambush -->
+	<Bind evt="SEE_ENEMY"				prio="12" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="7"  becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="12" becomeAlerted="1" activity="AVOID_RADIUS" />
+	<Bind evt="SET_ON_FIRE"				prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+</Behavior>
+
+<!-- ============================================================
+     3-PHASE ALERT SYSTEM
+     A staged alert system for enemies responding to an entering team.
+
+     [Core Principle]
+       Enemies are assumed to know the entire interior space of the building.
+       However, information about the entering team's location/identity
+       is acquired only through specific events.
+
+     ┌─────────────────────────────────────────────────────────┐
+     │ SILENT Phase: Completely unaware of the entering team   │
+     │   → Patrol/idle. Investigate suspicious sounds.         │
+     │   → Switch to LOUD when combat/explosion sounds occur.  │
+     ├─────────────────────────────────────────────────────────┤
+     │ LOUD Phase: Aware that the entering team is inside,     │
+     │            but exact identity/location is unknown       │
+     │   → Immediately move to cover. No blind suppressive fire.│
+     │   → When SEE_ENEMY / SEE_DEAD_FRIENDLY, etc. confirm    │
+     │     the location, begin Danger-level engagement.        │
+     │   → The Phase Loud Scout is responsible for locating    │
+     │     the entering team.                                  │
+     ├─────────────────────────────────────────────────────────┤
+     │ DANGER Phase: Both location and identity are confirmed  │
+     │   → Suppressive fire is allowed. Fire immediately when  │
+     │     the door opens.                                      │
+     │   → React immediately to all combat cues                 │
+     │     (sound/visual contact/friendly combat).              │
+     └─────────────────────────────────────────────────────────┘
+
+     [Phase Transition Flow]
+       SILENT ──(HEAR_COMBAT / HEAR_SNIPER_SHOT)──▶ LOUD
+       LOUD   ──(SEE_ENEMY)──────────────────────▶ DANGER (immediate)
+       LOUD   ──(SEE_DEAD_FRIENDLY)──────────────▶ DANGER (scout confirmation)
+       LOUD   ──(SEE_FRIENDLY_COMBAT)────────────▶ DANGER (friendly engagement witnessed)
+       LOUD   ──(8 seconds elapsed → grenade HEAR_COMBAT)──▶ DANGER (Phase Danger only)
+
+     [Gray Area: Dual Role of HEAR_COMBAT]
+       LOUD   + HEAR_COMBAT → IDLE_COMBAT
+         (direction is known, but exact location is unknown; hold position)
+       DANGER + HEAR_COMBAT → ENGAGE_ENEMY
+         (location is already known; engage immediately)
+       → The HEAR_COMBAT from the grenade explosion after 8 seconds
+         causes only Phase Danger to switch to engagement.
+       → Phase Loud does not blindly fire when it hears the grenade.
+
+     [Usage]
+       1. Standard interior enemy units: assign "Phase Silent".
+          (Automatically transitions to LOUD-level behavior when sounds are detected)
+       2. Key strongpoint defenders: assign "Phase Danger".
+          (Aim at the door from the start; immediately engage on the
+           grenade's HEAR_COMBAT after 8 seconds)
+       3. Use only one scout: assign "Phase Loud Scout".
+       4. Place a "Phase Trigger System" Prefab in front of the door.
+          id=2 Targets → Connect all Phase Loud/Silent unit IDs.
+          id=9 Targets → Connect Phase Danger unit IDs (for the 8-second advance).
+     ============================================================ -->
+
+<!-- ──────────────────────────────────────────────────────────────
+     SILENT PHASE
+     Initial state: completely unaware of the entering team.
+
+     Key differences from Normal Guy:
+       HEAR_COMBAT   → INVESTIGATE(X) → IDLE_COMBAT(O)
+         Reason: Instead of wandering toward the sound of gunfire,
+                immediately assume a defensive posture.
+                Since the interior layout is known, INVESTIGATE (wandering)
+                is inefficient.
+       SEE_DEAD_FRIENDLY → SWITCH_TO_COMBAT(X) → IDLE_COMBAT(O)
+         Reason: Discovering a friendly corpse does not trigger an immediate
+                charge; instead, maintain a defensive position.
+       HEAR_SNIPER_SHOT / SEE_FRIENDLY_COMBAT → IDLE_COMBAT(O)
+         Reason: Even if the direction of the sound is known,
+                the exact location has not been confirmed, so hold position.
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Phase Silent" inherit="Normal Guy">
+	<Bind evt="IDLE_TICK"               prio="0"  activity="IDLE_RELAXED" />
+	<Bind evt="CMD_PATROL"              prio="1"  activity="IDLE_RELAXED" alwaysSwitch="true"/>
+	<Bind evt="HEAR_SUSPICIOUS"         prio="2"  activity="INVESTIGATE" />
+	<!-- Combat/explosion sounds → defensive posture instead of INVESTIGATE (do not leave position) -->
+	<Bind evt="HEAR_COMBAT"             prio="3"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"     prio="4"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<!-- Sniper shot = distant threat, location unknown → remain on alert -->
+	<Bind evt="HEAR_SNIPER_SHOT"        prio="5"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<!-- Friendly corpse discovered = defensive posture; entering team's location still unknown -->
+	<Bind evt="SEE_DEAD_FRIENDLY"       prio="5"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_DOOR_OPEN"           prio="5"  activity="INVESTIGATE" />
+	<Bind evt="CMD_RUN_TO"              prio="5"  activity="IDLE_RELAXED" alwaysSwitch="true" />
+	<Bind evt="SELF_TOOK_DAMAGE"        prio="6"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<!-- Direct visual contact with enemy → immediate Danger-level engagement -->
+	<Bind evt="SEE_ENEMY"               prio="10" activity="SWITCH_TO_COMBAT" />
+	<Bind evt="CMD_SUPPRESS_FIRE"       prio="11" activity="SWITCH_TO_COMBAT" alwaysSwitch="true" />
+	<Bind evt="IN_BLAST_RADIUS"         prio="12" activity="SWITCH_TO_COMBAT" />
+	<Bind evt="HEAR_ALARM"              prio="13" activity="SWITCH_TO_COMBAT" />
+	<Bind evt="SET_ON_FIRE"             prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	<!-- Stop firing if an ally is blocking the line of fire -->
+	<Bind evt="BLOCKING_ALLY_LOS"       prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     LOUD PHASE
+     The entering team is known to be inside, but their exact
+     location/identity is unknown.
+
+     Phase Trigger System id=2 (0.5 seconds) sends CMD_RUN_TO
+     to move units into cover.
+
+     Behavioral principles:
+       - No blind suppressive fire (prevents wasted ammunition + position exposure)
+       - CMD_RUN_TO: immediately move to a covered position
+       - HEAR_COMBAT: remain in IDLE_COMBAT even after hearing gunfire
+           → The direction is known, but the entering team's exact
+             location is still unknown.
+       - SEE_ENEMY / SEE_DEAD_FRIENDLY / SEE_FRIENDLY_COMBAT:
+           Location confirmed → immediately ENGAGE_ENEMY (Danger transition)
+       - SELF_TOOK_DAMAGE: being shot triggers an immediate counterattack
+
+     Relationship to Breach Ambush Guy:
+       Phase Loud = official-name version of Breach Ambush Guy.
+       The logic is identical, but explicitly defined within the
+       three-phase system.
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Phase Loud" inherit="Normal Guy">
+	<Bind evt="IDLE_TICK"               prio="0"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_PATROL"              prio="1"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<!-- Location unknown → remain in IDLE_COMBAT when hearing sounds (no charge) -->
+	<Bind evt="HEAR_SUSPICIOUS"         prio="3"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_COMBAT"             prio="4"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"     prio="4"  becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- No blind suppressive fire — prevents wasting ammunition/revealing position -->
+	<Bind evt="CMD_SUPPRESS_FIRE"       prio="4"  activity="IDLE_COMBAT" />
+	<!-- CMD_RUN_TO from the Prefab Trigger chain → move to cover -->
+	<Bind evt="CMD_RUN_TO"              prio="6"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<Bind evt="SEE_DOOR_OPEN"           prio="6"  activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_ALARM"              prio="5"  activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_SNIPER_SHOT"        prio="7"  activity="AVOID_SNIPER" />
+	<!-- ★ Location confirmed → immediately transition to Danger-level engagement -->
+	<!-- SEE_DEAD_FRIENDLY: scout's death confirms the entering team's presence in this direction -->
+	<Bind evt="SEE_DEAD_FRIENDLY"       prio="10" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="SEE_ENEMY"               prio="12" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- SELF_TOOK_DAMAGE: being shot reveals the attacker's direction → immediate engagement -->
+	<Bind evt="SELF_TOOK_DAMAGE"        prio="13" becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="IN_BLAST_RADIUS"         prio="13" activity="AVOID_RADIUS" />
+	<Bind evt="SET_ON_FIRE"             prio="15" becomeAlerted="1" activity="AVOID_FIRE" />
+	<!-- Stop firing if an ally is blocking the line of fire -->
+	<Bind evt="BLOCKING_ALLY_LOS"       prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     LOUD PHASE SCOUT (use only one per map)
+     Phase Trigger System id=4 (10.5 seconds) sends CMD_RUN_TO to this unit.
+     → Advance toward the doorway to locate the entering team.
+
+     Relationship to Breach Scout:
+       Phase Loud Scout = official-name version of Breach Scout.
+
+     ★ Important: assign this Behavior to only one unit.
+       Sending multiple units forward at once is unrealistic and
+       causes excessive force losses.
+
+     How it works:
+       Scout spots the entering team with SEE_ENEMY
+       → starts ENGAGE_ENEMY
+       → nearby allies receive SEE_FRIENDLY_COMBAT
+       → Phase Loud allies switch to ENGAGE_ENEMY (location is propagated)
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Phase Loud Scout" inherit="Phase Loud">
+	<!-- While scouting: actively investigate open doors/sounds to locate the enemy -->
+	<Bind evt="SEE_DOOR_OPEN"           prio="8"  activity="INVESTIGATE" />
+	<Bind evt="HEAR_SUSPICIOUS"         prio="8"  activity="INVESTIGATE" />
+	<!-- Ignore suppressive-fire commands while scouting — advancing reconnaissance takes priority -->
+	<Bind evt="CMD_SUPPRESS_FIRE"       prio="3"  activity="IDLE_COMBAT" />
+	<!-- Friendly corpse → immediate engagement (propagates location to waiting allies via SEE_FRIENDLY_COMBAT) -->
+	<Bind evt="SEE_DEAD_FRIENDLY"       prio="6"  activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Entering team spotted → immediate engagement (propagates to all Phase Loud units) -->
+	<Bind evt="SEE_ENEMY"               prio="15" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Stop firing if an ally is blocking the line of fire -->
+	<Bind evt="BLOCKING_ALLY_LOS"       prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     DANGER PHASE
+     The entering team's location and identity are fully known.
+     Units either transition from Phase Loud via SEE_ENEMY /
+     SEE_DEAD_FRIENDLY, or are assigned this Behavior directly
+     in the map editor as key defensive units.
+
+     Key differences from Phase Loud (location is confirmed):
+       CMD_SUPPRESS_FIRE → ENGAGE_ENEMY (O) ← "confirmed fire," not blind suppressive fire
+       HEAR_COMBAT → ENGAGE_ENEMY (O)        ← gunfire confirms the location
+       SEE_DOOR_OPEN → ENGAGE_ENEMY (O)      ← fire immediately when the door opens
+       SEE_FRIENDLY_COMBAT → ENGAGE_ENEMY (O) ← focus fire toward the friendly engagement
+
+     8-second grenade interaction:
+       A grenade explosion triggers HEAR_COMBAT.
+       Phase Loud   : prio=4  → IDLE_COMBAT  (still waiting; location unknown)
+       Phase Danger : prio=11 → ENGAGE_ENEMY (location already known; engage immediately)
+       → Only Phase Danger units engage in response to the grenade sound.
+         Phase Loud units wait for the scout's SEE_ENEMY propagation.
+
+     Relationship to Breach Ambush Ready:
+       Phase Danger = official-name version of Breach Ambush Ready
+       + additional enhancements.
+       SEE_DOOR_OPEN → ENGAGE_ENEMY added (absorbing the Room Defender behavior).
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Phase Danger" inherit="Phase Loud">
+	<!-- Ignore uncertain sounds — with the location already known, do not react to noise -->
+	<Bind evt="HEAR_SUSPICIOUS"         prio="1"  activity="IDLE_COMBAT" />
+	<Bind evt="SEE_DOOR_OPEN"           prio="1"  activity="IDLE_COMBAT" /><!-- Initial override; redefined below at prio=9 -->
+	<!-- Allow suppressive fire — fire toward the known entry route -->
+	<Bind evt="CMD_SUPPRESS_FIRE"       prio="7"  activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Door opens → fire immediately; with the location known, entry = confirmed enemy -->
+	<Bind evt="SEE_DOOR_OPEN"           prio="9"  becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="HEAR_SNIPER_SHOT"        prio="9"  activity="ENGAGE_ENEMY" />
+	<!-- All combat cues → immediately focus on engagement -->
+	<Bind evt="HEAR_COMBAT"             prio="11" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"     prio="11" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="SEE_DEAD_FRIENDLY"       prio="11" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Direct visual contact with enemy → highest-priority engagement -->
+	<Bind evt="SEE_ENEMY"               prio="20" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Stop firing if an ally is blocking the line of fire -->
+	<Bind evt="BLOCKING_ALLY_LOS"       prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     REAR GUARD
+     Independently watches secondary entrances, corridors, and
+     escape routes rather than the primary entry direction.
+     Never leaves position even when combat breaks out up front.
+     Reacts only to SEE_ENEMY / SELF_TOOK_DAMAGE.
+     While the entering team focuses on clearing the front,
+     their flank/rear remains exposed.
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Rear Guard" inherit="Normal Guy">
+	<Bind evt="IDLE_TICK"				prio="0"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_PATROL"				prio="1"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<Bind evt="HEAR_SUSPICIOUS"			prio="4"  activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_COMBAT"				prio="5"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"		prio="5"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_SNIPER_SHOT"		prio="5"  activity="IDLE_COMBAT" />
+	<Bind evt="SEE_DEAD_FRIENDLY"		prio="6"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_DOOR_OPEN"			prio="7"  activity="IDLE_COMBAT" />
+	<Bind evt="HEAR_ALARM"				prio="7"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_SUPPRESS_FIRE"		prio="5"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_RUN_TO"				prio="5"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="8"  becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="SEE_ENEMY"				prio="12" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="13" activity="AVOID_RADIUS" />
+	<Bind evt="SET_ON_FIRE"				prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	<!-- Stop firing if an ally is blocking the line of fire -->
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     CQB ASSAULTER (Phase Danger Flanker)
+     Phase Danger variant. When PTS id=9 sends CMD_RUN_TO,
+     immediately advance and engage.
+
+     When combined with Phase Danger (covered shooter):
+       Front shooter engages → Flanker forces close-quarters combat
+       Flanker is targeted → turning toward the Flanker exposes the player
+       to the front shooter.
+
+     PTS map-editor setup: connect this unit's ID to id=9 Targets.
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Phase Danger Flanker" inherit="Phase Danger">
+	<!-- Highest-priority response to the advance command -->
+	<Bind evt="CMD_RUN_TO"				prio="12" activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<!-- Lower-priority grenade avoidance while advancing -->
+	<Bind evt="IN_BLAST_RADIUS"			prio="6"  activity="AVOID_RADIUS" />
+	<!-- Enemy spotted while advancing → immediate highest-priority close engagement -->
+	<Bind evt="SEE_ENEMY"				prio="25" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Stop firing if an ally is blocking the line of fire (higher than SEE_ENEMY prio=25) -->
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+```xml
+<!-- ============================================================
+     SURRENDER SYSTEM
+
+     Core principle:
+       IDLE_HOSTAGE = the engine's "hands raised and frozen" pose.
+       Assigning this activity to an enemy puts them into a surrendered state.
+       Reuses an existing engine state without adding a separate activity.
+
+     Surrender trigger events:
+       TAKE_SCATTER_DAMAGE — direct hit from a flashbang/shotgun blast → immediately enter surrender pose
+       IN_BLAST_RADIUS     — stun grenade/nearby explosion → surrender or flee
+       SELF_TOOK_DAMAGE    — accumulated damage → reaction varies by training level
+
+     Training-level distinction:
+       Morale Break Grunt   — untrained enemy. Surrenders after a single hit/flashbang.
+       Morale Break Trained — trained enemy. Stunned by flashbangs, flees when hit.
+                              Only surrenders under extreme pressure (repeated hits).
+
+     Response for the entry team:
+       Surrendered enemies enter the IDLE_HOSTAGE state → can be immediately subdued/secured.
+       However, they do not react to SEE_DEAD_FRIENDLY (witnessing an allied death) →
+       they may resume resisting if the surrounding situation turns against them.
+     ============================================================ -->
+
+<!-- Demoralized state (Surrendered):
+     ★ Engine limitation: IDLE_HOSTAGE does not work on armed enemies.
+       It is only meaningful for disarmed units (with no weapon assigned in the map editor).
+
+     Intended use when assigning this Behavior from the start:
+       Enemies who are armed but have no will to fight (guards, coerced combatants, etc.).
+       React to all combat events such as SEE_ENEMY and HEAR_COMBAT with FLEE.
+       They flee rather than fight even when they encounter the entry team.
+       They naturally flee if shot or set on fire.
+
+     Relationship to the Morale Break variants:
+       Morale Break Grunt/Trained → once entering the FLEE state,
+       the engine automatically maintains the fleeing behavior. No separate transition is required. -->
+<Behavior name="Surrendered">
+	<Bind evt="IDLE_TICK"				prio="0"  activity="FLEE" />
+	<Bind evt="CMD_PATROL"				prio="1"  activity="FLEE" alwaysSwitch="true" />
+	<Bind evt="HEAR_SUSPICIOUS"			prio="2"  activity="FLEE" />
+	<Bind evt="HEAR_COMBAT"				prio="3"  activity="FLEE" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"		prio="3"  activity="FLEE" />
+	<Bind evt="HEAR_ALARM"				prio="3"  activity="FLEE" />
+	<Bind evt="SEE_DEAD_FRIENDLY"		prio="4"  activity="FLEE" />
+	<Bind evt="SEE_DOOR_OPEN"			prio="4"  activity="FLEE" />
+	<Bind evt="SEE_ENEMY"				prio="5"  activity="FLEE" />
+	<Bind evt="CMD_SUPPRESS_FIRE"		prio="5"  activity="FLEE" />
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="8"  activity="FLEE" />
+	<Bind evt="TAKE_SCATTER_DAMAGE"		prio="8"  activity="FLEE" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="9"  activity="AVOID_RADIUS" />
+	<Bind evt="SET_ON_FIRE"				prio="10" activity="AVOID_FIRE" />
+</Behavior>
+
+<!-- Untrained enemy surrender (Morale Break Grunt):
+     Based on Normal Combat. Immediately loses the will to fight under the following conditions.
+
+     ★ Engine limitation: IDLE_HOSTAGE (surrender pose) is an activity intended for unarmed units/hostages.
+       Assigning it to armed enemies is ignored by the engine.
+       Instead, FLEE is used: an enemy hit by a flashbang drops their weapon and flees →
+       the combat disengagement effect is the same. There is no surrender pose.
+
+     Surrender conditions (in descending priority):
+       TAKE_SCATTER_DAMAGE prio=18 → FLEE:
+         A single hit from a flashbang/shotgun blast causes immediate flight (complete loss of morale).
+       IN_BLAST_RADIUS prio=15 → FLEE:
+         Near an explosion → panic and flee.
+       SELF_TOOK_DAMAGE prio=14 → FLEE:
+         Taking damage → immediately flee. No retaliation.
+       SEE_DEAD_FRIENDLY prio=11 → FLEE:
+         Witnessing an allied death → morale collapse and flee. -->
+<Behavior name="Morale Break Grunt" inherit="Normal Combat">
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+	<!-- Direct flashbang/shotgun hit → immediately flee (surrender pose unavailable; replaced with combat disengagement) -->
+	<Bind evt="TAKE_SCATTER_DAMAGE"		prio="18" activity="FLEE" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="15" activity="FLEE" />
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="14" becomeAlerted="1" activity="FLEE" />
+	<Bind evt="SEE_DEAD_FRIENDLY"		prio="11" activity="FLEE" />
+</Behavior>
+
+<!-- Trained enemy surrender (Morale Break Trained):
+     Based on Normal Combat. Only loses the will to fight under extreme pressure.
+
+     TAKE_SCATTER_DAMAGE prio=18 → FLEE:
+       Flashbangs cause immediate flight regardless of training (unable to resist while blinded).
+     In all other situations, fights the same way as Normal Combat.
+     Flashbangs are the only guaranteed method of forcing combat disengagement. -->
+<Behavior name="Morale Break Trained" inherit="Normal Combat">
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+	<!-- Flashbang → immediately flee (even trained enemies cannot resist a flashbang) -->
+	<Bind evt="TAKE_SCATTER_DAMAGE"		prio="18" activity="FLEE" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="12" activity="IDLE_COMBAT" />
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="8"  becomeAlerted="1" activity="IDLE_COMBAT" />
+	<Bind evt="SEE_DEAD_FRIENDLY"		prio="6"  becomeAlerted="1" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     ISOLATED ROOM — AGGRESSIVE EXIT PATTERN (Room Aggressor)
+     An aggressive variant contrasting with Room Defender (does not leave the room).
+     Upon detecting suspicious sounds, exits the room and actively searches for the entry team.
+
+     CQB scenario:
+       The entry team opens the door but does not see the enemy
+       → they do not know whether the enemy has left the room or is searching somewhere in the hallway
+       → creates a scenario where the team is ambushed from behind after declaring the area clear
+
+     Note: Do not combine with Rear Guard (conflicting roles).
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Room Aggressor" inherit="Normal Guy">
+	<Bind evt="IDLE_TICK"				prio="0"  activity="IDLE_COMBAT" />
+	<Bind evt="CMD_PATROL"				prio="1"  activity="IDLE_COMBAT" alwaysSwitch="true" />
+	<!-- Suspicious sound/door opening → immediately deploy outside to search -->
+	<Bind evt="HEAR_SUSPICIOUS"			prio="4"  activity="INVESTIGATE" />
+	<Bind evt="HEAR_COMBAT"				prio="5"  becomeAlerted="1" activity="INVESTIGATE" alwaysSwitch="true" />
+	<Bind evt="SEE_DOOR_OPEN"			prio="6"  activity="INVESTIGATE" alwaysSwitch="true" />
+	<Bind evt="SEE_FRIENDLY_COMBAT"		prio="6"  becomeAlerted="1" activity="INVESTIGATE" alwaysSwitch="true" />
+	<Bind evt="HEAR_SNIPER_SHOT"		prio="7"  activity="INVESTIGATE" />
+	<Bind evt="HEAR_ALARM"				prio="7"  becomeAlerted="1" activity="INVESTIGATE" />
+	<!-- Witness allied death → immediately engage (identifies the direction of entry) -->
+	<Bind evt="SEE_DEAD_FRIENDLY"		prio="10" becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Taking damage → immediately engage -->
+	<Bind evt="SELF_TOOK_DAMAGE"		prio="8"  becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Enemy spotted → immediately engage -->
+	<Bind evt="SEE_ENEMY"				prio="12" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="IN_BLAST_RADIUS"			prio="13" activity="AVOID_RADIUS" />
+	<Bind evt="SET_ON_FIRE"				prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+
+<!-- ──────────────────────────────────────────────────────────────
+     ISOLATED ROOM DANGER STATE (Room Defender Danger)
+     State where the entry team's position has been identified through muzzle flash or an allied corpse.
+
+     Operates through human_params changes:
+       suspicionAreaShootRadius 1.0 → 2.5:
+         When the entry team fires, HEAR_SUSPICIOUS is generated within a 2.5m radius
+         → immediately reacts with ENGAGE_ENEMY (position identified through muzzle flash)
+       suspicionAreaDeathRadius 2.5 → 4.0:
+         Allied corpse within 4m → improved estimation of the entry team's position
+       combatStartedReactionTimeMS 1500 → 500:
+         Combat reaction delay reduced to one-third
+
+     Difference from Room Defender:
+       Room Defender:       HEAR_SUSPICIOUS → IDLE_COMBAT (ignore uncertain position)
+       Room Defender Danger: HEAR_SUSPICIOUS → ENGAGE_ENEMY (position identified → immediate fire)
+
+     Automatically transitions to Danger when the entry team fires or an allied corpse appears.
+     Works without map-editor configuration.
+     ────────────────────────────────────────────────────────────── -->
+<Behavior name="Room Defender Danger" inherit="Room Defender">
+	<!-- Muzzle flash (suspicionArea) → position identified → immediately fire -->
+	<Bind evt="HEAR_SUSPICIOUS"			prio="10" becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Gunfire → direction identified → immediately fire -->
+	<Bind evt="HEAR_COMBAT"				prio="11" becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Witness allied corpse → entry direction identified → immediately fire -->
+	<Bind evt="SEE_DEAD_FRIENDLY"		prio="12" becomeAlerted="1" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<!-- Direct visual contact → highest-priority engagement -->
+	<Bind evt="SEE_ENEMY"				prio="20" activity="ENGAGE_ENEMY" alwaysSwitch="true" />
+	<Bind evt="BLOCKING_ALLY_LOS"		prio="26" activity="IDLE_COMBAT" />
+</Behavior>
+```
+
+
+
+</Behaviors>
