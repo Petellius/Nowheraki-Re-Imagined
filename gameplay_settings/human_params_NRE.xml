@@ -33,12 +33,14 @@
 	suppressedAimTimePercent="5"
 	suppressedAccuracyPercent="-35"
 
+	suspicionAreaExplosionRadius	= "5.0"
+	suspicionAreaDeathRadius		= "4.5"
+	suspicionAreaThrowRadius		= "3.5"
+	suspicionAreaShootRadius		= "5.0"
+	suspicionAreaPenaltyDuration	= "3000"	
+
 	coverBlockPercent = "85"
 	fullCoverBlockPercent = "95"
-
-	flinchDamageThreshold	="18.0"
-	flinchChancePerDmgPoint	="1.3"
-	flinchStunDurationMsec	="150"
 
 	hideDelayMsec="2000"
 
