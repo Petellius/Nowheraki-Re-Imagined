@@ -18,10 +18,12 @@
 
 	FLEE = entity runs away towards automatically generated hiding areas on the map - you can see these using the AI Interaction debug on the dev mode config menu.
 
-	ENGAGE_ENEMY = Move to AI optimal range OR/ if ambushing move to cover + start firing at current/last known enemy position.   
+	ENGAGE_ENEMY = Move to AI optimal range OR/ if ambushing move to cover + start firing at current/last known enemy position. 
+
+	The AI does not differentiate between allied events and enemy events. So allies firing, or allies/civilians opening doors.  
 
 	Entity Settings:
-	ChanceToInvestigate + investigateMaxDistanceMeters: How likely the entity is to investigate and how far. They generally sprint towards the trigger point and end up getting killed.
+	chanceToInvestigate + investigateMaxDistanceMeters: How likely the entity is to investigate and how far. They generally sprint towards the trigger point and end up getting killed.
 	roamAround + roamRadius: If the entity walks around the man, and how far from their base position. Needs roaming nodes inside the map to work (otherwise they just spin around).
 	usesSuppressionFire: entity gets given the CMD_SUPPRESS_FIRE - unsure when or how, but its hardcoded - generally NOT compatible with chanceToAmbush.
 	chanceToAmbush: Entity gets assigned a random cover node nearby and moves to it and waits, only during ENGAGE_ENEMY or INVESTIGATION when in combat mode and trigger is close. 
