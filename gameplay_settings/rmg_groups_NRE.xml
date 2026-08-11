@@ -183,7 +183,7 @@
 	</Group>
 
 	<!-- Mid-Tier Military -->
-	<Group name="Warlord Militia" localizedName="@group_commandos">
+	<Group name="Warlord Militia" localizedName="@group_veterans">
 		<Troop entity="Warlord Militia"					danger="13"	weightChance="30" />
 		<Troop entity="Warlord Militia LongRange"		danger="18"	weightChance="20" />
 		<Troop entity="Warlord Militia Weaponless"		danger="12"	weightChance="5" />
@@ -255,7 +255,7 @@
 		<Troop entity="Bodyguard Heavy Pistol"		danger="18" weightChance="8" onlyOutside="true" /> <!-- Sniper -->
 	</Group>	
 
-	<Group name="NGF Conscripts" localizedName="@group_military_nre">
+	<Group name="NGF Conscripts" localizedName="@group_conscripts">
 		<Troop entity="Bodyguard PM"				danger="20"	weightChance="2" />
 		<Troop entity="Bodyguard SMG"  				danger="10" weightChance="20" />
 		<Troop entity="Bodyguard SMG Noob"			danger="8" weightChance="20" />	
