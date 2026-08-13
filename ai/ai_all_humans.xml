@@ -57,11 +57,11 @@
 		<Bind evt="SEE_FRIENDLY_COMBAT"	prio="5" activity="INVESTIGATE" />
 		<Bind evt="HEAR_COMBAT" 		prio="5" activity="INVESTIGATE" />
 		<Bind evt="CMD_RUN_TO" 			prio="5" activity="IDLE_COMBAT" alwaysSwitch="true" />
-		<Bind evt="SELF_TOOK_DAMAGE" 	prio="6" activity="INVESTIGATE" />
 		<Bind evt="CMD_SUPPRESS_FIRE" 	prio="7" activity="ENGAGE_ENEMY" alwaysSwitch="true" /> <!-- keep priority low so more important reaction events cancel shooting -->
 		<Bind evt="SEE_DOOR_OPEN" 		prio="7" activity="ENGAGE_ENEMY" />
 		<Bind evt="HEAR_SNIPER_SHOT" 	prio="8" activity="AVOID_SNIPER" />
 		<Bind evt="SEE_ENEMY" 			prio="10" activity="ENGAGE_ENEMY" />
+		<Bind evt="SELF_TOOK_DAMAGE" 	prio="11" activity="INVESTIGATE" />
 		<Bind evt="IN_BLAST_RADIUS" 	prio="12" activity="AVOID_RADIUS" />
 		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
 	</Behavior>
